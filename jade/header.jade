@@ -1,0 +1,32 @@
+-var breadCrumbs = ["Главная","Логотипы","Новость"]
+-var topMenu = ["Сайты", "Логотипы", "Прочий хлам", "Новенькое", "Добавить"]
+
+header
+    div.row-fluid
+        .layout-center-wrapper
+            nav.span6
+                ul.breadcrumb
+                    each item in breadCrumbs
+                        li: a(href="#") #{item}
+
+            .span3.offset3
+                a(href="#") Регистрация/ Вход
+    .layout-center-wrapper
+        .banner: a(href="#"): img(src="../img/banner-up.jpg" alt="")
+        .logo: a(href="#"): img(src="../img/logo.png" alt="")
+    
+    .search
+        input.search__area(type="text")
+        p.search__text Уже добавлено 
+            span 109 примеров
+            |  шаблонных и украденных сайтов и логотипов
+            
+    nav.top-menu
+        ul
+            li: a.top-menu__site(href="#") Сайты
+            li: a.top-menu__logo(href="#") Логотипы
+            li: a.top-menu__more(href="#") Прочий хлам
+            li: a.top-menu__new(href="#") Новенькое
+            li: a.top-menu__add(href="#") Добавить
+                
+                
