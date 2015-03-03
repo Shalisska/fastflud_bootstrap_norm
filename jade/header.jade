@@ -1,37 +1,43 @@
 -var breadCrumbs = ["Главная","Логотипы","Новость"]
 -var topMenu = ["Сайты", "Логотипы", "Прочий хлам", "Новенькое", "Добавить"]
 
-header
-    .head
-        .container
-            .row
-                .col-md-9
-                    ul.breadcrumb
-                        each item in breadCrumbs
-                            li: a(href="#") #{item}
+header.header
+    .head.clearfix
+        .layout-center-wrapper
+            nav.head__breadcrumb
+                ul
+                    each item in breadCrumbs
+                        li: a(href="#") #{item}
 
-                .col-md-3.text-right
-                    a(href="#") Регистрация/ Вход
-    .container
-        .banner.text-center: a(href="#"): img(src="../img/banner-up.jpg" alt="")
-        .logo.text-center: a(href="#"): img(src="../img/logo.png" alt="")
+            .head__registration
+                a.head__registration--enter(href="#") Регистрация/ Вход
+    .layout-center-wrapper
+        .header__banner: a(href="#"): img(src="../img/banner-up.jpg" alt="")
+        .header__logo: a(href="#"): img(src="../img/logo.png" alt="")
     
-        form.form-inline.form-search(name="search" action="#" method="get")
-            .text-center
-                .input-group
-                    label.sr-only(for="searchInput")
-                    input.form-control(id="searchInput" type="text" name="search" placeholder="Search")
-                    .input-group-btn
-                        button.btn.btn-primary
-                p.search__text Уже добавлено 
-                    span 109 примеров
-                    |  шаблонных и украденных сайтов и логотипов
+        form.form__search(name="search" action="#" method="get")
+            fieldset.form__search-layout
+                input.form__search-field(type="text" name="search" placeholder="Поиск")
+                button.btn.form__search-btn
+            p.form__search-text Уже добавлено 
+                span 109 примеров
+                |  шаблонных и украденных сайтов и логотипов
 
-        nav.navbar.navbar-default
-            ul.nav.navbar-nav
-                li: a.top-menu__site(href="#") Сайты
-                li: a.top-menu__logo(href="#") Логотипы
-                li: a.top-menu__more(href="#") Прочий хлам
-                li: a.top-menu__new(href="#") Новенькое
-                li: a.top-menu__add(href="#") Добавить
+        nav.top-menu
+            ul
+                li: a(href="#")
+                    .top-menu__img: img(src="../img/icon-site.png")
+                    | Сайты
+                li: a(href="#")
+                    .top-menu__img: img(src="../img/icon-logo.png")
+                    | Логотипы
+                li: a(href="#")
+                    .top-menu__img: img(src="../img/icon-more.png")
+                    | Прочий хлам
+                li: a(href="#")
+                    .top-menu__img: img(src="../img/icon-new.png")
+                    | Новенькое
+                li: a(href="#")
+                    .top-menu__img: img(src="../img/icon-add.png")
+                    | Добавить
                 

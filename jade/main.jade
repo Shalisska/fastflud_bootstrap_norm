@@ -5,12 +5,11 @@ html(lang="ru")
     body
         include header
         
-        main.container
-            .row
-                .col-md-9
-                    block content
-                .col-md-3
-                    include sidebar
+        main.layout-center-wrapper.clearfix
+            .main
+                block content
+            .sidebar
+                include sidebar
         include footer
         
         

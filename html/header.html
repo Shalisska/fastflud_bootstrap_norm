@@ -1,41 +1,39 @@
 
-<header>
-  <div class="head">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-9">
-          <ul class="breadcrumb">
-            <li><a href="#">Главная</a></li>
-            <li><a href="#">Логотипы</a></li>
-            <li><a href="#">Новость</a></li>
-          </ul>
-        </div>
-        <div class="col-md-3 text-right"><a href="#">Регистрация/ Вход</a></div>
-      </div>
+<header class="header">
+  <div class="head clearfix">
+    <div class="layout-center-wrapper">
+      <nav class="head__breadcrumb">
+        <ul>
+          <li><a href="#">Главная</a></li>
+          <li><a href="#">Логотипы</a></li>
+          <li><a href="#">Новость</a></li>
+        </ul>
+      </nav>
+      <div class="head__registration"><a href="#" class="head__registration--enter">Регистрация/ Вход</a></div>
     </div>
   </div>
-  <div class="container">
-    <div class="banner text-center"><a href="#"><img src="../img/banner-up.jpg" alt=""/></a></div>
-    <div class="logo text-center"><a href="#"><img src="../img/logo.png" alt=""/></a></div>
-    <form name="search" action="#" method="get" class="form-inline form-search">
-      <div class="text-center">
-        <div class="input-group">
-          <label for="searchInput" class="sr-only"></label>
-          <input id="searchInput" type="text" name="search" placeholder="Search" class="form-control"/>
-          <div class="input-group-btn">
-            <button class="btn btn-primary"></button>
-          </div>
-        </div>
-        <p class="search__text">Уже добавлено <span>109 примеров</span> шаблонных и украденных сайтов и логотипов</p>
-      </div>
+  <div class="layout-center-wrapper">
+    <div class="header__banner"><a href="#"><img src="../img/banner-up.jpg" alt=""/></a></div>
+    <div class="header__logo"><a href="#"><img src="../img/logo.png" alt=""/></a></div>
+    <form name="search" action="#" method="get" class="form__search">
+      <fieldset class="form__search-layout">
+        <input type="text" name="search" placeholder="Поиск" class="form__search-field"/>
+        <button class="btn form__search-btn"></button>
+      </fieldset>
+      <p class="form__search-text">Уже добавлено <span>109 примеров</span> шаблонных и украденных сайтов и логотипов</p>
     </form>
-    <nav class="navbar navbar-default">
-      <ul class="nav navbar-nav">
-        <li><a href="#" class="top-menu__site">Сайты</a></li>
-        <li><a href="#" class="top-menu__logo">Логотипы</a></li>
-        <li><a href="#" class="top-menu__more">Прочий хлам</a></li>
-        <li><a href="#" class="top-menu__new">Новенькое</a></li>
-        <li><a href="#" class="top-menu__add">Добавить</a></li>
+    <nav class="top-menu">
+      <ul>
+        <li><a href="#">
+            <div class="top-menu__img"><img src="../img/icon-site.png"/></div>Сайты</a></li>
+        <li><a href="#">
+            <div class="top-menu__img"><img src="../img/icon-logo.png"/></div>Логотипы</a></li>
+        <li><a href="#">
+            <div class="top-menu__img"><img src="../img/icon-more.png"/></div>Прочий хлам</a></li>
+        <li><a href="#">
+            <div class="top-menu__img"><img src="../img/icon-new.png"/></div>Новенькое</a></li>
+        <li><a href="#">
+            <div class="top-menu__img"><img src="../img/icon-add.png"/></div>Добавить</a></li>
       </ul>
     </nav>
   </div>

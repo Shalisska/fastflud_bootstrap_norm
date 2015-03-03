@@ -10,91 +10,87 @@
     <script src="../js/jquery-1.11.2.min.js"></script>
   </head>
   <body>
-    <header>
-      <div class="head">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-9">
-              <ul class="breadcrumb">
-                <li><a href="#">Главная</a></li>
-                <li><a href="#">Логотипы</a></li>
-                <li><a href="#">Новость</a></li>
-              </ul>
-            </div>
-            <div class="col-md-3 text-right"><a href="#">Регистрация/ Вход</a></div>
-          </div>
+    <header class="header">
+      <div class="head clearfix">
+        <div class="layout-center-wrapper">
+          <nav class="head__breadcrumb">
+            <ul>
+              <li><a href="#">Главная</a></li>
+              <li><a href="#">Логотипы</a></li>
+              <li><a href="#">Новость</a></li>
+            </ul>
+          </nav>
+          <div class="head__registration"><a href="#" class="head__registration--enter">Регистрация/ Вход</a></div>
         </div>
       </div>
-      <div class="container">
-        <div class="banner text-center"><a href="#"><img src="../img/banner-up.jpg" alt=""></a></div>
-        <div class="logo text-center"><a href="#"><img src="../img/logo.png" alt=""></a></div>
-        <form name="search" action="#" method="get" class="form-inline form-search">
-          <div class="text-center">
-            <div class="input-group">
-              <label for="searchInput" class="sr-only"></label>
-              <input id="searchInput" type="text" name="search" placeholder="Search" class="form-control">
-              <div class="input-group-btn">
-                <button class="btn btn-primary"></button>
-              </div>
-            </div>
-            <p class="search__text">Уже добавлено <span>109 примеров</span> шаблонных и украденных сайтов и логотипов</p>
-          </div>
+      <div class="layout-center-wrapper">
+        <div class="header__banner"><a href="#"><img src="../img/banner-up.jpg" alt=""></a></div>
+        <div class="header__logo"><a href="#"><img src="../img/logo.png" alt=""></a></div>
+        <form name="search" action="#" method="get" class="form__search">
+          <fieldset class="form__search-layout">
+            <input type="text" name="search" placeholder="Поиск" class="form__search-field">
+            <button class="btn form__search-btn"></button>
+          </fieldset>
+          <p class="form__search-text">Уже добавлено <span>109 примеров</span> шаблонных и украденных сайтов и логотипов</p>
         </form>
-        <nav class="navbar navbar-default">
-          <ul class="nav navbar-nav">
-            <li><a href="#" class="top-menu__site">Сайты</a></li>
-            <li><a href="#" class="top-menu__logo">Логотипы</a></li>
-            <li><a href="#" class="top-menu__more">Прочий хлам</a></li>
-            <li><a href="#" class="top-menu__new">Новенькое</a></li>
-            <li><a href="#" class="top-menu__add">Добавить</a></li>
+        <nav class="top-menu">
+          <ul>
+            <li><a href="#">
+                <div class="top-menu__img"><img src="../img/icon-site.png"></div>Сайты</a></li>
+            <li><a href="#">
+                <div class="top-menu__img"><img src="../img/icon-logo.png"></div>Логотипы</a></li>
+            <li><a href="#">
+                <div class="top-menu__img"><img src="../img/icon-more.png"></div>Прочий хлам</a></li>
+            <li><a href="#">
+                <div class="top-menu__img"><img src="../img/icon-new.png"></div>Новенькое</a></li>
+            <li><a href="#">
+                <div class="top-menu__img"><img src="../img/icon-add.png"></div>Добавить</a></li>
           </ul>
         </nav>
       </div>
     </header>
-    <main class="container">
-      <div class="row">
-        <div class="col-md-9">
-          <div class="content">
-            <div class="row">
-              <div class="col-md-4 content__item">gghjkkk</div>
-              <div class="col-md-4 content__item">gghjkkk</div>
-              <div class="col-md-4 content__item">gghjkkk</div>
-            </div>
-            <div class="row">
-              <div class="col-md-4 content__item">gghjkkk</div>
-              <div class="col-md-4 content__item">gghjkkk</div>
-              <div class="col-md-4 content__item">gghjkkk</div>
-            </div>
-            <div class="row">
-              <div class="col-md-4 content__item">gghjkkk</div>
-              <div class="col-md-4 content__item">gghjkkk</div>
-              <div class="col-md-4 content__item">gghjkkk</div>
-            </div>
-            <div class="row">
-              <div class="col-md-12 content__item--big">gghjkkk</div>
-            </div>
-            <div class="row">
-              <div class="col-md-4 content__item">gghjkkk</div>
-              <div class="col-md-4 content__item">gghjkkk</div>
-              <div class="col-md-4 content__item">gghjkkk</div>
-            </div><a href="#" class="content__next">fastflud...</a>
+    <main class="layout-center-wrapper clearfix">
+      <div class="main">
+        <div class="content">
+          <div class="content__row clearfix">
+            <div class="content__item"><img src="../img/content__item.png"></div>
+            <div class="content__item"><img src="../img/content__item.png"></div>
+            <div class="content__item"><img src="../img/content__item.png"></div>
           </div>
+          <div class="content__row clearfix">
+            <div class="content__item"><img src="../img/content__item.png"></div>
+            <div class="content__item"><img src="../img/content__item.png"></div>
+            <div class="content__item"><img src="../img/content__item.png"></div>
+          </div>
+          <div class="content__row clearfix">
+            <div class="content__item"><img src="../img/content__item.png"></div>
+            <div class="content__item"><img src="../img/content__item.png"></div>
+            <div class="content__item"><img src="../img/content__item.png"></div>
+          </div>
+          <div class="content__row clearfix">
+            <div class="content__item content__item--big"><img src="../img/content__item--big.png"></div>
+          </div>
+          <div class="content__row clearfix">
+            <div class="content__item"><img src="../img/content__item.png"></div>
+            <div class="content__item"><img src="../img/content__item.png"></div>
+            <div class="content__item"><img src="../img/content__item.png"></div>
+          </div><a href="#" class="content__next">fastflud...</a>
         </div>
-        <div class="col-md-3">
-          <div class="sidebar__box sidebar__box--phone">
-            <p class="sidebar__title sidebar__title--phone">Акция</p>
-            <p class="sidebar__text sidebar__text--phone">Получи смартфон</p><a class="sidebar__present--phone"><img src="../img/phone1.png" alt="">
-              <p>или</p><img src="../img/phone2.png" alt=""></a>
-          </div>
-          <div class="sidebar__box sidebar__box--oscar">
-            <p class="sidebar__title sidebar__title--oscar">Премия &#171;Худший шаблон&#187;</p>
-            <p class="sidebar__text sidebar__text--oscar">Премия &#171;Худший шаблон&#187; выдается ежемесячно и позорит весь интернет (кроме лучшей его части — сайтов с индивидуальным дизаном). Получить премию может любой сайт (даже без заявки с его стороны). Победитель выбирается администрацией портала &#171;Fast Flud&#187; посетители также могут предложить своего кандидата.</p><a href="#" class="sidebar__btn--oscar">Предложить</a>
-          </div>
-          <div class="sidebar__box sidebar__box--food">
-            <p class="sidebar__title sidebar__title--food">Ноябрь: &#171;Пробирка-Фуд&#187;</p><img src="../img/steak-house.jpg" alt=""><a href="#" class="sidebar__link--food">октябрь, сентябрь, август...&#187;</a>
-          </div>
-          <div class="sidebar__box sidebar__box--blank"><img src="../img/banner-right.jpg"></div>
+      </div>
+      <div class="sidebar">
+        <div class="sidebar__box sidebar__box--phone">
+          <p class="sidebar__title sidebar__title--phone">Акция</p>
+          <p class="sidebar__text sidebar__text--phone">Получи смартфон</p><a class="sidebar__present--phone"><img src="../img/phone1.png" alt="">
+            <p>или</p><img src="../img/phone2.png" alt=""></a>
         </div>
+        <div class="sidebar__box sidebar__box--oscar">
+          <p class="sidebar__title sidebar__title--oscar">Премия &#171;Худший шаблон&#187;</p>
+          <p class="sidebar__text sidebar__text--oscar">Премия &#171;Худший шаблон&#187; выдается ежемесячно и позорит весь интернет (кроме лучшей его части — сайтов с индивидуальным дизаном). Получить премию может любой сайт (даже без заявки с его стороны). Победитель выбирается администрацией портала &#171;Fast Flud&#187; посетители также могут предложить своего кандидата.</p><a href="#" class="sidebar__btn--oscar">Предложить</a>
+        </div>
+        <div class="sidebar__box sidebar__box--food">
+          <p class="sidebar__title sidebar__title--food">Ноябрь: &#171;Пробирка-Фуд&#187;</p><img src="../img/steak-house.jpg" alt=""><a href="#" class="sidebar__link--food">октябрь, сентябрь, август...&#187;</a>
+        </div>
+        <div class="sidebar__box sidebar__box--blank"><img src="../img/banner-right.jpg"></div>
       </div>
     </main>
     <footer class="container">

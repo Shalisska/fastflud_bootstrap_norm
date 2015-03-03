@@ -1,24 +1,167 @@
-@import url("bootstrap/bootstrap.less");
+//@import url("bootstrap/bootstrap.less");
 @import url("variables.less");
-//@import url("mixin.less");
-//@import url("main.less");
+@import url("mixin.less");
+@import url("main.less");
 
 
-.container {    
-    @media (min-width: 1000px) {
-    width: 1000px;
-  }
+
+
+
+
+.header {
+    .head {
+        margin-bottom: 10px;
+        padding: 7px 0;
+        background: @header-bg;
+        
+        &__breadcrumb {
+            float: left;
+            ul {
+                .menu();
+                font-size: 0;
+                
+                li {                    
+                    margin-right: 3px;
+                    color: @breadcrumb-color;
+                    border-right: 1px solid @breadcrumb-color;
+                    
+                    &:last-child {
+                        color: white;
+                        border: none;
+                    }
+                    
+                    &:not(:last-child) a:hover {
+                        color: darken(@breadcrumb-color, 30%);
+                    }
+                    
+                    a {
+                        margin-right: 3px;
+                        font-size: @breadcrumb-size;
+                        text-transform: lowercase;
+                    }
+                }
+            }
+        }
+        
+        &__registration {
+            float: right;
+            
+            a {
+                color: white;
+                text-decoration: none;
+                
+                &:hover {
+                    text-decoration: underline;
+                }
+             }    
+        }
+    }
+    
+    &__banner {
+        margin-bottom: 35px;
+        text-align: center;
+    }
+    
+    &__logo {
+        margin-bottom: 25px;
+        text-align: center;
+    }
+    
+    .form__search {
+        margin-bottom: 55px;
+        
+        &-layout {
+            position: relative;
+            width: 63%;
+            margin: 0 auto 5px;
+            padding: 0;
+            border: none;
+        }
+        
+        &-field {
+            box-sizing: border-box;
+            width: 100%;
+            padding: 5px 30px 5px 5px;
+            font-size: @footer-menu;
+            border: 1px solid @sidebar-color;
+        }
+        
+        &-btn {
+            position: absolute;
+            right: 5px;
+            top: 50%;
+            margin-top: -14px;
+            width: 28px;
+            height: 28px;
+            background: url("../img/icon-search.png") no-repeat center center;
+            border: none;
+            outline: none;
+        }
+        
+        &-text {
+            margin: 0;
+            text-align: center;
+            font-family: @font-family--search;
+            color: @search-text;
+            font-weight: bold;
+            font-style: italic;
+            
+            span {
+                color: @search-text--main;
+            }
+        }
+    }
 }
 
-.head {
-    background: red;
+.top-menu {
+    ul {
+        .menu();
+        text-align: center;
+        font-size: 0;
+        
+        li {
+            width: 20%;
+            
+            a{
+                color: @color-main--grand;
+                font-size: @main-menu-size;
+                font-weight: bold;
+                text-transform: uppercase;
+            }
+        }
+    }
+}
+.main {
+    float: left;
+    width: 67%;
 }
 
-.central {
-    margin-left: auto;
-    margin-right: auto;
+.sidebar {
+    float: right;
+    width: 30%;
 }
 
-.navbar-nav {
-    float: none;
+.content {
+    &__row {
+        &:last-of-type {
+            margin-bottom: 75px;
+        }
+    }
+    
+    &__item {
+        float: left;
+        width: (100% / 3);
+        margin-bottom: 25px;
+        text-align: center;
+        
+        &--big {
+            width: 100%;
+        }
+    }
+    
+    &__next {
+        .reset-a();
+        font-size: @text-size--more;
+        font-weight: bold;
+    }
 }
