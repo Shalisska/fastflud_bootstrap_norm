@@ -5,11 +5,13 @@ html(lang="ru")
     body
         include header
         
-        main.layout-center-wrapper.row-fluid
-            .span8
-                block content
-            .span4
-                include sidebar
+        main.container
+            .row
+                .col-md-9
+                    block content
+                .col-md-3
+                    include sidebar
+        include footer
         
         
         
@@ -19,5 +21,4 @@ html(lang="ru")
         
         
         
-        
-        script(src="bootstrap.min.js")
+        script(src="../js/bootstrap.min.js")
