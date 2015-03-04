@@ -5,12 +5,14 @@ html(lang="ru")
     body
         include header
         
-        main.layout-center-wrapper.clearfix
-            .main
-                block content
-            .sidebar
-                include sidebar
-        include footer
+        .container
+            main.row
+                .main.col-md-8
+                    block content                    
+                .sidebar.col-md-4
+                    include sidebar
+                .row: a.next(href="#") fastflud...
+            include footer
         
         
         

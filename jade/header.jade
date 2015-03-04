@@ -2,28 +2,34 @@
 -var topMenu = ["Сайты", "Логотипы", "Прочий хлам", "Новенькое", "Добавить"]
 
 header.header
-    .head.clearfix
-        .layout-center-wrapper
-            nav.head__breadcrumb
-                ul
-                    each item in breadCrumbs
-                        li: a(href="#") #{item}
+    .head
+        .container
+            .row
+                nav.head__breadcrumb.col-md-8
+                    ul
+                        each item in breadCrumbs
+                            li: a(href="#") #{item}
 
-            .head__registration
-                a.head__registration--enter(href="#") Регистрация/ Вход
-    .layout-center-wrapper
-        .header__banner: a(href="#"): img(src="../img/banner-up.jpg" alt="")
-        .header__logo: a(href="#"): img(src="../img/logo.png" alt="")
+                .head__registration.col-md-4
+                    a.head__registration--reg(href="#") Регистрация 
+                    | / 
+                    a.head__registration--enter(href="#") Вход
+                    
+    .container
+        .header__banner.row: a(href="#"): img(src="../img/banner-up.jpg" alt="")
+        .header__logo.row: a(href="#"): img(src="../img/logo.png" alt="")
     
-        form.form__search(name="search" action="#" method="get")
-            fieldset.form__search-layout
-                input.form__search-field(type="text" name="search" placeholder="Поиск")
-                button.btn.form__search-btn
-            p.form__search-text Уже добавлено 
-                span 109 примеров
-                |  шаблонных и украденных сайтов и логотипов
+        form.form__search.row(name="search" action="#" method="get")
+            .col-md-8.col-md-offset-2
+                fieldset.form__search-layout.row
+                    input.form__search-field.col-md-12(type="text" name="search" placeholder="Поиск")
+                    button.btn.form__search-btn
+                .row
+                    p.form__search-text.col-md-12 Уже добавлено 
+                        span 109 примеров
+                        |  шаблонных и украденных сайтов и логотипов
 
-        nav.top-menu
+        nav.top-menu.row
             ul
                 li: a(href="#")
                     .top-menu__img: img(src="../img/icon-site.png")

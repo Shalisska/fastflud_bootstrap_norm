@@ -1,16 +1,15 @@
-footer.container
-    .row
-        .col-md-5
-            nav.navbar.navbar-default.footer__menu
-                ul.nav.navbar-nav
-                    li: a.links__vk(href="#")
-                    li: a.links__fb(href="#")
-                    li: a.links__twitter(href="#")
-                    li: a.links__odnoklassniki(href="#")
-                    li: a.links__google(href="#")
-            .footer__submenu
-                a(href="#") О проекте
-                a(href="#") Размещение рекламы
-        .col-md-1.pull-right.footer__copyright
-            p.footer__copyright-text
-            a.footer__copyright-logo(href="#"): img(src="../img/logo-artbrother.png" alt="")
+footer.row.footer
+    .col-md-5
+        nav.footer__menu
+            ul
+                li: a.footer__menu--vk(href="#")
+                li: a.footer__menu--fb(href="#")
+                li: a.footer__menu--twitter(href="#")
+                li: a.footer__menu--odnoklassniki(href="#")
+                li: a.footer__menu--google(href="#")
+        .footer__submenu
+            a(href="#") О проекте
+            a(href="#") Размещение рекламы
+    .col-md-2.col-md-offset-5.footer__copyright
+        p.footer__copyright-text Создание сайта:
+        a.footer__copyright-logo(href="#"): img(src="../img/logo-artbrother.png" alt="")

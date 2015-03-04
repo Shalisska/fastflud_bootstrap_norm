@@ -6,34 +6,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--link(href="../css/bootstrap.min.css" rel="stylesheet")-->
     <!--link(href="../css/bootstrap-responsive.min.css" rel="stylesheet")-->
+    <link href="../css/bootstrap.css" rel="stylesheet">
     <link href="../css/style.css" rel="stylesheet">
     <script src="../js/jquery-1.11.2.min.js"></script>
   </head>
   <body>
     <header class="header">
-      <div class="head clearfix">
-        <div class="layout-center-wrapper">
-          <nav class="head__breadcrumb">
-            <ul>
-              <li><a href="#">Главная</a></li>
-              <li><a href="#">Логотипы</a></li>
-              <li><a href="#">Новость</a></li>
-            </ul>
-          </nav>
-          <div class="head__registration"><a href="#" class="head__registration--enter">Регистрация/ Вход</a></div>
+      <div class="head">
+        <div class="container">
+          <div class="row">
+            <nav class="head__breadcrumb col-md-8">
+              <ul>
+                <li><a href="#">Главная</a></li>
+                <li><a href="#">Логотипы</a></li>
+                <li><a href="#">Новость</a></li>
+              </ul>
+            </nav>
+            <div class="head__registration col-md-4"><a href="#" class="head__registration--reg">Регистрация </a>/ <a href="#" class="head__registration--enter">Вход</a></div>
+          </div>
         </div>
       </div>
-      <div class="layout-center-wrapper">
-        <div class="header__banner"><a href="#"><img src="../img/banner-up.jpg" alt=""></a></div>
-        <div class="header__logo"><a href="#"><img src="../img/logo.png" alt=""></a></div>
-        <form name="search" action="#" method="get" class="form__search">
-          <fieldset class="form__search-layout">
-            <input type="text" name="search" placeholder="Поиск" class="form__search-field">
-            <button class="btn form__search-btn"></button>
-          </fieldset>
-          <p class="form__search-text">Уже добавлено <span>109 примеров</span> шаблонных и украденных сайтов и логотипов</p>
+      <div class="container">
+        <div class="header__banner row"><a href="#"><img src="../img/banner-up.jpg" alt=""></a></div>
+        <div class="header__logo row"><a href="#"><img src="../img/logo.png" alt=""></a></div>
+        <form name="search" action="#" method="get" class="form__search row">
+          <div class="col-md-8 col-md-offset-2">
+            <fieldset class="form__search-layout row">
+              <input type="text" name="search" placeholder="Поиск" class="form__search-field col-md-12">
+              <button class="btn form__search-btn"></button>
+            </fieldset>
+            <div class="row">
+              <p class="form__search-text col-md-12">Уже добавлено <span>109 примеров</span> шаблонных и украденных сайтов и логотипов</p>
+            </div>
+          </div>
         </form>
-        <nav class="top-menu">
+        <nav class="top-menu row">
           <ul>
             <li><a href="#">
                 <div class="top-menu__img"><img src="../img/icon-site.png"></div>Сайты</a></li>
@@ -49,44 +56,45 @@
         </nav>
       </div>
     </header>
-    <main class="layout-center-wrapper clearfix">
-      <div class="main">
-      </div>
-      <div class="sidebar">
-        <div class="sidebar__box sidebar__box--phone">
-          <p class="sidebar__title sidebar__title--phone">Акция</p>
-          <p class="sidebar__text sidebar__text--phone">Получи смартфон</p><a class="sidebar__present--phone"><img src="../img/phone1.png" alt="">
-            <p>или</p><img src="../img/phone2.png" alt=""></a>
+    <div class="container">
+      <main class="row">
+        <div class="main col-md-8">
         </div>
-        <div class="sidebar__box sidebar__box--oscar">
-          <p class="sidebar__title sidebar__title--oscar">Премия &#171;Худший шаблон&#187;</p>
-          <p class="sidebar__text sidebar__text--oscar">Премия &#171;Худший шаблон&#187; выдается ежемесячно и позорит весь интернет (кроме лучшей его части — сайтов с индивидуальным дизаном). Получить премию может любой сайт (даже без заявки с его стороны). Победитель выбирается администрацией портала &#171;Fast Flud&#187; посетители также могут предложить своего кандидата.</p><a href="#" class="sidebar__btn--oscar">Предложить</a>
+        <div class="sidebar col-md-4"><a href="#" class="sidebar__box sidebar__phone">
+            <p class="sidebar__title sidebar__phone-title sidebar__phone-title--grand">Акция</p>
+            <p class="sidebar__title sidebar__phone-title">Получи смартфон</p>
+            <div class="sidebar__phone-present"><img src="../img/phone1.png" alt="">
+              <div class="sidebar__phone-present__else"><img src="../img/else.png" alt=""></div><img src="../img/phone2.png" alt="">
+            </div></a>
+          <div class="sidebar__box sidebar__oscar">
+            <p class="sidebar__title sidebar__oscar-title">Премия &#171;Худший шаблон&#187;</p>
+            <div class="sidebar__oscar-layout"><img src="../img/oscar.png" alt="" class="sidebar__oscar-img">
+              <p class="sidebar__text sidebar__oscar-text">Премия &#171;Худший шаблон&#187; выдается ежемесячно и позорит весь интернет (кроме лучшей его части — сайтов с индивидуальным дизаном). Получить премию может любой сайт (даже без заявки с его стороны). Победитель выбирается администрацией портала &#171;Fast Flud&#187; посетители</p>
+            </div><a href="#" class="sidebar__oscar-btn">Предложить</a>
+          </div><a href="#" class="sidebar__box sidebar__food">
+            <p class="sidebar__title sidebar__food-title">Ноябрь: &#171;Пробирка-Фуд&#187;</p><img src="../img/steak-house.jpg" alt="">
+            <p href="#" class="sidebar__food-text">октябрь, сентябрь, август...&#187;</p></a><a href="#" class="sidebar__box sidebar__blank"><img src="../img/banner-right.jpg"></a>
         </div>
-        <div class="sidebar__box sidebar__box--food">
-          <p class="sidebar__title sidebar__title--food">Ноябрь: &#171;Пробирка-Фуд&#187;</p><img src="../img/steak-house.jpg" alt=""><a href="#" class="sidebar__link--food">октябрь, сентябрь, август...&#187;</a>
-        </div>
-        <div class="sidebar__box sidebar__box--blank"><img src="../img/banner-right.jpg"></div>
-      </div>
-    </main>
-    <footer class="container">
-      <div class="row">
+        <div class="row"><a href="#" class="next">fastflud...</a></div>
+      </main>
+      <footer class="row footer">
         <div class="col-md-5">
-          <nav class="navbar navbar-default footer__menu">
-            <ul class="nav navbar-nav">
-              <li><a href="#" class="links__vk"></a></li>
-              <li><a href="#" class="links__fb"></a></li>
-              <li><a href="#" class="links__twitter"></a></li>
-              <li><a href="#" class="links__odnoklassniki"></a></li>
-              <li><a href="#" class="links__google"></a></li>
+          <nav class="footer__menu">
+            <ul>
+              <li><a href="#" class="footer__menu--vk"></a></li>
+              <li><a href="#" class="footer__menu--fb"></a></li>
+              <li><a href="#" class="footer__menu--twitter"></a></li>
+              <li><a href="#" class="footer__menu--odnoklassniki"></a></li>
+              <li><a href="#" class="footer__menu--google"></a></li>
             </ul>
           </nav>
           <div class="footer__submenu"><a href="#">О проекте</a><a href="#">Размещение рекламы</a></div>
         </div>
-        <div class="col-md-1 pull-right footer__copyright">
-          <p class="footer__copyright-text"></p><a href="#" class="footer__copyright-logo"><img src="../img/logo-artbrother.png" alt=""></a>
+        <div class="col-md-2 col-md-offset-5 footer__copyright">
+          <p class="footer__copyright-text">Создание сайта:</p><a href="#" class="footer__copyright-logo"><img src="../img/logo-artbrother.png" alt=""></a>
         </div>
-      </div>
-    </footer>
+      </footer>
+    </div>
     <script src="../js/bootstrap.min.js"></script>
   </body>
 </html>
