@@ -47,3 +47,55 @@
     text-align: center;
     border-radius: 3px;
 }
+
+.img-window (@height; @border; @vs-size; @vs-font; @vs-line) {
+    position: relative;
+    .clearfix();
+    height: @height;
+    border: @border solid #373635;
+    border-radius: 5px;
+
+    &:before {
+        content: "vs";
+        position: absolute;
+        width: @vs-size;
+        height: @vs-size;
+        top: 50%;
+        margin-top: -(@vs-size / 2);
+        left: 50%;
+        margin-left: -(@vs-size / 2);
+        background: @sidebar-bg;
+        border-radius: 50%;
+        font-family: @font-family--light;
+        font-size: @vs-font;
+        line-height: @vs-line;
+        z-index: 10;
+    }
+
+    &__part {
+        position: relative;
+        float: left;
+        width: 50%;
+        height: 100%;
+        overflow: hidden;
+
+        img {
+            width: 200%;
+            height: auto;
+        }
+
+        &:first-child {
+            border-right: (@border / 2) solid #373635;
+        }
+
+        &:last-child {
+            border-left: (@border / 2) solid #373635;
+
+            img {
+                position: absolute;
+                top: 0;
+                right: 0;
+            }
+        }
+    }
+}

@@ -86,7 +86,7 @@ module.exports = function (grunt) {
 			}
 		},
         jade: {
-			  temp: {
+			 temp: {
                   options: {
                       pretty: true
             },                  
@@ -95,6 +95,19 @@ module.exports = function (grunt) {
                       cwd: 'jade/',
                       src: ['*.jade'],
                       dest: 'html/',
+                      ext: '.html',
+                      extDot: 'last'
+                    }]
+                },
+            parts: {
+                  options: {
+                      pretty: true
+            },                  
+                    files: [{
+                      expand: true,
+                      cwd: 'jade/parts/',
+                      src: ['*.jade'],
+                      dest: 'html/parts',
                       ext: '.html',
                       extDot: 'last'
                     }]

@@ -1,4 +1,3 @@
-//@import url("bootstrap/bootstrap.less");
 @import url("variables.less");
 @import url("mixin.less");
 @import url("main.less");
@@ -148,12 +147,16 @@ main {
         &:hover {
             color: lighten(black, 30%);
         }
+        
+        &--smaller {
+            font-size: 45.87px;
+        }
     }
 }
 
-.main {
-    padding-top: 20px;
-}
+//.main {
+//    padding-top: 20px;
+//}
 
 .content {    
     .row {
@@ -164,10 +167,42 @@ main {
     
     &__item {
         margin-bottom: 35px;
+        padding: 0 15px;
         text-align: center;
         
+        .img-box {
+            .img-window(
+                @height: 115px;
+                @border: 2px;
+                @vs-size: 36px;
+                @vs-font: 27px;
+                @vs-line: 31px;
+            );
+                
+            &__title {
+                margin: 0;
+                padding: 0 2px;
+                line-height: 1.27;
+                font-weight: bold;
+                text-align: left;
+                word-wrap: break-word;
+            }
+        }
+        
         &--big {
-            
+            .img-box {
+                .img-window(
+                    @height: 370px;
+                    @border: 7px;
+                    @vs-size: 110px;
+                    @vs-font: 84px;
+                    @vs-line: 90px;
+                );
+                
+                &__title {
+                    font-size: @text-size--big;
+                }
+            }
         }
     }
 }
@@ -308,7 +343,6 @@ main {
 .footer {
     padding: 40px 20px;
     background: @header-bg;
-    margin-bottom: 150px;
     
     &__menu {
         margin-bottom: 40px;
@@ -361,6 +395,38 @@ main {
             font-family: @font-family--copyright;
             font-size: @copyright-size;
             color: #fff1ef;
+        }
+    }
+}
+
+.news {
+    margin-bottom: 55px;
+    font-family: @font-family--search;
+    
+    &__title {
+        margin-bottom: 10px;
+        font-size: 27px;
+        color: @color-main--grand;
+        font-weight: bold;
+        text-align: center;
+    }
+    
+    &__text {
+        margin-bottom: 35px;
+        text-align: justify;
+    }
+    
+    &__img-box {
+        height: 370px;
+        text-align: center;
+        border: 6px solid #373635;
+        border-radius: 5px;
+        margin-bottom: 35px;
+        overflow: hidden;
+        
+        img {
+            width: 100%;
+            height: auto;
         }
     }
 }

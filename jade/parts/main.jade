@@ -10,16 +10,11 @@ html(lang="ru")
                 .main.col-md-8
                     block content                    
                 .sidebar.col-md-4
-                    include sidebar
-                .row: a.next(href="#") fastflud...
-            include footer
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        script(src="../js/bootstrap.min.js")
+                    block sidebar
+                .row
+                    block next
+                    
+        include footer
+        .hidden_elem
+            include hidden_elem
+        include scripts
