@@ -1,6 +1,7 @@
 @import url("variables.less");
 @import url("mixin.less");
 @import url("main.less");
+@import url("form.less");
 
 
 
@@ -353,10 +354,7 @@ main {
                 margin-right: 9%;
                 
                 a {
-                    width: 35px;
-                    height: 35px;
-                    background-position: center center;
-                    background-repeat: no-repeat;
+                    .socials();
                 }
             }
         }
@@ -427,6 +425,154 @@ main {
         img {
             width: 100%;
             height: auto;
+        }
+    }
+}
+.comments {
+    padding: 10px;
+    background: @sidebar-bg;
+    border: 1px solid #d9d9d9;
+    
+    &__head {
+        margin-bottom: 10px;
+        font-size: 18px;
+        font-weight: bold;
+        text-transform: uppercase;
+        vertical-align: middle;
+        
+        &-title {
+            margin: 0;
+            color: @color-main--grand;
+            
+            &:before {
+                content: "";
+                display: inline-block;
+                position: relative;
+                width: 25px;
+                height: 25px;
+                top: 4px;
+                margin-right: 5px;
+                background: url("../img/icon-logo.png") no-repeat center center;
+                background-size: 100%;
+            }
+        }
+        
+        &-count {
+            margin: 0;
+            text-align: right;
+            color: @search-text;
+            
+            &:after {
+                content: "";
+                display: inline-block;
+                position: relative;
+                width: 19px;
+                height: 25px;
+                top: 6px;
+                margin-left: 5px;
+                background: url("../img/cloud-count.png") no-repeat center center;
+            }
+        }
+    }    
+    
+    &__write {
+        position: relative;
+        margin: 0 0 20px;;
+        padding-left: 2%;
+        display: inline-block;
+        font-size: 13px;
+        color: @search-text;
+        z-index: 10;
+        text-transform: lowercase;
+        
+        &:after {
+            content: "";
+            position: absolute;
+            width: 104%;
+            height: 34px;
+            top: -2px;
+            left: 0;
+            background: url("../img/cloud-comments.png") no-repeat center center;
+            background-size: 100%;
+            z-index: -1;
+        }
+    }
+    
+    &__reg {
+        float: right;
+        font-size: 13px;
+        color: @search-text;
+        text-decoration: underline;
+    }
+    
+    input[type="checkbox"] {
+        display: none;
+    }
+    
+    &__form {
+        .clearfix();
+        background: white;
+        border-radius: 5px;
+        
+        textarea {
+            width: 100%;
+            font-size: 13px;
+            font-style: italic;
+            border: none;
+            border-radius: 5px;
+        }
+        
+        input[type="submit"] {
+            font-size: 14px;
+            color: #eb2629;
+            text-transform: uppercase;
+            background: transparent;
+            border: none;
+        }
+    }
+    
+    &__more {
+        float: right;
+        
+        a {
+            .reset-a();
+            display: inline-block;
+            margin-right: 5px;
+            width: 19px;
+            height: 19px;
+            background-position: center center;
+            background-repeat: no-repeat;
+        }
+        
+        .smile {
+            background-image: url("../img/icon-smile.png");
+        }
+        
+        .file {
+            background-image: url("../img/icon-bracket.png");
+        }
+    }
+    
+    &-item {
+        font-size: 18px;
+        
+        &__img {
+            float: left;
+            margin-right: 5px;
+            width: 65px;
+            height: 56px;
+            background: url("../img/cloud-author.gif") no-repeat center center;
+            background-size: 100%;
+            text-align: center;
+            
+            img {
+                width: 94%;
+                margin-top: 6%;
+            }
+        }
+        
+        &__author {
+            display: inline-block;
         }
     }
 }

@@ -21,7 +21,7 @@
                 <li><a href="#">Новость</a></li>
               </ul>
             </nav>
-            <div class="head__registration col-md-4"><a href="#">Регистрация / Вход</a></div>
+            <div class="head__registration col-md-4"><a href="#registration" class="fancybox">Регистрация / Вход</a></div>
           </div>
         </div>
       </div>
@@ -90,12 +90,56 @@
             </div>
           </div>
         </div>
-        <div class="sidebar col-md-4"><a href="#" class="sidebar__box sidebar__blank"><img src="../img/banner-right.jpg"></a><a href="#" class="sidebar__box sidebar__phone">
-            <p class="sidebar__title sidebar__phone-title sidebar__phone-title--grand">Акция</p>
-            <p class="sidebar__title sidebar__phone-title">Получи смартфон</p>
-            <div class="sidebar__phone-present"><img src="../img/phone1.png" alt="">
-              <div class="sidebar__phone-present__else"><img src="../img/else.png" alt=""></div><img src="../img/phone2.png" alt="">
-            </div></a><a href="#" class="sidebar__box sidebar__blank"><img src="../img/banner-right.jpg"></a></div>
+        <div class="sidebar col-md-4">
+          <div class="comments">
+            <div class="row comments__head">
+              <div class="col-md-8">
+                <p class="comments__head-title">Комментарии:</p>
+              </div>
+              <div class="col-md-4">
+                <p class="comments__head-count">236</p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12">
+                <p class="comments__write">Оставить комментарий</p><a href="#registration" class="comments__reg fancybox">Регистрация/Вход</a>
+              </div>
+              <div class="col-md-12">
+                <form action="#" method="get" name="comments" class="comments__form">
+                  <textarea name="comment" placeholder="Я говорю.../" rows="5"></textarea>
+                  <input type="submit">
+                  <div class="comments__more"><a class="smile"></a><a class="file"></a></div>
+                </form>
+              </div>
+            </div>
+            <div class="comments-item">
+              <div class="comments-item__img"><img src="../img/site1.jpg" alt=""></div>
+              <div class="comments-item__head">
+                <p class="comments-item__author">Anonym</p>
+                <p class="comments-item__rang">Эксперт</p>
+              </div>
+              <p class="comments-item__text">Купи себе лесизаблудись в нем Купи себе лес и заблудись в немм Купи себе лес и заблудись в нем Купи себе лес и заблудись в нем Купи себе лес и заблудись в немКупи себе лес и заблудись в нем Купи себе лес и заблудись в нем</p>
+              <div class="comments-item__more"></div>
+              <input type="checkbox" id="answer">
+              <div class="col-md-7">
+                <label for="answer" class="comments__left">Ответить</label>
+              </div>
+              <div class="col-md-5 comments-item__counter">
+                <button href="#" class="comments-item__counter comments-item__counter--plus">+1</button>
+                <button href="#" class="comments-item__counter comments-item__counter--minus">-10</button>
+              </div>
+            </div>
+            <div class="row">   
+              <div class="col-md-12">
+                <form action="#" method="get" name="comments__answer" class="comments__form">
+                  <textarea name="comment" placeholder="Anonym, я говорю.../" rows="5"></textarea>
+                  <input type="submit">
+                  <div class="comments__more"><a class="smile"></a><a class="file"></a></div>
+                </form>
+              </div>
+            </div><a class="comments__all">Все комментарии</a>
+          </div>
+        </div>
         <div class="row"><a href="#" class="next next--smaller">Следующий FF-логотип...</a></div>
       </main>
     </div>
@@ -117,23 +161,49 @@
       </div>
     </footer>
     <div class="hidden_elem">
-      <form action="#" method="post" name="registration" class="form form--reg">
+      <form action="#" method="post" name="registration" id="registration" class="form form--reg">
+        <p class="form__title form__title--main">Регистрация/Вход</p>
         <fieldset class="form__enter">
-          <input type="text" name="login" placeholder="Логин" required>
-          <input type="text" name="pass" placeholder="Пароль" required>
+          <div class="form__input">
+            <input type="text" name="login" placeholder="Логин">
+            <input type="text" name="pass" placeholder="Пароль">
+          </div>
           <input type="submit" value="Войти"><a href="#" class="form__forget">Забыли пароль?</a>
         </fieldset>
         <fieldset class="form__socials">
+          <p class="form__title">Войти с помощью:</p>
           <ul>
-            <li><a href="#" class="footer__menu--vk"></a></li>
-            <li><a href="#" class="footer__menu--fb"></a></li>
-            <li><a href="#" class="footer__menu--twitter"></a></li>
-            <li><a href="#" class="footer__menu--odnoklassniki"></a></li>
-            <li><a href="#" class="footer__menu--google"></a></li>
+            <li><a href="#" class="form__socials--vk"></a></li>
+            <li><a href="#" class="form__socials--fb"></a></li>
+            <li><a href="#" class="form__socials--twitter"></a></li>
+            <li><a href="#" class="form__socials--odnoklassniki"></a></li>
+            <li><a href="#" class="form__socials--google"></a></li>
           </ul>
+        </fieldset>
+        <fieldset class="form__reg">
+          <p class="form__title">Регистрация в Fastflud:</p>
+          <div class="form__input">
+            <div class="form__required-l">
+              <input type="text" name="login" placeholder="E-mail"><span class="form__required"></span>
+            </div>
+            <div class="form__required-l">
+              <input type="text" name="login" placeholder="Логин"><span class="form__required"></span>
+            </div>
+            <div class="form__required-l">
+              <input type="text" name="login" placeholder="Пароль"><span class="form__required"></span>
+            </div>
+          </div>
+          <div class="form__input capcha-l">
+            <div class="capcha"></div>
+            <div class="form__required-l">
+              <input type="text" name="login" placeholder="Капча" required><span class="form__required"></span>
+            </div>
+          </div>
+          <input type="submit" value="Регистрация">
         </fieldset>
       </form>
     </div>
-    <script src="libs/fancybox/jquery.fancybox.pack.js"></script>
+    <script src="../libs/fancybox/jquery.fancybox.pack.js"></script>
+    <script src="../js/common.js"></script>
   </body>
 </html>
