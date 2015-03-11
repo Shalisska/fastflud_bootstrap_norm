@@ -16,6 +16,7 @@
         padding: 7px 0;
         background: @header-bg;
         
+        //хлебные крошки
         &__breadcrumb {            
             ul {
                 .menu();
@@ -44,6 +45,7 @@
             }
         }
         
+        //регистрация
         &__registration {
             text-align: right;
             color: white;
@@ -68,6 +70,7 @@
         text-align: center;
     }
     
+    //поиск
     .form__search {
         margin-bottom: 55px;
         
@@ -83,6 +86,7 @@
             padding: 5px 30px 5px 5px;
             font-size: @footer-menu;
             border: 1px solid @sidebar-color;
+            outline: none;
         }
         
         &-btn {
@@ -112,6 +116,7 @@
     }
 }
 
+//верхнее меню
 .top-menu {
     ul {
         .menu();
@@ -122,10 +127,41 @@
             width: 20%;
             
             a{
-                color: @color-main--grand;
+                color: #666565;
                 font-size: @main-menu-size;
                 font-weight: bold;
                 text-transform: uppercase;
+                
+                .top-menu__img {
+                    img {
+                        margin: 0 auto;
+                        
+                        &:first-child {
+                            display: none;                        
+                        }
+
+                        &:last-child {
+                            display: block;
+                        }
+                    }
+                }
+                
+                &:hover,
+                &.active {
+                    color: @color-main--grand;
+                    
+                    .top-menu__img {
+                        img {
+                            &:first-child {
+                                display: block;                        
+                            }
+
+                            &:last-child {
+                                display: none;
+                            }
+                        }
+                    }
+                }
             }
         }
     }
@@ -135,9 +171,10 @@ main {
     position: relative;
     margin-bottom: 20px;
     
+    //следующий контент
     .next {
         position: absolute;
-        left: 0px;
+        left: 15px;
         bottom: -13px;
         .reset-a();
         font-size: @text-size--more;
@@ -161,6 +198,7 @@ main {
 
 .content {    
     .row {
+        //отступ для последней строки с контентом
         &:last-of-type {
             margin-bottom: 100px;
         }
@@ -171,6 +209,12 @@ main {
         padding: 0 15px;
         text-align: center;
         
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+        
+        //бокс с картинкой
         .img-box {
             .img-window(
                 @height: 115px;
@@ -189,7 +233,7 @@ main {
                 word-wrap: break-word;
             }
         }
-        
+        //для большой картинки
         &--big {
             .img-box {
                 .img-window(
@@ -208,7 +252,9 @@ main {
     }
 }
 
+//правая часть
 .sidebar {
+    //дефолтные стили для бокса
     &__box {
         .reset-a();
         position: relative;
@@ -251,6 +297,8 @@ main {
         text-align: justify;
     }
     
+    
+    //акция с телефонами
     &__phone {        
         &-title {
             margin-bottom: 20px;
@@ -292,6 +340,7 @@ main {
         }
     }
     
+    //премия Худший шаблон
     &__oscar {
         background: @sidebar-bg;
         text-align: center;
@@ -328,6 +377,7 @@ main {
         }
     }
     
+    //пробирка-фуд
     &__food {
         
         &-title {
@@ -341,10 +391,15 @@ main {
         }
     }
 }
+
+
+//футер
 .footer {
+    .clearfix();
     padding: 40px 20px;
     background: @header-bg;
     
+    //нижнее меню
     &__menu {
         margin-bottom: 40px;
         
@@ -376,6 +431,7 @@ main {
         }
     }
     
+    //подменю
     &__submenu {        
         a {
             margin-right: 23%;
@@ -385,6 +441,7 @@ main {
         }
     }
     
+    //копирайт
     &__copyright {
         text-align: center;
         
@@ -397,11 +454,13 @@ main {
     }
 }
 
+//страница с отдельной новостью
 .news {
     margin-bottom: 55px;
     font-family: @font-family--search;
     
     &__title {
+        margin-top: 0;
         margin-bottom: 10px;
         font-size: 27px;
         color: @color-main--grand;
@@ -414,6 +473,7 @@ main {
         text-align: justify;
     }
     
+    //бокс для картинки
     &__img-box {
         height: 370px;
         text-align: center;
@@ -428,11 +488,18 @@ main {
         }
     }
 }
+
+//боковые комменты
 .comments {
+    position: relative;
+    height: 90%;
+    margin-top: 10px;
+    margin-bottom: 100px;
     padding: 10px;
     background: @sidebar-bg;
     border: 1px solid #d9d9d9;
     
+    //осн заголовок
     &__head {
         margin-bottom: 10px;
         font-size: 18px;
@@ -440,10 +507,12 @@ main {
         text-transform: uppercase;
         vertical-align: middle;
         
+        //наименование
         &-title {
             margin: 0;
             color: @color-main--grand;
             
+            //звезда
             &:before {
                 content: "";
                 display: inline-block;
@@ -457,11 +526,13 @@ main {
             }
         }
         
+        //счетчик комментов        
         &-count {
             margin: 0;
             text-align: right;
             color: @search-text;
             
+            //облачко
             &:after {
                 content: "";
                 display: inline-block;
@@ -475,6 +546,7 @@ main {
         }
     }    
     
+    //оставить коммент
     &__write {
         position: relative;
         margin: 0 0 20px;;
@@ -485,6 +557,7 @@ main {
         z-index: 10;
         text-transform: lowercase;
         
+        //облачко
         &:after {
             content: "";
             position: absolute;
@@ -498,30 +571,67 @@ main {
         }
     }
     
+    //регистрация
     &__reg {
         float: right;
         font-size: 13px;
         color: @search-text;
         text-decoration: underline;
+        
+        &:hover,
+        &:active{
+            color: @search-text;
+        }
     }
     
+    //чекбоксы
     input[type="checkbox"] {
         display: none;
+        
+        //при нажатии выдвигается поле для коммента
+        &:checked~.comments__form--answer{
+            display: block;
+        }
     }
     
+    //поле для комментов
     &__form {
         .clearfix();
         background: white;
         border-radius: 5px;
         
+        //стили для ответа
+        &--answer {
+            display: none;
+            position: relative;
+            margin-left: 40px;
+            margin-top: 10px;
+            
+            //уголок
+            &:after {
+                content: "";
+                position: absolute;
+                top: -14px;
+                left: 40px;
+                width: 10px;
+                height: 14px;
+                background: linear-gradient(to right top, white 49%, transparent 51%);
+                transform: skewX(15deg);                
+            }
+        }
+        
+        //поле для ввода текста
         textarea {
             width: 100%;
+            max-width: 100%;
             font-size: 13px;
             font-style: italic;
             border: none;
             border-radius: 5px;
+            outline: none;
         }
         
+        //кнопка отправки
         input[type="submit"] {
             font-size: 14px;
             color: #eb2629;
@@ -531,6 +641,7 @@ main {
         }
     }
     
+    //доп кнопки
     &__more {
         float: right;
         
@@ -542,26 +653,37 @@ main {
             height: 19px;
             background-position: center center;
             background-repeat: no-repeat;
+            cursor: pointer;
         }
         
+        //смайлики
         .smile {
             background-image: url("../img/icon-smile.png");
         }
         
+        //файлы
         .file {
             background-image: url("../img/icon-bracket.png");
         }
     }
     
+    //блоки с комментами
     &-item {
+        margin-bottom: 25px;
         font-size: 18px;
         
+        //блок для написания коммента
+        &--main {
+            margin-bottom: 15px;
+        }
+                
+        //аватарка
         &__img {
             float: left;
             margin-right: 5px;
             width: 65px;
             height: 56px;
-            background: url("../img/cloud-author.gif") no-repeat center center;
+            background: url("../img/cloud-author.png") no-repeat center center;
             background-size: 100%;
             text-align: center;
             
@@ -569,10 +691,95 @@ main {
                 width: 94%;
                 margin-top: 6%;
             }
+        }        
+        
+        //заголовок
+        &__head {
+            .clearfix();
+            display: inline-block;
+            width: 75%;
+            font-style: italic;
+            font-family: @font-family--italic;
         }
         
+        //ник
         &__author {
+            float: left;
+            margin: 0;
+            color: #eb2629;
+        }
+        
+        //ранг
+        &__rang {
+            float: right;
+            margin: 0;
+            color: #666565;
+        }
+        
+        //коммент
+        &__text {
+            margin: 0;
+        }
+        
+        //доп функционал
+        &__more {
+            .clearfix();
+        }
+        
+        //ответить
+        &__answer {
+            font-size: 14px;
+            font-family: @font-family--italic;
+            color: #666565;
+            cursor: pointer;
+        }
+        
+        //счетчик
+        &__counter {
+            background: #666565;
+            font-family: @font-family--italic;
+            font-size: 12px;
+            line-height: 1.1;
+            color: white;
+            border: none;
+            
+            //оболочка для счетчика
+            &-l {
+                text-align: right;
+            }
+        }
+    }
+    
+    //все комменты
+    &__all {
+        position: absolute;
+        bottom: 15px;
+        font-size: 18px;
+        font-weight: bold;
+        text-transform: uppercase;
+        color: @color-main--grand;
+        cursor: pointer;
+        line-height: 2;
+        
+        //стрелочка
+        &:before {
+            content: "";
             display: inline-block;
+            width: 28px;
+            height: 39px;
+            vertical-align: bottom;
+            margin-right: 10px;
+            background: url("../img/icon_down.png") no-repeat center center;
+        }
+        
+        &:visited {
+            text-decoration: none;
+            color: @color-main--grand;
+        }
+        
+        &:hover,
+        &:active {
+            color: darken(@color-main--grand, 10%);
         }
     }
 }

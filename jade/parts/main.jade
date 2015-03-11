@@ -1,3 +1,4 @@
+//2 колонки
 doctype html
 html(lang="ru")
     head
@@ -7,14 +8,16 @@ html(lang="ru")
         
         .container
             main.row
+                //основной контент
                 .main.col-md-8
-                    block content                    
+                    block content
+                //правая колонка
                 .sidebar.col-md-4
                     block sidebar
                 .row
-                    block next
+                     block next
                     
-        include footer
+            include footer
         .hidden_elem
             include hidden_elem
         include scripts

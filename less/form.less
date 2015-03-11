@@ -24,6 +24,11 @@ body textarea:required:valid {
 	
 }
 
+.hidden_elem {
+    display: none;
+}
+
+//форма входа-регистрации
 .form {
     margin: 0 auto;
     max-width: 1000px;
@@ -36,6 +41,7 @@ body textarea:required:valid {
     & input {
         outline: none;
         
+        //текстовые поля
         &[type="text"] {
             padding: 1px 5px 2px;
             font-size: @header-size--2;
@@ -46,6 +52,7 @@ body textarea:required:valid {
             border: 1px solid @placeholder;
         }
         
+        //кнопка отправки
         &[type="submit"] {
             font-family: @font-family--bold;
             font-size: @header-size--2;
@@ -56,6 +63,7 @@ body textarea:required:valid {
         }
     }
     
+    //заголовки
     &__title{
         margin: 0;
         margin-bottom: 25px;
@@ -64,6 +72,7 @@ body textarea:required:valid {
         font-size: @header-size--2;
         color: @placeholder;
         
+        //основной заголовок
         &--main {
             margin-bottom: 0;
             padding: 11px 0 15px;
@@ -73,6 +82,7 @@ body textarea:required:valid {
         }
     }
     
+    //блоки
     fieldset {
         position: relative;
         margin: 0;
@@ -98,6 +108,7 @@ body textarea:required:valid {
         margin-bottom: 15px;
     }
     
+    //забыли пароль
     &__forget {
         display: block;
         margin-top: 10px;
@@ -109,6 +120,7 @@ body textarea:required:valid {
         text-decoration: underline;
     }
     
+    //блок входа
     &__enter {
         input[type="text"] {
             width: 22%;
@@ -120,6 +132,7 @@ body textarea:required:valid {
         }
     }
     
+    //регистрация через соц сети
     &__socials {
         ul {
             .menu();
@@ -155,6 +168,8 @@ body textarea:required:valid {
         }
     }
     
+    //регистрация
+    //звездочки для обязательных полей
     &__required {
         position: absolute;
         width: 19px;
@@ -162,6 +177,7 @@ body textarea:required:valid {
         top: -13px;
         background: url("../img/icon-required.png") no-repeat center center;
         
+        //обертка для звезд
         &-l {
             position: relative;
             display: inline-block;
@@ -179,6 +195,7 @@ body textarea:required:valid {
         }
     }
     
+    //капча
     .capcha {
         display: inline-block;
         width: 165px;
@@ -188,12 +205,14 @@ body textarea:required:valid {
         border: 3px solid @color-main--grand;
         vertical-align: middle;
         
+        //обертка для капчи
         &-l {
             margin: 45px auto 30px;
         }
     }
 }
 
+//стили для fancybox
 .fancybox {
     &-skin {
         background: transparent;

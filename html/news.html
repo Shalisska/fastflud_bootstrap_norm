@@ -1,4 +1,5 @@
-<!DOCTYPE html>
+
+<!--2 колонки--><!DOCTYPE html>
 <html lang="ru">
   <head>
     <title>fastflud</title>
@@ -8,12 +9,14 @@
     <link href="../libs/fancybox/jquery.fancybox.css" rel="stylesheet">
     <link href="../css/style.css" rel="stylesheet">
     <script src="../js/jquery-1.11.2.min.js"></script>
+    <script src="../js/auto-height.js"></script>
   </head>
   <body>
     <header class="header">
       <div class="head">
         <div class="container">
           <div class="row">
+            <!--хлебные крошки-->
             <nav class="head__breadcrumb col-md-8">
               <ul>
                 <li><a href="#">Главная</a></li>
@@ -21,13 +24,16 @@
                 <li><a href="#">Новость</a></li>
               </ul>
             </nav>
+            <!--регистрация-->
             <div class="head__registration col-md-4"><a href="#registration" class="fancybox">Регистрация / Вход</a></div>
           </div>
         </div>
       </div>
+      <!--баннеры-->
       <div class="container">
         <div class="header__banner row"><a href="#"><img src="../img/banner-up.jpg" alt=""></a></div>
         <div class="header__logo row"><a href="#"><img src="../img/logo.png" alt=""></a></div>
+        <!--поиск-->
         <form name="search" action="#" method="get" class="form__search row">
           <div class="col-md-8 col-md-offset-2">
             <fieldset class="form__search-layout row">
@@ -39,59 +45,72 @@
             </div>
           </div>
         </form>
+        <!--верхнее меню-->
         <nav class="top-menu row">
           <ul>
             <li><a href="#">
-                <div class="top-menu__img"><img src="../img/icon-site.png"></div>Сайты</a></li>
+                <div class="top-menu__img"><img src="../img/icon-site.png"><img src="../img/icon-site--off.png"></div>Сайты</a></li>
             <li><a href="#">
-                <div class="top-menu__img"><img src="../img/icon-logo.png"></div>Логотипы</a></li>
+                <div class="top-menu__img"><img src="../img/icon-logo.png"><img src="../img/icon-logo--off.png"></div>Логотипы</a></li>
             <li><a href="#">
-                <div class="top-menu__img"><img src="../img/icon-more.png"></div>Прочий хлам</a></li>
+                <div class="top-menu__img"><img src="../img/icon-more.png"><img src="../img/icon-more--off.png"></div>Прочий хлам</a></li>
             <li><a href="#">
-                <div class="top-menu__img"><img src="../img/icon-new.png"></div>Новенькое</a></li>
+                <div class="top-menu__img"><img src="../img/icon-new.png"><img src="../img/icon-new--off.png"></div>Новенькое</a></li>
             <li><a href="#">
-                <div class="top-menu__img"><img src="../img/icon-add.png"></div>Добавить</a></li>
+                <div class="top-menu__img"><img src="../img/icon-add.png"><img src="../img/icon-add--off.png"></div>Добавить</a></li>
           </ul>
         </nav>
       </div>
     </header>
     <div class="container">
       <main class="row">
+        <!--основной контент-->
         <div class="main col-md-8">
           <div class="content">
             <div class="news">
+              <!--заголовок-->
               <p class="news__title">Металлоперерабатывающий завод<br>vs<br>завод железобетонных блоков</p>
+              <!--новость-->
               <p class="news__text">Давайте улыбаться! Совсем скоро весна, зеленая травка, теплое солнышко, которое согреет вас и будет поднимать настроение каждый день! А пока с такой же целью посмотрите этот пост. Ведь есть так много поводов улыбнуться. давайте улыбаться! Совсем скоро весна, зеленая травка, теплое солнышко, которое согреет вас и будет поднимать настроение каждый день! А пока с такой же целью посмотрите этот пост. Ведь есть так много поводов улыбнуться. давайте улыбаться! Совсем скоро весна, зеленая травка, теплое солнышко, которое согреет вас и будет поднимать настроение каждый день! А пока с такой же целью посмотрите этот пост. Ведь есть так много поводов улыбнуться.</p>
+              <!--картинки-->
               <div class="news__img-box"><img src="../img/site1.jpg" alt="site1"></div>
               <div class="news__img-box"><img src="../img/site2.jpg" alt="site2"></div>
             </div>
+            <!--маленькие куски-->
             <div class="row">
               <div class="col-md-4 content__item">
-                <div class="img-box">
-                  <div class="img-box__part"><img src="../img/site1.jpg" alt="site1"></div>
-                  <div class="img-box__part"><img src="../img/site2.jpg" alt="site2"></div>
-                </div>
-                <p class="img-box__title">Металлоперерабатывающий завод vs завод железобетонных блоков</p>
+                <!--картинка-ссылка--><a href="#">
+                  <div class="img-box">
+                    <div class="img-box__part"><img src="../img/site1.jpg" alt="site1"></div>
+                    <div class="img-box__part"><img src="../img/site2.jpg" alt="site2"></div>
+                  </div>
+                  <p class="img-box__title">Металлоперерабатывающий завод vs завод железобетонных блоков</p></a>
               </div>
               <div class="col-md-4 content__item">
-                <div class="img-box">
-                  <div class="img-box__part"><img src="../img/site1.jpg" alt="site1"></div>
-                  <div class="img-box__part"><img src="../img/site2.jpg" alt="site2"></div>
-                </div>
-                <p class="img-box__title">Металлоперерабатывающий завод vs завод железобетонных блоков</p>
+                <!--картинка-ссылка--><a href="#">
+                  <div class="img-box">
+                    <div class="img-box__part"><img src="../img/site1.jpg" alt="site1"></div>
+                    <div class="img-box__part"><img src="../img/site2.jpg" alt="site2"></div>
+                  </div>
+                  <p class="img-box__title">Металлоперерабатывающий завод vs завод железобетонных блоков</p></a>
               </div>
               <div class="col-md-4 content__item">
-                <div class="img-box">
-                  <div class="img-box__part"><img src="../img/site1.jpg" alt="site1"></div>
-                  <div class="img-box__part"><img src="../img/site2.jpg" alt="site2"></div>
-                </div>
-                <p class="img-box__title">Металлоперерабатывающий завод vs завод железобетонных блоков</p>
+                <!--картинка-ссылка--><a href="#">
+                  <div class="img-box">
+                    <div class="img-box__part"><img src="../img/site1.jpg" alt="site1"></div>
+                    <div class="img-box__part"><img src="../img/site2.jpg" alt="site2"></div>
+                  </div>
+                  <p class="img-box__title">Металлоперерабатывающий завод vs завод железобетонных блоков</p></a>
               </div>
             </div>
           </div>
         </div>
+        <!--правая колонка-->
         <div class="sidebar col-md-4">
+          <!--сайдбар с комментами-->
+          <!--правая колонка с комментами-->
           <div class="comments">
+            <!--основной заголовок-->
             <div class="row comments__head">
               <div class="col-md-8">
                 <p class="comments__head-title">Комментарии:</p>
@@ -100,76 +119,132 @@
                 <p class="comments__head-count">236</p>
               </div>
             </div>
-            <div class="row">
+            <!--поле для комментария-->
+            <div class="row comments-item comments-item--main">
               <div class="col-md-12">
                 <p class="comments__write">Оставить комментарий</p><a href="#registration" class="comments__reg fancybox">Регистрация/Вход</a>
               </div>
+              <!--форма коммента-->
               <div class="col-md-12">
                 <form action="#" method="get" name="comments" class="comments__form">
                   <textarea name="comment" placeholder="Я говорю.../" rows="5"></textarea>
-                  <input type="submit">
+                  <input type="submit" value="Отправить">
+                  <!--доп. кнопки-->
                   <div class="comments__more"><a class="smile"></a><a class="file"></a></div>
                 </form>
               </div>
             </div>
+            <!--поле с комментом-->
             <div class="comments-item">
+              <div class="comments-item__img"><img src="../img/site1.jpg" alt=""></div>
+              <div class="comments-item__head">
+                <p class="comments-item__author">Anonym</p>
+                <p class="comments-item__rang">Эксперт        </p>
+              </div>
+              <p class="comments-item__text">Купи себе лесизаблудись в нем Купи себе лес и заблудись в немм Купи себе лес и заблудись в нем Купи себе лес и заблудись в нем</p>
+              <!--действия на коммент-->
+              <div class="row">
+                <div class="comments-item__more">
+                  <!--ответить-->
+                  <div class="col-md-7">
+                    <label for="answer" class="comments-item__answer">Ответить</label>
+                  </div>
+                  <!--оценить-->
+                  <div class="col-md-5 comments-item__counter-l">
+                    <button href="#" class="comments-item__counter comments-item__counter--plus">+1</button>
+                    <button href="#" class="comments-item__counter comments-item__counter--minus">-10</button>
+                  </div>
+                </div>
+              </div>
+              <!--скрытое поле для ответа на коммент-->
+              <div class="row">
+                <div class="col-md-12">               
+                  <input type="checkbox" id="answer">
+                  <form action="#" method="get" name="comments__answer" class="comments__form comments__form--answer">
+                    <textarea name="comment" placeholder="Anonym, я говорю.../" rows="5"></textarea>
+                    <input type="submit">
+                    <!--доп. кнопки-->
+                    <div class="comments__more"><a class="smile"></a><a class="file"></a></div>
+                  </form>
+                </div>
+              </div>
+            </div>
+            <!--поле с комментом-->
+            <div class="comments-item">       
               <div class="comments-item__img"><img src="../img/site1.jpg" alt=""></div>
               <div class="comments-item__head">
                 <p class="comments-item__author">Anonym</p>
                 <p class="comments-item__rang">Эксперт</p>
               </div>
-              <p class="comments-item__text">Купи себе лесизаблудись в нем Купи себе лес и заблудись в немм Купи себе лес и заблудись в нем Купи себе лес и заблудись в нем Купи себе лес и заблудись в немКупи себе лес и заблудись в нем Купи себе лес и заблудись в нем</p>
-              <div class="comments-item__more"></div>
-              <input type="checkbox" id="answer">
-              <div class="col-md-7">
-                <label for="answer" class="comments__left">Ответить</label>
+              <p class="comments-item__text">Купи себе лесизаблудись в нем Купи себе лес и заблудись в немм Купи себе лес и заблудись в нем Купи себе лес и заблудись в нем</p>
+              <!--действия на коммент-->
+              <div class="row">
+                <div class="comments-item__more">
+                  <!--ответить-->
+                  <div class="col-md-7">
+                    <label for="answer1" class="comments-item__answer">Ответить</label>
+                  </div>
+                  <!--оценить-->
+                  <div class="col-md-5 comments-item__counter-l">
+                    <button href="#" class="comments-item__counter comments-item__counter--plus">+1</button>
+                    <button href="#" class="comments-item__counter comments-item__counter--minus">-10</button>
+                  </div>
+                </div>
               </div>
-              <div class="col-md-5 comments-item__counter">
-                <button href="#" class="comments-item__counter comments-item__counter--plus">+1</button>
-                <button href="#" class="comments-item__counter comments-item__counter--minus">-10</button>
+              <!--скрытое поле для ответа на коммент-->
+              <div class="row">
+                <div class="col-md-12">               
+                  <input type="checkbox" id="answer1">
+                  <form action="#" method="get" name="comments__answer" class="comments__form comments__form--answer">
+                    <textarea name="comment" placeholder="Anonym, я говорю.../" rows="5"></textarea>
+                    <input type="submit">
+                    <!--доп. кнопки-->
+                    <div class="comments__more"><a class="smile"></a><a class="file"></a></div>
+                  </form>
+                </div>
               </div>
             </div>
-            <div class="row">   
-              <div class="col-md-12">
-                <form action="#" method="get" name="comments__answer" class="comments__form">
-                  <textarea name="comment" placeholder="Anonym, я говорю.../" rows="5"></textarea>
-                  <input type="submit">
-                  <div class="comments__more"><a class="smile"></a><a class="file"></a></div>
-                </form>
-              </div>
-            </div><a class="comments__all">Все комментарии</a>
+            <!--все комментарии (внизу сайдбара)--><a href="#" class="comments__all">Все комментарии</a>
           </div>
         </div>
         <div class="row"><a href="#" class="next next--smaller">Следующий FF-логотип...</a></div>
       </main>
+      <footer class="footer">
+        <div class="col-md-5">
+          <!--нижнее меню-->
+          <nav class="footer__menu">
+            <ul>
+              <li><a href="#" class="footer__menu--vk"></a></li>
+              <li><a href="#" class="footer__menu--fb"></a></li>
+              <li><a href="#" class="footer__menu--twitter"></a></li>
+              <li><a href="#" class="footer__menu--odnoklassniki"></a></li>
+              <li><a href="#" class="footer__menu--google"></a></li>
+            </ul>
+          </nav>
+          <!--подменю-->
+          <div class="footer__submenu"><a href="#">О проекте</a><a href="#">Размещение рекламы</a></div>
+        </div>
+        <!--копирайт-->
+        <div class="col-md-2 col-md-offset-5 footer__copyright">
+          <p class="footer__copyright-text">Создание сайта:</p><a href="#" class="footer__copyright-logo"><img src="../img/logo-artbrother.png" alt=""></a>
+        </div>
+      </footer>
     </div>
-    <footer class="row footer">
-      <div class="col-md-5">
-        <nav class="footer__menu">
-          <ul>
-            <li><a href="#" class="footer__menu--vk"></a></li>
-            <li><a href="#" class="footer__menu--fb"></a></li>
-            <li><a href="#" class="footer__menu--twitter"></a></li>
-            <li><a href="#" class="footer__menu--odnoklassniki"></a></li>
-            <li><a href="#" class="footer__menu--google"></a></li>
-          </ul>
-        </nav>
-        <div class="footer__submenu"><a href="#">О проекте</a><a href="#">Размещение рекламы</a></div>
-      </div>
-      <div class="col-md-2 col-md-offset-5 footer__copyright">
-        <p class="footer__copyright-text">Создание сайта:</p><a href="#" class="footer__copyright-logo"><img src="../img/logo-artbrother.png" alt=""></a>
-      </div>
-    </footer>
     <div class="hidden_elem">
+      <!--скрытые элементы на странице-->
+      <!--форма регистрации-->
       <form action="#" method="post" name="registration" id="registration" class="form form--reg">
         <p class="form__title form__title--main">Регистрация/Вход</p>
+        <!--поле входа-->
         <fieldset class="form__enter">
           <div class="form__input">
             <input type="text" name="login" placeholder="Логин">
             <input type="text" name="pass" placeholder="Пароль">
           </div>
-          <input type="submit" value="Войти"><a href="#" class="form__forget">Забыли пароль?</a>
+          <input type="submit" value="Войти">
+          <!--забыли пароль--><a href="#" class="form__forget">Забыли пароль?</a>
         </fieldset>
+        <!--регистрация через соц. сети-->
         <fieldset class="form__socials">
           <p class="form__title">Войти с помощью:</p>
           <ul>
@@ -180,6 +255,7 @@
             <li><a href="#" class="form__socials--google"></a></li>
           </ul>
         </fieldset>
+        <!--регистрация-->
         <fieldset class="form__reg">
           <p class="form__title">Регистрация в Fastflud:</p>
           <div class="form__input">
@@ -193,6 +269,7 @@
               <input type="text" name="login" placeholder="Пароль"><span class="form__required"></span>
             </div>
           </div>
+          <!--капча-->
           <div class="form__input capcha-l">
             <div class="capcha"></div>
             <div class="form__required-l">

@@ -5,18 +5,23 @@ header.header
     .head
         .container
             .row
+            
+                //хлебные крошки
                 nav.head__breadcrumb.col-md-8
                     ul
                         each item in breadCrumbs
                             li: a(href="#") #{item}
 
+                //регистрация
                 .head__registration.col-md-4
                     a(href="#registration" class="fancybox") Регистрация / Вход
                     
+    //баннеры
     .container
         .header__banner.row: a(href="#"): img(src="../img/banner-up.jpg" alt="")
         .header__logo.row: a(href="#"): img(src="../img/logo.png" alt="")
     
+        //поиск
         form.form__search.row(name="search" action="#" method="get")
             .col-md-8.col-md-offset-2
                 fieldset.form__search-layout.row
@@ -27,21 +32,32 @@ header.header
                         span 109 примеров
                         |  шаблонных и украденных сайтов и логотипов
 
+        //верхнее меню
         nav.top-menu.row
             ul
                 li: a(href="#")
-                    .top-menu__img: img(src="../img/icon-site.png")
+                    .top-menu__img
+                        img(src="../img/icon-site.png")
+                        img(src="../img/icon-site--off.png")
                     | Сайты
                 li: a(href="#")
-                    .top-menu__img: img(src="../img/icon-logo.png")
+                    .top-menu__img
+                        img(src="../img/icon-logo.png")
+                        img(src="../img/icon-logo--off.png")
                     | Логотипы
                 li: a(href="#")
-                    .top-menu__img: img(src="../img/icon-more.png")
+                    .top-menu__img
+                        img(src="../img/icon-more.png")
+                        img(src="../img/icon-more--off.png")
                     | Прочий хлам
                 li: a(href="#")
-                    .top-menu__img: img(src="../img/icon-new.png")
+                    .top-menu__img
+                        img(src="../img/icon-new.png")
+                        img(src="../img/icon-new--off.png")
                     | Новенькое
                 li: a(href="#")
-                    .top-menu__img: img(src="../img/icon-add.png")
+                    .top-menu__img
+                        img(src="../img/icon-add.png")
+                        img(src="../img/icon-add--off.png")
                     | Добавить
                 
