@@ -63,7 +63,7 @@ body {
 .form input {
   outline: none;
 }
-.form input[type="text"] {
+.form input:not([type="submit"]) {
   padding: 1px 5px 2px;
   font-size: 24px;
   text-transform: lowercase;

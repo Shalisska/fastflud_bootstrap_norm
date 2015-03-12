@@ -6,7 +6,7 @@ form.form.form--reg(action="#" method="post" name="registration" id="registratio
     fieldset.form__enter
         .form__input
             input(type="text" name="login" placeholder="Логин")
-            input(type="text" name="pass" placeholder="Пароль")
+            input(type="password" name="pass" placeholder="Пароль")
         input(type="submit" value="Войти")
         //забыли пароль
         a.form__forget(href="#") Забыли пароль?
@@ -26,19 +26,19 @@ form.form.form--reg(action="#" method="post" name="registration" id="registratio
         p.form__title Регистрация в Fastflud:
         .form__input
             .form__required-l
-                input(type="text" name="login" placeholder="E-mail")
+                input(type="email" name="email" placeholder="E-mail")
                 span.form__required
             .form__required-l
                 input(type="text" name="login" placeholder="Логин")
                 span.form__required
             .form__required-l
-                input(type="text" name="login" placeholder="Пароль")
+                input(type="password" name="pass" placeholder="Пароль")
                 span.form__required
         //капча
         .form__input.capcha-l
             .capcha
             .form__required-l
-                input(type="text" name="login" placeholder="Капча" required)
+                input(type="text" name="capcha" placeholder="Капча" required)
                 span.form__required
         
         input(type="submit" value="Регистрация")

@@ -42,7 +42,7 @@ body textarea:required:valid {
         outline: none;
         
         //текстовые поля
-        &[type="text"] {
+        &:not([type="submit"]) {
             padding: 1px 5px 2px;
             font-size: @header-size--2;
             text-transform: lowercase;
