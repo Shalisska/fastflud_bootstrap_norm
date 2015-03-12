@@ -160,6 +160,10 @@
                                 display: none;
                             }
                         }
+                        
+                        .date {
+                            background: @color-main--grand;
+                        }
                     }
                 }
             }
@@ -742,6 +746,7 @@ main {
             line-height: 1.1;
             color: white;
             border: none;
+            outline: none;
             
             //оболочка для счетчика
             &-l {
@@ -782,4 +787,40 @@ main {
             color: darken(@color-main--grand, 10%);
         }
     }
+}
+
+.date {
+    margin: 0 auto;
+    width: 80px;
+    height: 69px;
+    background: #666565;
+    border-radius: 10px;
+    
+    p {
+        margin: 0;
+        font-family: @font-family--bold;
+        color: white;
+        line-height: 0.9;
+        text-transform: lowercase;
+    }
+    
+    &__day {
+        font-size: 56.41px;
+    }
+    
+    &__month {
+        font-size: 15px;
+    }
+}
+
+.scroll_top {
+    .reset-a();
+    position: fixed;
+    right: 50px;
+    top: 50%;
+    margin-top: -50px;
+    width: 50px;
+    height: 100px;
+    background: url("../img/icon_up.png") no-repeat center center;
+    background-size: 100%;
 }

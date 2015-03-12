@@ -356,6 +356,10 @@ body {
 .top-menu ul li a.active .top-menu__img img:last-child {
   display: none;
 }
+.top-menu ul li a:hover .top-menu__img .date,
+.top-menu ul li a.active .top-menu__img .date {
+  background: #eb2629;
+}
 main {
   position: relative;
   margin-bottom: 20px;
@@ -916,6 +920,7 @@ main .next--smaller {
   line-height: 1.1;
   color: white;
   border: none;
+  outline: none;
 }
 .comments-item__counter-l {
   text-align: right;
@@ -946,4 +951,36 @@ main .next--smaller {
 .comments__all:hover,
 .comments__all:active {
   color: #cb1316;
+}
+.date {
+  margin: 0 auto;
+  width: 80px;
+  height: 69px;
+  background: #666565;
+  border-radius: 10px;
+}
+.date p {
+  margin: 0;
+  font-family: 'OpenSans-Bold', 'Arial', sans-serif;
+  color: white;
+  line-height: 0.9;
+  text-transform: lowercase;
+}
+.date__day {
+  font-size: 56.41px;
+}
+.date__month {
+  font-size: 15px;
+}
+.scroll_top {
+  text-decoration: none;
+  color: inherit;
+  position: fixed;
+  right: 50px;
+  top: 50%;
+  margin-top: -50px;
+  width: 50px;
+  height: 100px;
+  background: url("../img/icon_up.png") no-repeat center center;
+  background-size: 100%;
 }
