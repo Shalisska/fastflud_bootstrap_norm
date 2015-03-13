@@ -25,7 +25,7 @@ body textarea:required:valid {
 }
 
 .hidden_elem {
-    display: none;
+//    display: none;
 }
 
 //форма входа-регистрации
@@ -66,19 +66,20 @@ body textarea:required:valid {
     //заголовки
     &__title{
         margin: 0;
-        margin-bottom: 25px;
+        padding: 11px 0 15px;
+        background: @color-main--grand;
+        font-size: 25px;
+        color: #ffffff;
         font-family: @font-family--bold;
         text-transform: uppercase;
-        font-size: @header-size--2;
-        color: @placeholder;
-        
-        //основной заголовок
-        &--main {
-            margin-bottom: 0;
-            padding: 11px 0 15px;
-            background: @color-main--grand;
-            font-size: 25px;
-            color: #ffffff;
+         
+        //простые заголовки
+        &--regular {
+            margin-bottom: 25px;
+            padding: 0;
+            background: transparent;
+            font-size: @header-size--2;
+            color: @placeholder;
         }
     }
     
@@ -122,7 +123,7 @@ body textarea:required:valid {
     
     //блок входа
     &__enter {
-        input[type="text"] {
+        input:not([type="submit"]) {
             width: 22%;
             margin-right: 5%;
 
@@ -148,6 +149,7 @@ body textarea:required:valid {
                     .socials ();
                     width: 56px;
                     height: 56px;
+                    background-size: contain;
                 }
             }
         }
@@ -201,13 +203,118 @@ body textarea:required:valid {
         width: 165px;
         height: 63px;
         margin-right: 10%;
-        background: #acacac url("../img/capcha.png") no-repeat center center;
+        background: #acacac url("../img/content/capcha.png") no-repeat center center;
         border: 3px solid @color-main--grand;
         vertical-align: middle;
         
         //обертка для капчи
         &-l {
             margin: 45px auto 30px;
+        }
+    }
+    
+    &--add {
+        margin: 50px auto;
+        
+        .form__title {
+            &-l {
+                background: #eb2629;
+            }
+            
+            &--regular {
+                font-size: 14px;
+                text-align: right;
+                margin-right: 10%;
+                margin-bottom: 0;
+            }
+        }
+        
+        .top-menu {
+            padding-bottom: 10px;
+            
+            ul {
+                li {
+                    width: 15%;
+                    
+                    a {
+                        color: white;
+                        font-size: 18px;
+                        opacity: .65;
+                        
+                        &:hover,
+                        &.active {
+                            color: white;
+                            opacity: 1;
+                            
+                            .top-menu__img img {
+                                display: block;
+                            }
+                        }
+                    }
+                }
+            }
+            
+            &__img {
+                margin-bottom: 5px;
+            }
+        }
+        
+        fieldset {
+            padding: 5px 0 10px;
+        }
+        
+        .form__enter {
+            position: relative;
+            .clearfix();
+            padding-top: 30px;
+            
+            .form__input,
+            input[type="submit"] {
+                display: inline-block;
+            }
+            
+            .form__input input{
+                width: 40%;
+            }
+            
+            .form__forget {
+                position: absolute;
+                top: 0;
+                margin-top: 0;
+                right: 5px;
+            }
+        }
+        
+        .form__socials {
+            li {
+                margin-right: 6%;
+            }
+            
+            a {
+                width: 35px;
+                height: 35px;
+            }
+        }
+        
+        .form__reg {
+            .form__input {
+                padding-top: 15px 0 0;
+            }
+                        
+            .capcha-l,
+            input[type="submit"] {
+                display: inline-block;
+            }
+                        
+            .capcha-l {
+                margin-top: 0;
+                text-align: left;
+                width: 70%;
+                
+                .form__required-l {
+                    width: 50%;
+                }
+            }
         }
     }
 }

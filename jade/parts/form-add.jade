@@ -1,6 +1,21 @@
 //форма регистрации
-form.form.form--reg(action="#" method="post" name="registration" id="registration")
-    p.form__title.form__title Регистрация/Вход
+form.form.form--add(action="#" method="post" name="add" id="add")
+    .form__title-l
+        p.form__title.form__title Хочу предложить пост
+        nav.top-menu.row
+                ul
+                    li: a(href="#")
+                        .top-menu__img
+                            img(src="../img/icon-site--white.png")
+                        | Сайты
+                    li: a(href="#")
+                        .top-menu__img
+                            img(src="../img/icon-logo--white.png")
+                        | Логотипы
+                    li: a(href="#")
+                        .top-menu__img
+                            img(src="../img/icon-more--white.png")
+                        | Прочий хлам
     
     //поле входа
     fieldset.form__enter

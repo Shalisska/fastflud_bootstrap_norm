@@ -48,9 +48,6 @@ body {
   color: #666565;
   opacity: 1;
 }
-.hidden_elem {
-  display: none;
-}
 .form {
   margin: 0 auto;
   max-width: 1000px;
@@ -82,18 +79,19 @@ body {
 }
 .form__title {
   margin: 0;
-  margin-bottom: 25px;
-  font-family: 'OpenSans-Bold', 'Arial', sans-serif;
-  text-transform: uppercase;
-  font-size: 24px;
-  color: #666565;
-}
-.form__title--main {
-  margin-bottom: 0;
   padding: 11px 0 15px;
   background: #eb2629;
   font-size: 25px;
   color: #ffffff;
+  font-family: 'OpenSans-Bold', 'Arial', sans-serif;
+  text-transform: uppercase;
+}
+.form__title--regular {
+  margin-bottom: 25px;
+  padding: 0;
+  background: transparent;
+  font-size: 24px;
+  color: #666565;
 }
 .form fieldset {
   position: relative;
@@ -126,11 +124,11 @@ body {
   font-weight: bold;
   text-decoration: underline;
 }
-.form__enter input[type="text"] {
+.form__enter input:not([type="submit"]) {
   width: 22%;
   margin-right: 5%;
 }
-.form__enter input[type="text"]:last-child {
+.form__enter input:not([type="submit"]):last-child {
   margin-right: 0;
 }
 .form__socials ul {
@@ -159,6 +157,7 @@ body {
   background-repeat: no-repeat;
   width: 56px;
   height: 56px;
+  background-size: contain;
 }
 .form__socials--vk {
   background-image: url("../img/icon-vk_red.png");
@@ -200,12 +199,94 @@ body {
   width: 165px;
   height: 63px;
   margin-right: 10%;
-  background: #acacac url("../img/capcha.png") no-repeat center center;
+  background: #acacac url("../img/content/capcha.png") no-repeat center center;
   border: 3px solid #eb2629;
   vertical-align: middle;
 }
 .form .capcha-l {
   margin: 45px auto 30px;
+}
+.form--add {
+  margin: 50px auto;
+}
+.form--add .form__title-l {
+  background: #eb2629;
+}
+.form--add .form__title--regular {
+  font-size: 14px;
+  text-align: right;
+  margin-right: 10%;
+  margin-bottom: 0;
+}
+.form--add .top-menu {
+  padding-bottom: 10px;
+}
+.form--add .top-menu ul li {
+  width: 15%;
+}
+.form--add .top-menu ul li a {
+  color: white;
+  font-size: 18px;
+  opacity: .65;
+}
+.form--add .top-menu ul li a:hover,
+.form--add .top-menu ul li a.active {
+  color: white;
+  opacity: 1;
+}
+.form--add .top-menu ul li a:hover .top-menu__img img,
+.form--add .top-menu ul li a.active .top-menu__img img {
+  display: block;
+}
+.form--add .top-menu__img {
+  margin-bottom: 5px;
+}
+.form--add fieldset {
+  padding: 5px 0 10px;
+}
+.form--add .form__enter {
+  position: relative;
+  padding-top: 30px;
+}
+.form--add .form__enter:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+.form--add .form__enter .form__input,
+.form--add .form__enter input[type="submit"] {
+  display: inline-block;
+}
+.form--add .form__enter .form__input input {
+  width: 40%;
+}
+.form--add .form__enter .form__forget {
+  position: absolute;
+  top: 0;
+  margin-top: 0;
+  right: 5px;
+}
+.form--add .form__socials li {
+  margin-right: 6%;
+}
+.form--add .form__socials a {
+  width: 35px;
+  height: 35px;
+}
+.form--add .form__reg .form__input {
+  padding-top: 15px 0 0;
+}
+.form--add .form__reg .capcha-l,
+.form--add .form__reg input[type="submit"] {
+  display: inline-block;
+}
+.form--add .form__reg .capcha-l {
+  margin-top: 0;
+  text-align: left;
+  width: 70%;
+}
+.form--add .form__reg .capcha-l .form__required-l {
+  width: 50%;
 }
 .fancybox-skin {
   background: transparent;
@@ -348,16 +429,16 @@ body {
 .top-menu ul li a.active {
   color: #eb2629;
 }
-.top-menu ul li a:hover .top-menu__img img:first-child,
-.top-menu ul li a.active .top-menu__img img:first-child {
+.top-menu ul li a:hover img:first-child,
+.top-menu ul li a.active img:first-child {
   display: block;
 }
-.top-menu ul li a:hover .top-menu__img img:last-child,
-.top-menu ul li a.active .top-menu__img img:last-child {
+.top-menu ul li a:hover img:last-child,
+.top-menu ul li a.active img:last-child {
   display: none;
 }
-.top-menu ul li a:hover .top-menu__img .date,
-.top-menu ul li a.active .top-menu__img .date {
+.top-menu ul li a:hover .date,
+.top-menu ul li a.active .date {
   background: #eb2629;
 }
 main {
