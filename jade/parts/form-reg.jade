@@ -1,45 +1,57 @@
 //форма регистрации
 form.form.form--reg(action="#" method="post" name="registration" id="registration")
-    p.form__title.form__title Регистрация/Вход
+    p.form__title Регистрация/Вход
     
     //поле входа
     fieldset.form__enter
-        .form__input
-            input(type="text" name="login" placeholder="Логин")
-            input(type="password" name="pass" placeholder="Пароль")
-        input(type="submit" value="Войти")
-        //забыли пароль
-        a.form__forget(href="#") Забыли пароль?
+        .row
+            .col-md-12
+                input.form__input(type="text" name="login" placeholder="Логин")
+                input.form__input(type="password" name="pass" placeholder="Пароль")
+            .col-md-12
+                input(type="submit" value="Войти")
+            //забыли пароль
+            .col-md-12
+                a.form__forget(href="#") Забыли пароль?
         
     //регистрация через соц. сети
     fieldset.form__socials
         p.form__title.form__title--regular Войти с помощью:
-        ul
-            li: a.form__socials--vk(href="#")
-            li: a.form__socials--fb(href="#")
-            li: a.form__socials--twitter(href="#")
-            li: a.form__socials--odnoklassniki(href="#")
-            li: a.form__socials--google(href="#")
+        .row
+            .col-md-12
+                ul
+                    li: a.form__socials--vk(href="#")
+                    li: a.form__socials--fb(href="#")
+                    li: a.form__socials--twitter(href="#")
+                    li: a.form__socials--odnoklassniki(href="#")
+                    li: a.form__socials--google(href="#")
                 
     //регистрация
     fieldset.form__reg
         p.form__title.form__title--regular Регистрация в Fastflud:
         .form__input
-            .form__required-l
-                input(type="email" name="email" placeholder="E-mail")
-                span.form__required
-            .form__required-l
-                input(type="text" name="login" placeholder="Логин")
-                span.form__required
-            .form__required-l
-                input(type="password" name="pass" placeholder="Пароль")
-                span.form__required
+            .row
+                .col-md-3.col-md-offset-1
+                    .form__required-l
+                        input(type="email" name="email" placeholder="E-mail")
+                        span.form__required
+                .col-md-4
+                    .form__required-l
+                        input(type="text" name="login" placeholder="Логин")
+                        span.form__required
+                .col-md-3
+                    .form__required-l
+                        input(type="password" name="pass" placeholder="Пароль")
+                        span.form__required
         //капча
         .form__input.capcha-l
-            .capcha
-            .form__required-l
-                input(type="text" name="capcha" placeholder="Капча" required)
-                span.form__required
+            .row
+                .col-md-6
+                    .capcha
+                .col-md-6
+                    .form__required-l
+                        input(type="text" name="capcha" placeholder="Капча" required)
+                        span.form__required
         
-        input(type="submit" value="Регистрация")
-        
+                .col-md-12
+                    input(type="submit" value="Регистрация")        

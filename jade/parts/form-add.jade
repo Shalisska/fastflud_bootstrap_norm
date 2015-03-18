@@ -3,17 +3,22 @@ block form-add_site
     p.form__title.form__title--add Добавить по теме "Сайты"
     
     fieldset.form__add-link
-        label
-            span 1
-            input(type="text" placeholder='ссылка на сайт "у кого"' name="from-whom")
-        label
-            span 2
-            input(type="text" placeholder='ссылка на сайт "кто"' name="who")
-        p.form__add-link-more
-            | массовое копирование сайта 
-            a(href="#") добавить еще
+        .row
+            .col-md-12
+                label
+                    span 1
+                    input(type="text" placeholder='ссылка на сайт "у кого"' name="from-whom")
+            .col-md-12
+                label
+                    span 2
+                    input(type="text" placeholder='ссылка на сайт "кто"' name="who")
+                p.form__add-link-more
+                    | массовое копирование сайта 
+                    a(href="#") добавить еще
             
     fieldset.form__add-description
+        .row
+            .col-md-12
         label
             span 3
             .form__add-description-l

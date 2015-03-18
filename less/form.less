@@ -177,29 +177,30 @@ body textarea:required:valid {
         //обертка для звезд
         &-l {
             position: relative;
-            display: inline-block;
-            margin-right: 5%;
-            vertical-align: middle;
-            
-            &:last-child {
-                margin-right: 0;
-            }
+//            text-align: center;
+//            vertical-align: middle;
         }
     }
     
     //капча
     .capcha {
-        display: inline-block;
+        float: right;
         width: 165px;
         height: 63px;
-        margin-right: 10%;
+        margin-right: 5%;
+        margin-bottom: 30px;
         background: #acacac url("../img/content/capcha.png") no-repeat center center;
-        border: 3px solid @color-main--grand;
-        vertical-align: middle;
+        border: 3px solid #eb2629;
         
         //обертка для капчи
         &-l {
-            margin: 45px auto 30px;
+            margin: 45px auto 0;
+            
+             .form__required-l {
+                float: left;
+                margin-left: 5%;
+                margin-top: 12px;
+            }   
         }
     }
         
@@ -268,17 +269,7 @@ body textarea:required:valid {
         
         .form__enter {
             position: relative;
-            .clearfix();
             padding-top: 30px;
-            
-            .form__input,
-            input[type="submit"] {
-                display: inline-block;
-            }
-            
-            .form__input {
-                width: 55%;
-            }
             
             .form__forget {
                 position: absolute;
@@ -302,31 +293,23 @@ body textarea:required:valid {
         .form__reg {
             .form__input {
                 padding-top: 15px;
-                
-                &:first-of-type {
-                    .form__required-l {
-                        margin-right: 7%;
-                        
-                        &:last-of-type {
-                            margin-right: 0;
-                        }
-                    }
-                }
-            }
-                        
-            .capcha-l,
-            input[type="submit"] {
-                display: inline-block;
             }
                         
             .capcha {
-                margin-right: 20%;
+                float: none;
                 
                 &-l {
                     margin-top: 0;
                     margin-bottom: 10px;
-                    text-align: left;
-                    width: 60.7%;
+                   
+                    .form__required-l {
+                        float: none;
+                        margin-left: 0;
+                    }
+                    
+                    input[type="submit"] {
+                        margin-top: 12px;
+                    }
                 }
             }
         }
@@ -371,13 +354,12 @@ body textarea:required:valid {
         }
         
         &-link {
-            label:first-child {
+            .col-md-12:first-child {
                 margin-bottom: 15px;
             }
             
             &-more {
-                margin: 0;
-                margin-bottom: 20px;
+                margin: 0 0 20px;
                 font-style: italic;
                 font-family: @font-family--light;
                 font-weight: bold;
