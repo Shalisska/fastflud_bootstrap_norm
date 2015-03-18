@@ -1,0 +1,65 @@
+//форма регистрации
+form.form.form--add(action="#" method="post" name="add" id="add")
+    .form__title-l
+        p.form__title.form__title Хочу предложить пост
+        nav.top-menu.row
+                ul
+                    li: a(href="#")
+                        .top-menu__img
+                            img(src="../img/icon-site--white.png")
+                        | Сайты
+                    li: a(href="#")
+                        .top-menu__img
+                            img(src="../img/icon-logo--white.png")
+                        | Логотипы
+                    li: a(href="#")
+                        .top-menu__img
+                            img(src="../img/icon-more--white.png")
+                        | Прочий хлам
+    
+    //идентификация
+    .form__identification
+        //поле входа
+        fieldset.form__enter
+            .form__input
+                input(type="text" name="login" placeholder="Логин")
+                input(type="password" name="pass" placeholder="Пароль")
+            input(type="submit" value="Войти")
+            //забыли пароль
+            a.form__forget(href="#") Забыли пароль?
+
+        //регистрация через соц. сети
+        fieldset.form__socials
+            p.form__title.form__title--regular Войти с помощью:
+            ul
+                li: a.form__socials--vk(href="#")
+                li: a.form__socials--fb(href="#")
+                li: a.form__socials--twitter(href="#")
+                li: a.form__socials--odnoklassniki(href="#")
+                li: a.form__socials--google(href="#")
+
+        //регистрация
+        fieldset.form__reg
+            p.form__title.form__title--regular Регистрация в Fastflud:
+            .form__input
+                .form__required-l
+                    input(type="email" name="email" placeholder="E-mail")
+                    span.form__required
+                .form__required-l
+                    input(type="text" name="login" placeholder="Логин")
+                    span.form__required
+                .form__required-l
+                    input(type="password" name="pass" placeholder="Пароль")
+                    span.form__required
+            //капча
+            .form__input.capcha-l
+                .capcha
+                .form__required-l
+                    input(type="text" name="capcha" placeholder="Капча" required)
+                    span.form__required
+
+            input(type="submit" value="Регистрация")
+            
+    
+    fieldset.form__add
+        block form-add_logo

@@ -43,14 +43,9 @@ body textarea:required:valid {
         
         //текстовые поля
         &:not([type="submit"]) {
+            .input_placeholder ();
             width: 216px;
-            padding: 1px 5px 2px;
-            font-size: @header-size--2;
             text-transform: lowercase;
-            font-style: italic;
-            font-family: @font-family--light;
-            font-weight: bold;
-            border: 1px solid @placeholder;
         }
         
         //кнопка отправки
@@ -228,6 +223,12 @@ body textarea:required:valid {
                 margin-right: 10%;
                 margin-bottom: 0;
             }
+            
+            &--add {
+                font-size: 40px;
+                color: #eb2629;
+                background: transparent;
+            }
         }
         
         .top-menu {
@@ -329,7 +330,161 @@ body textarea:required:valid {
                 }
             }
         }
-    }    
+    }
+    
+    fieldset.form__add {
+        padding: 5px 28.5px 15px;
+        border-bottom: 60px solid #eb2629;
+    }
+    
+    &__add {
+        
+        fieldset {
+            
+            &:after {
+                display: none;
+            }
+        }
+        
+        &-link label,
+        &-description label {
+            display: block;
+            
+            span {
+                margin-right: 10px;
+                color: #eb2629;
+                font-size: 48.57px;
+                font-weight: bold;
+                line-height: 36px;
+                vertical-align: top;
+            }
+        }
+        
+        input[type="text"],
+        &-description-l {
+            width: 894px;
+        }
+        
+        textarea {
+            .input_placeholder ();
+            outline: none;
+        }
+        
+        &-link {
+            label:first-child {
+                margin-bottom: 15px;
+            }
+            
+            &-more {
+                margin: 0;
+                margin-bottom: 20px;
+                font-style: italic;
+                font-family: @font-family--light;
+                font-weight: bold;
+                font-size: 18px;
+                color: #666565;
+                text-align: right;
+                
+                a {
+                    color: #ff0000;
+                    text-decoration: underline;
+                    
+                    &:hover {
+                        color: lighten(#ff0000, 20%);
+                    }
+                    
+                    &:active {
+                        color: darken(#ff0000, 10%);
+                    }
+                }
+            }
+        }
+        
+        &-description {
+            &-l {
+                display: inline-block;
+                margin-bottom: 20px;
+            }
+            
+            textarea {
+                width: 100%;
+                max-width: 100%;
+            }
+        }
+        
+        &-screen {
+            padding: 10px 5px;
+            text-align: right;
+            border: 1px solid #666565;
+            border-top: none;
+        }
+        
+        .add-screen {
+            color: #000000;
+            font-size: 18px;
+            font-style: italic;
+            font-family: @font-family--light;
+            font-weight: bold;
+            
+            &:after {
+                content: "";
+                display: inline-block;
+                margin: 0 20px;
+                width: 12px;
+                height: 33px;
+                background: url("../img/icon-bracket.png") no-repeat center center;
+                background-size: 100%;
+                vertical-align: middle;
+            }
+        }
+        
+        &-send {
+            text-align: left;
+            
+            input[type="submit"] {
+                display: block;
+                margin: 0 auto;
+                border: 1px solid #757576;
+            }
+        }
+        
+        &-accept {
+            display: inline-block;
+            margin-left: 40px;
+            
+            input[type="checkbox"] {
+                display: none;
+                
+                &:checked~label[for="accept"]:before {
+                    content: "";
+                    position: absolute;
+                    width: 27px;
+                    height: 26px;
+                    left: -4px;
+                    bottom: 0;
+                    background: url("../img/icon-checkbox.png") no-repeat center center;
+                }
+            }
+            
+            label {
+                position: relative;
+                display: inline-block;
+                width: 18px;
+                height: 18px;
+                border: 1px solid #757576;
+                vertical-align: sub;
+            }
+            
+            a {
+                margin-left: 10px;
+                font-size: 18px;
+                font-style: italic;
+                font-family: @font-family--light;
+                font-weight: bold;
+                color: #666565;
+            }
+        }
+    }
 }
 
 //стили для fancybox

@@ -62,27 +62,52 @@
     </fieldset>
   </div>
   <fieldset class="form__add">
-    <p class="form-title form-title--add">Добавить по теме "Сайты"</p>
-    <fieldset class="form__add-link">
-      <label>
-        <input type="text" placeholder="ссылка на сайт &quot;у кого&quot;" name="from-whom"/>
-      </label>
-      <label>
-        <input type="text" placeholder="ссылка на сайт &quot;кто&quot;" name="who"/>
-      </label>
-      <p class="form__add-more">массовое копирование сайта <a href="#">добавить еще</a></p>
-    </fieldset>
-    <fieldset class="form__add-description">
-      <textarea name="description" rows="10" placeholder="Ваши комментарии"></textarea>
-      <div class="form__add-screen">
-        <div class="screen"></div><a href="#" class="add-screen">добавить скриншоты</a>
-      </div>
-    </fieldset>
-    <fieldset class="form__add-send">       </fieldset>
-    <label class="form__add-accept">
-      <input type="checkbox" name="accept"/><a href="#">Принять условия</a>
-    </label>
-    <input type="submit" value="Отправить"/>
+    <p class="form__title form__title--add">Добавить по теме "Логотипы"
+      <fieldset class="form__add-link">
+        <div class="row">
+          <div class="col-md-6">
+            <label><span>1</span>
+              <input type="text" placeholder="добавить файл &quot;у кого&quot;" name="file_from-whom"/>
+            </label>
+          </div>
+          <div class="col-md-6">
+            <label><span>2</span>
+              <input type="text" placeholder="добавить файл &quot;у кого&quot;" name="file_who"/>
+            </label>
+          </div>
+        </div>
+        <label><span>3</span>
+          <input type="text" placeholder="ссылка на сайт &quot;у кого&quot;" name="from-whom"/>
+        </label>
+        <label><span>4</span>
+          <input type="text" placeholder="ссылка на сайт &quot;кто&quot;" name="who"/>
+        </label>
+        <p class="form__add-link-more">массовое копирование сайта <a href="#">добавить еще</a></p>
+      </fieldset>
+      <fieldset class="form__add-description">
+        <label><span>5</span>
+          <div class="form__add-description-l">
+            <textarea name="description" rows="6" placeholder="Ваши комментарии"></textarea>
+            <div class="form__add-screen">
+              <div class="screen"></div><a href="#" class="add-screen">добавить скриншоты</a>
+            </div>
+          </div>
+        </label>
+      </fieldset>
+      <fieldset class="form__add-send">
+        <div class="row">
+          <div class="col-md-4">
+            <div class="form__add-accept">
+              <input type="checkbox" name="accept" id="accept" checked="checked"/>
+              <label for="accept">               </label><a href="#">Принять условия</a>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <input type="submit" value="Отправить"/>
+          </div>
+        </div>
+      </fieldset>
+    </p>
   </fieldset>
 </form>
 <!--форма регистрации-->

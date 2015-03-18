@@ -61,14 +61,14 @@ body {
   outline: none;
 }
 .form input:not([type="submit"]) {
-  width: 216px;
   padding: 1px 5px 2px;
   font-size: 24px;
-  text-transform: lowercase;
   font-style: italic;
   font-family: 'OpenSans Light', 'Arial', sans-serif;
   font-weight: bold;
   border: 1px solid #666565;
+  width: 216px;
+  text-transform: lowercase;
 }
 .form input[type="submit"] {
   font-family: 'OpenSans-Bold', 'Arial', sans-serif;
@@ -217,6 +217,11 @@ body {
   margin-right: 10%;
   margin-bottom: 0;
 }
+.form--add .form__title--add {
+  font-size: 40px;
+  color: #eb2629;
+  background: transparent;
+}
 .form--add .top-menu {
   padding-bottom: 10px;
 }
@@ -294,6 +299,133 @@ body {
   margin-bottom: 10px;
   text-align: left;
   width: 60.7%;
+}
+.form fieldset.form__add {
+  padding: 5px 28.5px 15px;
+  border-bottom: 60px solid #eb2629;
+}
+.form__add fieldset:after {
+  display: none;
+}
+.form__add-link label,
+.form__add-description label {
+  display: block;
+}
+.form__add-link label span,
+.form__add-description label span {
+  margin-right: 10px;
+  color: #eb2629;
+  font-size: 48.57px;
+  font-weight: bold;
+  line-height: 36px;
+  vertical-align: top;
+}
+.form__add input[type="text"],
+.form__add-description-l {
+  width: 894px;
+}
+.form__add textarea {
+  padding: 1px 5px 2px;
+  font-size: 24px;
+  font-style: italic;
+  font-family: 'OpenSans Light', 'Arial', sans-serif;
+  font-weight: bold;
+  border: 1px solid #666565;
+  outline: none;
+}
+.form__add-link label:first-child {
+  margin-bottom: 15px;
+}
+.form__add-link-more {
+  margin: 0;
+  margin-bottom: 20px;
+  font-style: italic;
+  font-family: 'OpenSans Light', 'Arial', sans-serif;
+  font-weight: bold;
+  font-size: 18px;
+  color: #666565;
+  text-align: right;
+}
+.form__add-link-more a {
+  color: #ff0000;
+  text-decoration: underline;
+}
+.form__add-link-more a:hover {
+  color: #ff6666;
+}
+.form__add-link-more a:active {
+  color: #cc0000;
+}
+.form__add-description-l {
+  display: inline-block;
+  margin-bottom: 20px;
+}
+.form__add-description textarea {
+  width: 100%;
+  max-width: 100%;
+}
+.form__add-screen {
+  padding: 10px 5px;
+  text-align: right;
+  border: 1px solid #666565;
+  border-top: none;
+}
+.form__add .add-screen {
+  color: #000000;
+  font-size: 18px;
+  font-style: italic;
+  font-family: 'OpenSans Light', 'Arial', sans-serif;
+  font-weight: bold;
+}
+.form__add .add-screen:after {
+  content: "";
+  display: inline-block;
+  margin: 0 20px;
+  width: 12px;
+  height: 33px;
+  background: url("../img/icon-bracket.png") no-repeat center center;
+  background-size: 100%;
+  vertical-align: middle;
+}
+.form__add-send {
+  text-align: left;
+}
+.form__add-send input[type="submit"] {
+  display: block;
+  margin: 0 auto;
+  border: 1px solid #757576;
+}
+.form__add-accept {
+  display: inline-block;
+  margin-left: 40px;
+}
+.form__add-accept input[type="checkbox"] {
+  display: none;
+}
+.form__add-accept input[type="checkbox"]:checked ~ label[for="accept"]:before {
+  content: "";
+  position: absolute;
+  width: 27px;
+  height: 26px;
+  left: -4px;
+  bottom: 0;
+  background: url("../img/icon-checkbox.png") no-repeat center center;
+}
+.form__add-accept label {
+  position: relative;
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  border: 1px solid #757576;
+  vertical-align: sub;
+}
+.form__add-accept a {
+  margin-left: 10px;
+  font-size: 18px;
+  font-style: italic;
+  font-family: 'OpenSans Light', 'Arial', sans-serif;
+  font-weight: bold;
+  color: #666565;
 }
 .fancybox-skin {
   background: transparent;
