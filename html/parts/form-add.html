@@ -1,6 +1,6 @@
 
 <!--форма регистрации-->
-<form action="#" method="post" name="add" id="add" class="form form--add">
+<form action="#" method="post" name="add" id="add" enctype="multipart/form-data" class="form form--add">
   <div class="form__title-l">
     <p class="form__title form__title">Хочу предложить пост</p>
     <nav class="top-menu row">
@@ -87,31 +87,21 @@
     </fieldset>
   </div>
   <fieldset class="form__add">
-    <p class="form__title form__title--add">Добавить по теме "Сайты"</p>
-    <fieldset class="form__add-link">
-      <div class="row">
-        <div class="col-md-12">
-          <label><span>1</span>
-            <input type="text" placeholder="ссылка на сайт &quot;у кого&quot;" name="from-whom"/>
-          </label>
-        </div>
-        <div class="col-md-12">
-          <label><span>2</span>
-            <input type="text" placeholder="ссылка на сайт &quot;кто&quot;" name="who"/>
-          </label>
-          <p class="form__add-link-more">массовое копирование сайта <a href="#">добавить еще</a></p>
-        </div>
-      </div>
-    </fieldset>
+    <p class="form__title form__title--add">Добавить по теме "Прочий хлам"</p>
+    <p class="form__title--sub">Здесь вы можете добавить другие примеры недоброкачественной работы: аудио- и видеоматериалы, упаковки и т.п.</p>
     <fieldset class="form__add-description">
       <div class="row">
         <div class="col-md-12"></div>
       </div>
-      <label><span>3</span>
+      <label><span class="form__number">1</span>
         <div class="form__add-description-l">
           <textarea name="description" rows="6" placeholder="Ваши комментарии"></textarea>
-          <div class="form__add-screen">
-            <div class="screen"></div><a href="#" class="add-screen">добавить скриншоты</a>
+          <div class="form__add-screen file_upload-l">
+            <label class="file_upload">
+              <div class="screen"></div>
+              <div class="file_upload__field">добавить скриншоты</div><a href="#" class="file_upload__btn add-screen"></a>
+              <input type="file" name="file_screen"/>
+            </label>
           </div>
         </div>
       </label>

@@ -7,58 +7,66 @@ header.header
             .row
             
                 //хлебные крошки
-                nav.head__breadcrumb.col-md-8
-                    ul
+                nav.col-md-8
+                    ul.head__breadcrumb
                         each item in breadCrumbs
                             li: a(href="#") #{item}
 
                 //регистрация
-                .head__registration.col-md-4
-                    a(href="#registration" class="fancybox registration") Регистрация / Вход
+                .col-md-4
+                    .head__registration
+                        a(href="#registration" class="registration") Регистрация / Вход
                     
     //баннеры
     .container
-        .header__banner.row: a(href="#"): img(src="../img/content/banner-up.jpg" alt="")
-        .header__logo.row: a(href="#"): img(src="../img/logo.png" alt="")
+        .row
+            .header__banner: a(href="#"): img(src="../img/content/banner-up.jpg" alt="")
+        .row
+            .header__logo: a(href="#"): img(src="../img/logo.png" alt="")
     
         //поиск
-        form.form__search.row(name="search" action="#" method="get")
-            .col-md-8.col-md-offset-2
-                fieldset.form__search-layout.row
-                    input.form__search-field.col-md-12(type="text" name="search" placeholder="Поиск")
-                    button.btn.form__search-btn
-                .row
-                    p.form__search-text.col-md-12 Уже добавлено 
-                        span 109 примеров
-                        |  шаблонных и украденных сайтов и логотипов
+        form.form__search(name="search" action="#" method="get")
+            .row
+                .col-md-8.col-md-offset-2
+                    .row
+                        .col-md-12
+                            fieldset.form__search-layout
+                                input.form__search-field(type="text" name="search" placeholder="Поиск")
+                                button.btn.form__search-btn
+                    .row
+                        .col-md-12
+                            p.form__search-text Уже добавлено 
+                                span 109 примеров
+                                |  шаблонных и украденных сайтов и логотипов
 
         //верхнее меню
-        nav.top-menu.row
-            ul
-                li: a(href="#")
-                    .top-menu__img
-                        img(src="../img/icon-site.png")
-                        img(src="../img/icon-site--off.png")
-                    | Сайты
-                li: a(href="#")
-                    .top-menu__img
-                        img(src="../img/icon-logo.png")
-                        img(src="../img/icon-logo--off.png")
-                    | Логотипы
-                li: a(href="#")
-                    .top-menu__img
-                        img(src="../img/icon-more.png")
-                        img(src="../img/icon-more--off.png")
-                    | Прочий хлам
-                li: a(href="#")
-                    .top-menu__img
-                        .date#date
-                            p.date__day 23
-                            p.date__month декабря
-                    | Новенькое
-                li: a(href="#add" class="fancybox add-form")
-                    .top-menu__img
-                        img(src="../img/icon-add.png")
-                        img(src="../img/icon-add--off.png")
-                    | Добавить
+        nav.row
+            .col-md-12
+                ul.top-menu
+                    li: a(href="#")
+                        .top-menu__img
+                            img(src="../img/icon-site.png")
+                            img(src="../img/icon-site--off.png")
+                        | Сайты
+                    li: a(href="#")
+                        .top-menu__img
+                            img(src="../img/icon-logo.png")
+                            img(src="../img/icon-logo--off.png")
+                        | Логотипы
+                    li: a(href="#")
+                        .top-menu__img
+                            img(src="../img/icon-more.png")
+                            img(src="../img/icon-more--off.png")
+                        | Прочий хлам
+                    li: a(href="#")
+                        .top-menu__img
+                            .date#date
+                                p.date__day 23
+                                p.date__month декабря
+                        | Новенькое
+                    li: a(href="#add" class="fancybox add-form")
+                        .top-menu__img
+                            img(src="../img/icon-add.png")
+                            img(src="../img/icon-add--off.png")
+                        | Добавить
                 

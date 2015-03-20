@@ -24,19 +24,27 @@ body textarea:required:valid {
 	
 }
 
-.hidden_elem {
-//    display: none;
-}
-
 //форма входа-регистрации
 .form {
-    margin: 0 auto;
+    position: absolute;
+    top: 50px;
+    width: 100%;
     max-width: 1000px;
-    padding: 0;
+    left: 50%;
+    margin-left: -500px;
     background: white;
     border: 4px solid @color-main--grand;
     border-radius: 6px;
     text-align: center;
+    
+    &__esc {
+        position: absolute;
+        width: 20px;
+        height: 18px;
+        top: 20px;
+        right: 20px;
+        background: url("../img/icon-close.png") no-repeat center center;
+    }
     
     & input {
         outline: none;
@@ -76,6 +84,15 @@ body textarea:required:valid {
             background: transparent;
             font-size: @header-size--2;
             color: @placeholder;
+        }
+        
+        &--sub {
+            margin: -15px 10px 20px;
+            font-style: italic;
+            font-family: @font-family--light;
+            font-weight: bold;
+            font-size: @header-size--2;
+            color: #666565;
         }
     }
     
@@ -177,8 +194,6 @@ body textarea:required:valid {
         //обертка для звезд
         &-l {
             position: relative;
-//            text-align: center;
-//            vertical-align: middle;
         }
     }
     
@@ -207,8 +222,6 @@ body textarea:required:valid {
     &__identification {
         border-bottom: 5px solid @color-main--grand;
     }
-    
-    
     
     &--add {
         margin: 50px auto;
@@ -332,30 +345,39 @@ body textarea:required:valid {
         &-link label,
         &-description label {
             display: block;
-            
-            span {
-                margin-right: 10px;
-                color: #eb2629;
-                font-size: 48.57px;
-                font-weight: bold;
-                line-height: 36px;
-                vertical-align: top;
-            }
         }
         
         input[type="text"],
         &-description-l {
-            width: 894px;
+            float: right;
+            width: 95%;
+            max-width: 95%;
+        }
+        
+        &-description-l {
+            .clearfix();
         }
         
         textarea {
             .input_placeholder ();
+            width: 100%;
+            max-width: 888px;
             outline: none;
         }
         
         &-link {
             .col-md-12:first-child {
                 margin-bottom: 15px;
+                
+                &-files {
+                    span {
+                        
+                    }
+                    
+                    input {
+                        
+                    }
+                }
             }
             
             &-more {
@@ -387,37 +409,6 @@ body textarea:required:valid {
                 display: inline-block;
                 margin-bottom: 20px;
             }
-            
-            textarea {
-                width: 100%;
-                max-width: 100%;
-            }
-        }
-        
-        &-screen {
-            padding: 10px 5px;
-            text-align: right;
-            border: 1px solid #666565;
-            border-top: none;
-        }
-        
-        .add-screen {
-            color: #000000;
-            font-size: 18px;
-            font-style: italic;
-            font-family: @font-family--light;
-            font-weight: bold;
-            
-            &:after {
-                content: "";
-                display: inline-block;
-                margin: 0 20px;
-                width: 12px;
-                height: 33px;
-                background: url("../img/icon-bracket.png") no-repeat center center;
-                background-size: 100%;
-                vertical-align: middle;
-            }
         }
         
         &-send {
@@ -432,7 +423,7 @@ body textarea:required:valid {
         
         &-accept {
             display: inline-block;
-            margin-left: 40px;
+            margin-left: 15%;
             
             input[type="checkbox"] {
                 display: none;
@@ -467,20 +458,154 @@ body textarea:required:valid {
             }
         }
     }
+    
+    &__number {
+        float: left;
+        width: 5%;
+        color: #eb2629;
+        font-size: 48.57px;
+        font-weight: bold;
+        line-height: 36px;
+        vertical-align: top;
+        
+        &--file {
+            width: 12.7%;
+        }
+    }
+}
+
+.file_upload {
+    float: left;
+    position: relative;
+    overflow: hidden;
+    width: 87.3%;
+    height: 36px;
+    line-height: 36px;
+    
+    &-l {
+        .clearfix();
+        width: 85%;
+        
+        &--r {
+            float: right;
+        }
+    }
+    
+    &__field,
+    &__btn {
+        float: left;
+        border: 1px solid black;
+        color: @placeholder;
+    }
+    
+    &__field {
+        .input_placeholder ();
+        width: 89%;
+        height: 36px;
+        border-right: none;
+        line-height: 30px;
+        text-align: left;
+    }
+    
+    &__btn {
+        width: 36px;
+        height: 36px;
+        background: url("../img/icon_add.png") no-repeat center center;
+    }
+    
+    input[type=file]{
+        position: absolute;
+        left: 0;
+        top: 0;
+        visibility: hidden
+    }
+}
+
+.form__add-screen {
+    border: 1px solid #666565;
+    border-top: none;
+    
+    &.file_upload-l {
+            width: 100%;
+        }
+        
+    .file_upload {
+        width: 100%;
+        height: 52px;
+        
+        
+        
+        &__field {
+            padding: 10px 55px 10px 5px;
+            width: 100%;
+            height: 100%;
+            text-align: right;
+            color: #000000;
+            font-size: 18px;
+            font-style: italic;
+            font-family: @font-family--light;
+            font-weight: bold;
+            border: none;
+        }
+        
+        &__btn {
+            position: absolute;
+            width: 12px;
+            height: 100%;
+            right: 20px;
+            top: 0;
+            background: url("../img/icon-bracket.png") no-repeat center center;
+            background-size: 100%;
+            border: none;
+        }
+    }
+}
+
+.add-screen {
+//        display: inline-block;
+//        margin: 0 20px;
+//        
+//        vertical-align: middle;
+    
 }
 
 //стили для fancybox
-.fancybox {
-    &-skin {
-        background: transparent;
-    }
-    
-    &-close {
-        top: 15px;
-        right: 20px;
-        background: url("../img/icon-close.png") no-repeat center center;
-    }
-}
+//.fancybox {
+//    &-skin {
+//        background: transparent;
+//    }
+//    
+//    &-close {
+//        top: 15px;
+//        right: 20px;
+//        background: url("../img/icon-close.png") no-repeat center center;
+//    }
+//}
 .form__identification {
     
+}
+
+/* ширма (полупрозрачное затенение под модальным окном) */
+.shim {
+    /* фиксируем, растягиваем на весь доступный экран */
+    position: fixed;
+    bottom: 0; left: 0; top: 0; right: 0;
+    z-index: 50;
+    display: none;
+
+    /* если в модальном окне много содержимого, показываем скроллбар */
+    overflow: auto;
+
+    /* однопальцевый скролл для iPad*/
+    -webkit-overflow-scrolling: touch;
+}
+
+/* фикс для странностей в iPad */
+.shim > * {
+    -webkit-transform: translateZ(0px);
+}
+
+/* декоративная часть ширмы: делаем полупрозрачной и чёрной */
+.shim {
+    background: rgba(0,0,0,0.5);
 }

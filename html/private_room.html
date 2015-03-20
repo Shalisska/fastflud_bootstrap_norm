@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <title>fastflud</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../css/bootstrap.css" rel="stylesheet">
+    <link href="../libs/fancybox/jquery.fancybox.css" rel="stylesheet">
+    <link href="../css/style.css" rel="stylesheet">
+    <script src="../js/jquery-1.11.2.min.js"></script>
+    <script src="../js/auto-height.js"></script>
+  </head>
+  <body>
+    <header class="header private">
+      <div class="head">
+        <div class="container">
+          <div class="row">
+            <!--хлебные крошки-->
+            <nav class="col-md-8">
+              <ul class="head__breadcrumb">
+                <li><a href="#">Главная</a></li>
+                <li><a href="#">Логотипы</a></li>
+                <li><a href="#">Новость</a></li>
+              </ul>
+            </nav>
+            <!--регистрация-->
+            <div class="col-md-4">
+              <div class="head__registration hide"><a href="#registration" class="registration">Регистрация / Вход</a></div>
+              <div class="head__registration head__registration--known"><a href="#" class="user">Anonym Anonym</a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="private container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="avatar-l">
+            <div class="avatar"><img src="../img/content/avatar.jpg" alt="foto"></div>
+          </div>
+          <div class="info-l">
+            <div class="info clearfix">
+              <div class="info__part">
+                <p class="title">Anonym Anonym</p>
+                <p class="rang">Профи</p>
+                <p class="subtext">На сайте <span class="subtext--timer">2 месяца 4 дня</span></p>
+              </div>
+              <div class="info__part info__part--options">
+                <div class="info__part--options-item"><a href="#">Добавить пост +</a></div>
+                <div class="info__part--options-item"><a href="#">Мои посты <span class="posts-counter">4</span></a></div>
+              </div>
+            </div>
+            <p class="info__text">
+              Ножницы режут бумагу, бумага заворачивает камень, камень давит ящерицу, ящерица травит Спока, Спок ломает ножницы, ножницы отрезают голову ящерице, ящерица ест бумагу, бумага подставляет Спока, Спок испаряет камень, и, как обычно, камень разбивает ножницы. &#169;
+              
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <nav class="col-md-12">
+          <ul class="private__menu">
+            <li class="active"><a href="#">Редактировать профиль</a></li>
+            <li><a href="#">Мои комментарии</a></li>
+            <li><a href="#">Ответы ( <span class="private__menu-answers">5</span>)</a></li>
+            <li><a href="#">10 последних просмотренных постов</a></li>
+            <li><a href="#" class="private__menu-home"></a><a href="#" class="private__menu-search"></a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <form action="post" class="form form--profile">
+            <div class="avatar-l">
+              <label class="avatar file_upload">
+                <div class="file_upload__field"><img src="../img/content/avatar.jpg" alt="foto"></div><a href="#" class="file_upload__btn add-screen">Обновить</a>
+                <input type="file" name="file_screen">
+              </label>
+            </div>
+            <div class="info-l">
+              <div class="info clearfix">
+                <div class="info__part"></div>
+                <div class="info__part"></div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

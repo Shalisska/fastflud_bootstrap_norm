@@ -17,8 +17,7 @@
         background: @header-bg;
         
         //хлебные крошки
-        &__breadcrumb {            
-            ul {
+        &__breadcrumb {
                 .menu();
                 font-size: 0;
                 
@@ -42,7 +41,6 @@
                         text-transform: lowercase;
                     }
                 }
-            }
         }
         
         //регистрация
@@ -82,8 +80,9 @@
         }
         
         &-field {
+            width: 100%;
             box-sizing: border-box;
-            padding: 5px 30px 5px 5px;
+            padding: 5px 35px 5px 5px;
             font-size: @footer-menu;
             border: 1px solid @sidebar-color;
             outline: none;
@@ -118,7 +117,6 @@
 
 //верхнее меню
 .top-menu {
-    ul {
         .menu();
         text-align: center;
         font-size: 0;
@@ -166,7 +164,6 @@
                 }
             }
         }
-    }
 }
 
 main {
@@ -666,6 +663,7 @@ main {
         //файлы
         .file {
             background-image: url("../img/icon-bracket.png");
+            background-size: auto 100%;
         }
     }
     
@@ -685,7 +683,7 @@ main {
             margin-right: 5px;
             width: 65px;
             height: 56px;
-            background: url("../img/cloud-author.png") no-repeat center center;
+            background: url("../img/content/cloud-author.png") no-repeat center center;
             background-size: 100%;
             text-align: center;
             
@@ -821,4 +819,20 @@ main {
     height: 100px;
     background: url("../img/icon_up.png") no-repeat center center;
     background-size: 100%;
+}
+
+@import url("private.less");
+
+.popup-show {
+    display: block;
+}
+
+.hide {
+    display: none;
+}
+
+.clearfix:after {
+    content: '';
+    display: table;
+    clear: both;
 }

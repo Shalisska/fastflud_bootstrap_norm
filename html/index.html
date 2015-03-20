@@ -17,53 +17,69 @@
         <div class="container">
           <div class="row">
             <!--хлебные крошки-->
-            <nav class="head__breadcrumb col-md-8">
-              <ul>
+            <nav class="col-md-8">
+              <ul class="head__breadcrumb">
                 <li><a href="#">Главная</a></li>
                 <li><a href="#">Логотипы</a></li>
                 <li><a href="#">Новость</a></li>
               </ul>
             </nav>
             <!--регистрация-->
-            <div class="head__registration col-md-4"><a href="#registration" class="fancybox registration">Регистрация / Вход</a></div>
+            <div class="col-md-4">
+              <div class="head__registration"><a href="#registration" class="registration">Регистрация / Вход</a></div>
+            </div>
           </div>
         </div>
       </div>
       <!--баннеры-->
       <div class="container">
-        <div class="header__banner row"><a href="#"><img src="../img/content/banner-up.jpg" alt=""></a></div>
-        <div class="header__logo row"><a href="#"><img src="../img/logo.png" alt=""></a></div>
+        <div class="row">
+          <div class="header__banner"><a href="#"><img src="../img/content/banner-up.jpg" alt=""></a></div>
+        </div>
+        <div class="row">
+          <div class="header__logo"><a href="#"><img src="../img/logo.png" alt=""></a></div>
+        </div>
         <!--поиск-->
-        <form name="search" action="#" method="get" class="form__search row">
-          <div class="col-md-8 col-md-offset-2">
-            <fieldset class="form__search-layout row">
-              <input type="text" name="search" placeholder="Поиск" class="form__search-field col-md-12">
-              <button class="btn form__search-btn"></button>
-            </fieldset>
-            <div class="row">
-              <p class="form__search-text col-md-12">Уже добавлено <span>109 примеров</span> шаблонных и украденных сайтов и логотипов</p>
+        <form name="search" action="#" method="get" class="form__search">
+          <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+              <div class="row">
+                <div class="col-md-12">
+                  <fieldset class="form__search-layout">
+                    <input type="text" name="search" placeholder="Поиск" class="form__search-field">
+                    <button class="btn form__search-btn"></button>
+                  </fieldset>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12">
+                  <p class="form__search-text">Уже добавлено <span>109 примеров</span> шаблонных и украденных сайтов и логотипов</p>
+                </div>
+              </div>
             </div>
           </div>
         </form>
         <!--верхнее меню-->
-        <nav class="top-menu row">
-          <ul>
-            <li><a href="#">
-                <div class="top-menu__img"><img src="../img/icon-site.png"><img src="../img/icon-site--off.png"></div>Сайты</a></li>
-            <li><a href="#">
-                <div class="top-menu__img"><img src="../img/icon-logo.png"><img src="../img/icon-logo--off.png"></div>Логотипы</a></li>
-            <li><a href="#">
-                <div class="top-menu__img"><img src="../img/icon-more.png"><img src="../img/icon-more--off.png"></div>Прочий хлам</a></li>
-            <li><a href="#">
-                <div class="top-menu__img">
-                  <div id="date" class="date">
-                    <p class="date__day">23</p>
-                    <p class="date__month">декабря</p>
-                  </div>
-                </div>Новенькое</a></li>
-            <li><a href="#add" class="fancybox add-form">
-                <div class="top-menu__img"><img src="../img/icon-add.png"><img src="../img/icon-add--off.png"></div>Добавить</a></li>
-          </ul>
+        <nav class="row">
+          <div class="col-md-12">
+            <ul class="top-menu">
+              <li><a href="#">
+                  <div class="top-menu__img"><img src="../img/icon-site.png"><img src="../img/icon-site--off.png"></div>Сайты</a></li>
+              <li><a href="#">
+                  <div class="top-menu__img"><img src="../img/icon-logo.png"><img src="../img/icon-logo--off.png"></div>Логотипы</a></li>
+              <li><a href="#">
+                  <div class="top-menu__img"><img src="../img/icon-more.png"><img src="../img/icon-more--off.png"></div>Прочий хлам</a></li>
+              <li><a href="#">
+                  <div class="top-menu__img">
+                    <div id="date" class="date">
+                      <p class="date__day">23</p>
+                      <p class="date__month">декабря</p>
+                    </div>
+                  </div>Новенькое</a></li>
+              <li><a href="#add" class="fancybox add-form">
+                  <div class="top-menu__img"><img src="../img/icon-add.png"><img src="../img/icon-add--off.png"></div>Добавить</a></li>
+            </ul>
+          </div>
         </nav>
       </div>
     </header>
@@ -229,10 +245,11 @@
         </div>
       </footer>
     </div><a id="toTop" href="/" class="scroll_top"></a>
-    <div class="hidden_elem">
-      <!--скрытые элементы на странице-->
+    <!--.hidden_elem-->
+    <!--скрытые элементы на странице-->
+    <div class="shim">
       <!--форма регистрации-->
-      <form action="#" method="post" name="add" id="add" class="form form--add">
+      <form action="#" method="post" name="add" id="add" enctype="multipart/form-data" class="form form--add">
         <div class="form__title-l">
           <p class="form__title form__title">Хочу предложить пост</p>
           <nav class="top-menu row">
@@ -319,31 +336,21 @@
           </fieldset>
         </div>
         <fieldset class="form__add">
-          <p class="form__title form__title--add">Добавить по теме "Сайты"</p>
-          <fieldset class="form__add-link">
-            <div class="row">
-              <div class="col-md-12">
-                <label><span>1</span>
-                  <input type="text" placeholder="ссылка на сайт &quot;у кого&quot;" name="from-whom">
-                </label>
-              </div>
-              <div class="col-md-12">
-                <label><span>2</span>
-                  <input type="text" placeholder="ссылка на сайт &quot;кто&quot;" name="who">
-                </label>
-                <p class="form__add-link-more">массовое копирование сайта <a href="#">добавить еще</a></p>
-              </div>
-            </div>
-          </fieldset>
+          <p class="form__title form__title--add">Добавить по теме "Прочий хлам"</p>
+          <p class="form__title--sub">Здесь вы можете добавить другие примеры недоброкачественной работы: аудио- и видеоматериалы, упаковки и т.п.</p>
           <fieldset class="form__add-description">
             <div class="row">
               <div class="col-md-12"></div>
             </div>
-            <label><span>3</span>
+            <label><span class="form__number">1</span>
               <div class="form__add-description-l">
                 <textarea name="description" rows="6" placeholder="Ваши комментарии"></textarea>
-                <div class="form__add-screen">
-                  <div class="screen"></div><a href="#" class="add-screen">добавить скриншоты</a>
+                <div class="form__add-screen file_upload-l">
+                  <label class="file_upload">
+                    <div class="screen"></div>
+                    <div class="file_upload__field">добавить скриншоты</div><a href="#" class="file_upload__btn add-screen"></a>
+                    <input type="file" name="file_screen">
+                  </label>
                 </div>
               </div>
             </label>
@@ -363,9 +370,11 @@
           </fieldset>
         </fieldset>
       </form>
+    </div>
+    <div class="shim">   
       <!--форма регистрации-->
       <form action="#" method="post" name="registration" id="registration" class="form form--reg">
-        <p class="form__title">Регистрация/Вход</p>
+        <p class="form__title">Регистрация/Вход</p><a href="#" class="form__esc"></a>
         <!--поле входа-->
         <fieldset class="form__enter">
           <div class="row">

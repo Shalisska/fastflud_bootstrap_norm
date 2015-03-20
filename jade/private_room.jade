@@ -1,0 +1,46 @@
+doctype html
+html(lang="ru")
+    head
+        include parts/head    
+    body
+        include parts/private_room-header
+    
+        main.private.container
+            .row
+                .col-md-12
+                    .avatar-l
+                        .avatar: img(src="../img/content/avatar.jpg" alt="foto")
+                    .info-l
+                        .info.clearfix
+                            .info__part
+                                p.title Anonym Anonym
+                                p.rang Профи
+                                p.subtext
+                                    | На сайте 
+                                    span.subtext--timer 2 месяца 4 дня
+                            .info__part.info__part--options
+                                div.info__part--options-item: a(href="#") Добавить пост +
+                                div.info__part--options-item: a(href="#")
+                                    | Мои посты 
+                                    span.posts-counter 4
+                        p.info__text.
+                            Ножницы режут бумагу, бумага заворачивает камень, камень давит ящерицу, ящерица травит Спока, Спок ломает ножницы, ножницы отрезают голову ящерице, ящерица ест бумагу, бумага подставляет Спока, Спок испаряет камень, и, как обычно, камень разбивает ножницы. &#169;
+
+            .row
+                nav.col-md-12
+                    ul.private__menu
+                        li.active: a(href="#") Редактировать профиль
+                        li: a(href="#") Мои комментарии
+                        li: a(href="#")
+                            | Ответы ( 
+                            span.private__menu-answers 5
+                            | )
+                        li: a(href="#") 10 последних просмотренных постов
+                        li
+                            a.private__menu-home(href="#")
+                            a.private__menu-search(href="#")
+                            
+            .row
+                .col-md-12
+                    include parts/private_profile
+
