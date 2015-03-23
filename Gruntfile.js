@@ -12,7 +12,7 @@ module.exports = function (grunt) {
 		},
 		autoprefixer: {
 			options: {
-				browsers: ['last 2 versions', 'ie 10']
+				browsers: ['last 2 versions', 'ie 8']
 			},
 			style: {
 				src: 'css/style.css'
@@ -78,18 +78,25 @@ module.exports = function (grunt) {
 					src: [
 						'css/**',
 						'img/**',
-						'js/**',
-						'*.html'
+						'js/**'
 					],
 					dest: 'build'
 				}]
-			}
+			},
+            build_html: {
+                files: [{
+					expand: true,
+					cwd: 'html/',
+                    src:['*.html'],
+					dest: 'build'
+				}]
+            }
 		},
         jade: {
 			 temp: {
                   options: {
                       pretty: true
-            },                  
+            },
                     files: [{
                       expand: true,
                       cwd: 'jade/',
@@ -102,7 +109,7 @@ module.exports = function (grunt) {
             parts: {
                   options: {
                       pretty: true
-            },                  
+                    },
                     files: [{
                       expand: true,
                       cwd: 'jade/parts/',
@@ -138,12 +145,12 @@ module.exports = function (grunt) {
 	});
 	
 	grunt.registerTask('default', [
-		'imagemin',
+//		'imagemin',
 		'clean',
 		'copy',
-		'cssmin',
-		'htmlmin',
-		'uglify'
+//		'cssmin',
+//		'htmlmin',
+//		'uglify'
 	]);
 	
 	grunt.registerTask('debug', [
