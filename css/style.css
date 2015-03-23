@@ -1402,22 +1402,41 @@ main .next--smaller {
   width: 25px;
   background-image: url("../img/icon-search--private.png");
 }
-.private form {
+.private .form {
   position: static;
   margin-left: 0;
   border: none;
 }
-.private form .file_upload {
+.private .form .file_upload {
   float: none;
   display: block;
   height: auto;
 }
-.private form .file_upload__field {
+.private .form .file_upload__field {
   float: none;
   border: none;
   width: 100%;
   height: auto;
   padding: 0;
+}
+.private .form .file_upload__btn {
+  border: none;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  background-image: none;
+  background: rgba(255, 255, 255, 0.5);
+  font-size: 28px;
+  text-transform: uppercase;
+  padding-top: 50%;
+  color: black;
+}
+.private .form .file_upload__btn:hover,
+.private .form .file_upload__btn:active {
+  text-decoration: none;
 }
 .popup-show {
   display: block;

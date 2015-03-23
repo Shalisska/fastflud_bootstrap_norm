@@ -135,7 +135,7 @@
         }
     }
     
-    form {
+    .form {
         position: static;
         margin-left: 0;
         border: none;
@@ -152,6 +152,27 @@
                 width: 100%;
                 height: auto;
                 padding: 0;
+            }
+            
+            &__btn {
+                border: none;
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                top: 0;
+                left: 0;
+                bottom: 0;
+                background-image: none;
+                background: rgba(255, 255, 255, .5);
+                font-size: 28px;
+                text-transform: uppercase;
+                padding-top: 50%;
+                color: black;
+                
+                &:hover,
+                &:active {
+                    text-decoration: none;
+                }
             }
         }
     }
