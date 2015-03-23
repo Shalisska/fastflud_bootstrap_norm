@@ -1438,6 +1438,25 @@ main .next--smaller {
 .private .form .file_upload__btn:active {
   text-decoration: none;
 }
+.private .form .info__item {
+  display: block;
+  margin-bottom: 10px;
+  padding: 0;
+  text-align: left;
+  font-size: 16px;
+  color: black;
+}
+.private .form .info__item input {
+  padding: 0;
+  font-size: 16px;
+  font-style: normal;
+  font-family: inherit;
+  background-color: #defd23;
+  border-color: #d0eb2e;
+}
+.private .form .info__item input[type="text"] {
+  text-transform: capitalize;
+}
 .popup-show {
   display: block;
 }

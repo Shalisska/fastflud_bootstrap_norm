@@ -9,6 +9,7 @@
     <link href="../css/style.css" rel="stylesheet">
     <script src="../js/jquery-1.11.2.min.js"></script>
     <script src="../js/auto-height.js"></script>
+    <script src="../js/auto-width.js"></script>
   </head>
   <body>
     <header class="header private">
@@ -79,30 +80,35 @@
             </div>
             <div class="info-l">
               <div class="info clearfix">
+                <div class="info__part">
+                  <label class="info__item"><span>Nickname </span>
+                    <input type="text" name="nick" value="Anonym">
+                  </label>
+                  <label class="info__item"><span>Имя </span>
+                    <input type="text" name="name" value="Анна">
+                  </label>
+                  <label class="info__item"><span>Фамилия </span>
+                    <input type="text" name="surname" value="Петрова">
+                  </label>
+                  <fieldset class="info__item"><span>Пол </span>
+                    <label>Ж
+                      <input type="radio" name="gender" value="woman">
+                    </label>
+                    <label>М
+                      <input type="radio" name="gender" value="man">
+                    </label>
+                  </fieldset>
+                  <label class="info__item"><span>Дата рождения </span>
+                    <input type="date" name="date" value="1986-12-12">
+                  </label>
+                  <label class="info__item"><span>E-mail </span>
+                    <input type="email" value="fffff@hhjj.ru">
+                  </label>
+                </div>
                 <div class="info__part"></div>
               </div>
             </div>
           </form>
-          <!--                label-->
-          <!--                    | Nickname -->
-          <!--                    input(type="text"name="nick" value="Anonym")-->
-          <!--                label-->
-          <!--                    | Имя -->
-          <!--                    input(type="text" name="name" value="Анна")-->
-          <!--                label-->
-          <!--                    | Фамилия -->
-          <!--                    input(type="text" name="surname" value="Петрова")-->
-          <!--                label-->
-          <!--                    | Пол -->
-          <!--                    input(type="radio" name="gender" value="woman")-->
-          <!--                    input(type="radio" name="gender" value="man")-->
-          <!--                label-->
-          <!--                    | Дата рождения -->
-          <!--                    input(type="date" name="date" value="12.12.1986")-->
-          <!--                label-->
-          <!--                    | E-mail -->
-          <!--                    input(type="email" value="fffff@hhjj.ru").info__part
-          -->
         </div>
       </div>
     </main>

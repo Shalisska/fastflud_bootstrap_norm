@@ -8,23 +8,27 @@ form.form.form--profile(action="post")
     .info-l
         .info.clearfix
             .info__part
-//                label
-//                    | Nickname 
-//                    input(type="text"name="nick" value="Anonym")
-//                label
-//                    | Имя 
-//                    input(type="text" name="name" value="Анна")
-//                label
-//                    | Фамилия 
-//                    input(type="text" name="surname" value="Петрова")
-//                label
-//                    | Пол 
-//                    input(type="radio" name="gender" value="woman")
-//                    input(type="radio" name="gender" value="man")
-//                label
-//                    | Дата рождения 
-//                    input(type="date" name="date" value="12.12.1986")
-//                label
-//                    | E-mail 
-//                    input(type="email" value="fffff@hhjj.ru")
+                label.info__item
+                    span Nickname 
+                    input(type="text" name="nick" value="Anonym")
+                label.info__item
+                    span Имя 
+                    input(type="text" name="name" value="Анна")
+                label.info__item
+                    span Фамилия 
+                    input(type="text" name="surname" value="Петрова")
+                fieldset.info__item
+                    span Пол 
+                    label
+                        | Ж
+                        input(type="radio" name="gender" value="woman")
+                    label
+                        | М
+                        input(type="radio" name="gender" value="man")
+                label.info__item
+                    span Дата рождения 
+                    input(type="date" name="date" value="1986-12-12")
+                label.info__item
+                    span E-mail 
+                    input(type="email" value="fffff@hhjj.ru")
             .info__part
