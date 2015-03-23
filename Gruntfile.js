@@ -141,7 +141,26 @@ module.exports = function (grunt) {
 				src: 'build/js/js.js',
 				dest: 'build/js/js.min.js'
 			}
-		}
+		},
+        
+        replace: {
+            build: {
+                options: {
+                    patterns: [{
+                        match: /src="..\//g,
+                        replacement: 'src="'
+                    }, {
+                        match: /href="..\//g,
+                        replacement: 'href="'
+                    }]
+                },
+                files: [{
+                    expand: true,
+                    flattern: true,
+                    src: ['build/*.html']
+                }]
+            }
+        }
 	});
 	
 	grunt.registerTask('default', [
@@ -150,7 +169,8 @@ module.exports = function (grunt) {
 		'copy',
 //		'cssmin',
 //		'htmlmin',
-//		'uglify'
+//		'uglify',
+        'replace'
 	]);
 	
 	grunt.registerTask('debug', [
