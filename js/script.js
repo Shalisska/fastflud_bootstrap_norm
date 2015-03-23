@@ -67,8 +67,10 @@ clock();
 (function(document) {
 	//ищем кнопки
     var regs = document.querySelectorAll('.registration');
+    var adds = document.querySelectorAll('.add-form');
 	//ищем формы
 	var reg__form = document.querySelector('.form--reg').parentNode;
+    var add__form = document.querySelector('.form--add').parentNode;
 	
 	//открытие формы
 	for (var i = 0; i < regs.length; i++) {
@@ -78,9 +80,20 @@ clock();
 			event.preventDefault();
 			if (reg__form.classList.contains('popup-show') != true) {
 				reg__form.classList.add('popup-show');
-			}			
+			}
 		})
 	}
+    
+	for (var i = 0; i < adds.length; i++) {
+	var add = adds[i];
+
+	add.addEventListener('click', function(event) {
+		event.preventDefault();
+		if (add__form.classList.contains('popup-show') != true) {
+            add__form.classList.add('popup-show');
+		}
+	})
+}
 	
 	//закрытие окон
 	var esc = document.querySelectorAll('.form__esc');
@@ -91,7 +104,7 @@ clock();
 			
 			var close = this.parentNode.parentNode;
 			close.classList.remove('popup-show');
-		});       
+		});
 	}
     
    var shims = document.querySelectorAll('.shim');

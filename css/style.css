@@ -226,8 +226,9 @@ body {
 .form__identification {
   border-bottom: 5px solid #eb2629;
 }
-.form--add {
-  margin: 50px auto;
+.form__reg .form__input:first-of-type input {
+  margin-bottom: 20px;
+  width: 250px;
 }
 .form--add .form__title-l {
   background: #eb2629;
@@ -290,19 +291,8 @@ body {
 .form--add .form__reg .form__input {
   padding-top: 15px;
 }
-.form--add .form__reg .capcha {
-  float: none;
-}
 .form--add .form__reg .capcha-l {
-  margin-top: 0;
-  margin-bottom: 10px;
-}
-.form--add .form__reg .capcha-l .form__required-l {
-  float: none;
-  margin-left: 0;
-}
-.form--add .form__reg .capcha-l input[type="submit"] {
-  margin-top: 12px;
+  margin-top: -20px;
 }
 .form fieldset.form__add {
   padding: 5px 28.5px 15px;
@@ -977,7 +967,7 @@ main .next--smaller {
   background-image: url("../img/icon-google.png");
 }
 .footer__submenu a {
-  margin-right: 23%;
+  margin-right: 10%;
   color: white;
   font-size: 16px;
   text-transform: lowercase;

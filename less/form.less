@@ -222,10 +222,16 @@ body textarea:required:valid {
     &__identification {
         border-bottom: 5px solid @color-main--grand;
     }
+    &__reg {
+        .form__input:first-of-type {
+            input {
+                margin-bottom: 20px;
+                width: 250px;
+            }
+        }
+    }
     
     &--add {
-        margin: 50px auto;
-        
         .form__title {
             &-l {
                 background: #eb2629;
@@ -307,23 +313,9 @@ body textarea:required:valid {
             .form__input {
                 padding-top: 15px;
             }
-                        
-            .capcha {
-                float: none;
-                
-                &-l {
-                    margin-top: 0;
-                    margin-bottom: 10px;
-                   
-                    .form__required-l {
-                        float: none;
-                        margin-left: 0;
-                    }
-                    
-                    input[type="submit"] {
-                        margin-top: 12px;
-                    }
-                }
+            
+            .capcha-l {
+                margin-top: -20px;
             }
         }
     }
