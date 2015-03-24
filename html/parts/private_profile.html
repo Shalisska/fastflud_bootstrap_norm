@@ -9,31 +9,83 @@
   <div class="info-l">
     <div class="info clearfix">
       <div class="info__part">
-        <label class="info__item"><span>Nickname </span>
+        <label class="info__item"><span>Nickname</span>
           <input type="text" name="nick" value="Anonym"/>
         </label>
-        <label class="info__item"><span>Имя </span>
+        <label class="info__item"><span>Имя</span>
           <input type="text" name="name" value="Анна"/>
         </label>
-        <label class="info__item"><span>Фамилия </span>
+        <label class="info__item"><span>Фамилия</span>
           <input type="text" name="surname" value="Петрова"/>
         </label>
-        <fieldset class="info__item"><span>Пол </span>
-          <label>Ж
-            <input type="radio" name="gender" value="woman"/>
-          </label>
-          <label>М
-            <input type="radio" name="gender" value="man"/>
-          </label>
+        <fieldset class="info__item info__item--radio"><span>Пол</span>
+          <input type="radio" name="gender" value="woman" id="woman" checked="checked"/>
+          <input type="radio" name="gender" value="man" id="man"/>
+          <label for="woman">Ж</label>
+          <label for="man">М</label>
         </fieldset>
-        <label class="info__item"><span>Дата рождения </span>
+        <label class="info__item"><span>Дата рождения</span>
           <input type="date" name="date" value="1986-12-12"/>
         </label>
-        <label class="info__item"><span>E-mail </span>
+        <label class="info__item"><span>E-mail</span>
           <input type="email" value="fffff@hhjj.ru"/>
         </label>
       </div>
-      <div class="info__part"></div>
+      <div class="info__part">
+        <label class="info__item"><span>Страна</span>
+          <input type="text" name="country" value="РФ"/>
+        </label>
+        <label class="info__item"><span>Город</span>
+          <input type="text" name="city" value="Москва"/>
+        </label>
+        <fieldset class="info__item--pass-l"><span>Смена пароля:</span>
+          <label class="info__item info__item--pass"><span>Старый пароль</span>
+            <input type="password" name="pass-old"/>
+          </label>
+          <label class="info__item info__item--pass"><span>Новый пароль</span>
+            <input type="password" name="pass-new"/>
+          </label>
+          <label class="info__item info__item--pass"><span>Повторите новый пароль</span>
+            <input type="password" name="pass-repeat"/>
+          </label>
+        </fieldset>
+      </div>
     </div>
   </div>
+  <input id="rang-info" type="checkbox" class="rang__input"/>
+  <div class="rang-l">
+    <p class="rang__title">Статус на FF</p>
+    <label for="rang-info" class="rang">Профи</label>
+  </div>
+  <div class="rang__info">Для того чтобы повысить свой статус на FF необходимо предлагать посты!
+    <ul class="rang__items">
+      <li>Новичок-стажер - 1 пост</li>
+      <li>Стажер-середина - 3 поста</li>
+      <li>Середина-профи - 7 постов</li>
+      <li>профи-эксперт - 15 постов</li>
+    </ul>
+  </div>
+  <textarea name="cite" rows="5" class="info__text info__text--area">Ножницы режут бумагу, бумага заворачивает камень, камень давит ящерицу, ящерица травит Спока, Спок ломает ножницы, ножницы отрезают голову ящерице, ящерица ест бумагу, бумага подставляет Спока, Спок испаряет камень, и, как обычно, камень разбивает ножницы. &#169;</textarea>
+  <input type="submit" value="Сохранить" class="btn btn--profile"/>
 </form>
+<div class="friends">
+  <p class="friends__title">Друзья из соц. сетей на FF</p><a href="#" class="friends__item"><span class="friends__img"><img src="../img/content/avatar.jpg" alt="friend"/><a href="#" class="friends__add">+</a></span><span class="friends__name">Anonym Anonym</span></a><a href="#" class="friends__item"><span class="friends__img"><img src="../img/content/avatar.jpg" alt="friend"/><a href="#" class="friends__add">+</a></span><span class="friends__name">Anonym Anonym</span></a><a href="#" class="friends__item"><span class="friends__img"><img src="../img/content/avatar.jpg" alt="friend"/><a href="#" class="friends__add">+</a></span><span class="friends__name">Anonym Anonym</span></a>
+    <div class="friends__item">
+      <div class="friends__img">
+        <!--img(src="../img/content/avatar.jpg", alt="friend")--><a href="#" class="friends__add">+</a>
+      </div>
+      <p class="friends__name">Anonym Anonym</p>
+    </div>
+    <div class="friends__item">
+      <div class="friends__img">
+        <!--img(src="../img/content/avatar.jpg", alt="friend")--><a href="#" class="friends__add">+</a>
+      </div>
+      <p class="friends__name">Anonym Anonym</p>
+    </div>
+    <div class="friends__item">
+      <div class="friends__img">
+        <!--img(src="../img/content/avatar.jpg", alt="friend")--><a href="#" class="friends__add">+</a>
+      </div>
+      <p class="friends__name">Anonym Anonym</p>
+    </div>
+</div>

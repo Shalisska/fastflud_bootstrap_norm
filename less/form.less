@@ -466,6 +466,43 @@ body textarea:required:valid {
     }
 }
 
+//чекбокс запомнить меня
+.form__remember {
+    margin-top: 15px;
+    margin-bottom: 20px;
+    input[type="checkbox"] {
+        display: none;
+
+        &:checked~label[for="remember"] span:before {
+            content: "";
+            position: absolute;
+            width: 27px;
+            height: 26px;
+            left: -4px;
+            bottom: 0;
+            background: url("../img/icon-checkbox.png") no-repeat center center;
+        }
+    }
+
+    label {
+        font-style: italic;
+        font-size: 18px;
+        font-family: @font-family--light;
+        font-weight: bold;
+        color: @placeholder;
+    }
+    span {
+        position: relative;
+        display: inline-block;
+        margin-right: 10px;
+        margin-bottom: 5px;
+        width: 18px;
+        height: 18px;
+        border: 1px solid #757576;
+        vertical-align: middle;
+    }
+}
+
 .file_upload {
     float: left;
     position: relative;
@@ -553,36 +590,13 @@ body textarea:required:valid {
     }
 }
 
-.add-screen {
-//        display: inline-block;
-//        margin: 0 20px;
-//        vertical-align: middle;
-    
-}
-
-//стили для fancybox
-//.fancybox {
-//    &-skin {
-//        background: transparent;
-//    }
-//    
-//    &-close {
-//        top: 15px;
-//        right: 20px;
-//        background: url("../img/icon-close.png") no-repeat center center;
-//    }
-//}
-.form__identification {
-    
-}
-
 /* ширма (полупрозрачное затенение под модальным окном) */
 .shim {
     /* фиксируем, растягиваем на весь доступный экран */
     position: fixed;
     bottom: 0; left: 0; top: 0; right: 0;
     z-index: 50;
-    display: none;
+//    display: none;
 
     /* если в модальном окне много содержимого, показываем скроллбар */
     overflow: auto;
@@ -599,4 +613,16 @@ body textarea:required:valid {
 /* декоративная часть ширмы: делаем полупрозрачной и чёрной */
 .shim {
     background: rgba(0,0,0,0.5);
+}
+
+.error {
+    display: none;
+    width: 70%;
+    margin: 20px auto;
+    padding: 5px;
+    border: 3px solid red;
+    color: red;
+    text-align: left;
+    font-size: 16px;
+    border-radius: 5px;
 }

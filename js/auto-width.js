@@ -1,18 +1,10 @@
-function setEqualWidth(rows) {
-//    var widtherrow = 0;
-    rows.each(function () {
-        var text = $(this).
-        
-        
-        currentWidth = $(this).width();
-        if (currentWidth > widtherrow) {
-            widtherrow  = currentWidth;
-        }
-    });
-        
-    rows.height(widtherrow);
-}
-
 $(document).ready(function () {
-    setEqualWidth($('.info__item > input').not($('input[type="radio"]')));
+    var rows = $('.info__item').not($('fieldset')).not($('.info__item--pass'));
+    
+    rows.each(function () {
+        var rowsWidth = $(this).width() - 7;
+        var textWidth = $(this).children('span').width();
+        var currentWidth = rowsWidth - textWidth;
+        var inputWidth = $(this).children('input').width(currentWidth);
+    });
 });

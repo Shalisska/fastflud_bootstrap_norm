@@ -257,10 +257,17 @@
               <input type="password" name="pass" placeholder="Пароль" class="form__input">
             </div>
             <div class="col-md-12">
+              <!--запомнить меня-->
+              <div class="form__remember">
+                <input type="checkbox" name="remember" id="remember" checked>
+                <label for="remember"><span></span>Запомнить меня</label>
+              </div>
               <input type="submit" value="Войти">
             </div>
             <!--забыли пароль-->
-            <div class="col-md-12"><a href="#" class="form__forget">Забыли пароль?</a></div>
+            <div class="col-md-12"><a href="#" class="form__forget">Забыли пароль?</a>
+              <div class="error"><strong>Пароль</strong><br><span>Неверно введен пароль</span></div>
+            </div>
           </div>
         </fieldset>
         <!--регистрация через соц. сети-->

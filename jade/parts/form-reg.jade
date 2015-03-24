@@ -10,10 +10,21 @@ form.form.form--reg(action="#" method="post" name="registration" id="registratio
                 input.form__input(type="text" name="login" placeholder="Логин")
                 input.form__input(type="password" name="pass" placeholder="Пароль")
             .col-md-12
+                //запомнить меня
+                .form__remember
+                    input(type="checkbox" name="remember" id="remember" checked)
+                    label(for="remember")
+                        span
+                        | Запомнить меня
                 input(type="submit" value="Войти")
             //забыли пароль
             .col-md-12
                 a.form__forget(href="#") Забыли пароль?
+                
+                .error
+                    strong Пароль
+                    br
+                    span Неверно введен пароль
         
     //регистрация через соц. сети
     fieldset.form__socials

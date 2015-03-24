@@ -405,6 +405,39 @@ body {
 .form__number--file {
   width: 12.7%;
 }
+.form__remember {
+  margin-top: 15px;
+  margin-bottom: 20px;
+}
+.form__remember input[type="checkbox"] {
+  display: none;
+}
+.form__remember input[type="checkbox"]:checked ~ label[for="remember"] span:before {
+  content: "";
+  position: absolute;
+  width: 27px;
+  height: 26px;
+  left: -4px;
+  bottom: 0;
+  background: url("../img/icon-checkbox.png") no-repeat center center;
+}
+.form__remember label {
+  font-style: italic;
+  font-size: 18px;
+  font-family: 'OpenSans Light', 'Arial', sans-serif;
+  font-weight: bold;
+  color: #666565;
+}
+.form__remember span {
+  position: relative;
+  display: inline-block;
+  margin-right: 10px;
+  margin-bottom: 5px;
+  width: 18px;
+  height: 18px;
+  border: 1px solid #757576;
+  vertical-align: middle;
+}
 .file_upload {
   float: left;
   position: relative;
@@ -496,7 +529,6 @@ body {
   top: 0;
   right: 0;
   z-index: 50;
-  display: none;
   /* если в модальном окне много содержимого, показываем скроллбар */
   overflow: auto;
   /* однопальцевый скролл для iPad*/
@@ -509,6 +541,17 @@ body {
 /* декоративная часть ширмы: делаем полупрозрачной и чёрной */
 .shim {
   background: rgba(0, 0, 0, 0.5);
+}
+.error {
+  display: none;
+  width: 70%;
+  margin: 20px auto;
+  padding: 5px;
+  border: 3px solid red;
+  color: red;
+  text-align: left;
+  font-size: 16px;
+  border-radius: 5px;
 }
 .header {
   margin-bottom: 60px;
@@ -1294,10 +1337,49 @@ main .next--smaller {
   line-height: 1;
 }
 .private .rang {
-  margin-bottom: 15px;
   color: #e82a2c;
   font-family: 'OpenSans-Bold', 'Arial', sans-serif;
   text-transform: uppercase;
+  text-decoration: underline;
+  cursor: pointer;
+}
+.private .rang--header {
+  margin-bottom: 15px;
+  text-decoration: none;
+  cursor: default;
+}
+.private .rang-l {
+  margin-bottom: 25px;
+  width: 185px;
+}
+.private .rang__title {
+  margin: 0;
+  font-size: 23px;
+}
+.private .rang__input {
+  display: none;
+}
+.private .rang__input:checked ~ .rang-l {
+  margin-bottom: 15px;
+}
+.private .rang__input:checked ~ .rang__info {
+  display: block;
+}
+.private .rang__info {
+  display: none;
+  margin-left: 35px;
+  margin-bottom: 25px;
+  padding: 2px 5px 5px 25px;
+  font-family: 'OpenSans-Italic', 'Arial', sans-serif;
+  font-weight: bold;
+  text-align: left;
+  font-size: 13px;
+  border: 1px dashed #e82a2c;
+}
+.private .rang__items {
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 .private .subtext {
   font-size: 16px;
@@ -1313,7 +1395,7 @@ main .next--smaller {
   float: left;
   width: 25%;
 }
-.private .avatar-l:after {
+.private .avatar--header-l:after {
   content: "";
   position: absolute;
   width: 2px;
@@ -1332,7 +1414,10 @@ main .next--smaller {
 }
 .private .info__part {
   float: left;
-  width: 50%;
+  width: 49%;
+}
+.private .info__part:last-of-type {
+  float: right;
 }
 .private .info__part--options-item {
   margin-bottom: 15px;
@@ -1440,7 +1525,16 @@ main .next--smaller {
   font-size: 16px;
   color: black;
 }
+.private .form .info__item:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+.private .form .info__item:after {
+  display: none;
+}
 .private .form .info__item input {
+  float: right;
   padding: 0;
   font-size: 16px;
   font-style: normal;
@@ -1450,6 +1544,101 @@ main .next--smaller {
 }
 .private .form .info__item input[type="text"] {
   text-transform: capitalize;
+}
+.private .form .info__item--radio input[type="radio"] {
+  display: none;
+}
+.private .form .info__item--radio label {
+  margin-right: 5%;
+}
+.private .form .info__item--radio label:first-of-type {
+  margin-left: 15%;
+}
+.private .form .info__item--radio label:after {
+  content: "";
+  display: inline-block;
+  width: 11px;
+  height: 11px;
+  margin-left: 3px;
+  background: #defd23;
+  border: 1px solid #d0eb2e;
+  border-radius: 50%;
+}
+.private .form .info__item--radio input[id="woman"]:checked ~ label[for="woman"]:after,
+.private .form .info__item--radio input[id="man"]:checked ~ label[for="man"]:after {
+  background-color: black;
+  border-color: black;
+}
+.private .form .info__item--pass-l {
+  padding: 2px 0 0;
+  text-align: left;
+  font-size: 16px;
+  color: black;
+}
+.private .form .info__item--pass-l > span {
+  display: inline-block;
+  margin-bottom: 10px;
+}
+.private .form .info__item--pass input {
+  width: 65%;
+}
+.private .form .info__item--pass input[name="pass-repeat"] {
+  width: 100%;
+  margin-top: 5px;
+}
+.private .form .info__text {
+  width: 100%;
+  max-width: 100%;
+  background-color: #defd23;
+  border-color: #d0eb2e;
+}
+.private .form .info__text--area {
+  padding: 5px 10px;
+}
+.friends {
+  font-size: 0;
+}
+.friends__title {
+  font-size: 16px;
+  font-weight: bold;
+  border-bottom: 1px solid black;
+}
+.friends__item {
+  display: inline-block;
+  width: 16.66666667%;
+  padding: 0 5px;
+}
+.friends__item:hover,
+.friends__item:active {
+  color: white;
+  text-decoration: none;
+}
+.friends__img {
+  position: relative;
+  width: 125px;
+  height: 151px;
+  background: #666565;
+}
+.friends__img img {
+  position: relative;
+  width: 100%;
+  height: auto;
+  z-index: 10;
+}
+.friends__add {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  top: 50%;
+  margin-top: -40px;
+  left: 50%;
+  margin-left: -40px;
+  color: white;
+  font-size: 100px;
+  line-height: 73px;
+  text-align: center;
+  border: 4px solid white;
+  border-radius: 50%;
 }
 .popup-show {
   display: block;
