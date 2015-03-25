@@ -405,12 +405,15 @@ body {
 .form__number--file {
   width: 12.7%;
 }
+/*чекбокс запомнить меня*/
 .form__remember {
   margin-top: 15px;
   margin-bottom: 20px;
+  /*стилизованный чекбокс*/
 }
 .form__remember input[type="checkbox"] {
   display: none;
+  /*галка при включенном чекбоксе*/
 }
 .form__remember input[type="checkbox"]:checked ~ label[for="remember"] span:before {
   content: "";
@@ -529,6 +532,7 @@ body {
   top: 0;
   right: 0;
   z-index: 50;
+  display: none;
   /* если в модальном окне много содержимого, показываем скроллбар */
   overflow: auto;
   /* однопальцевый скролл для iPad*/
@@ -1287,6 +1291,7 @@ main .next--smaller {
   vertical-align: bottom;
   margin-right: 10px;
   background: url("../img/icon_down.png") no-repeat center center;
+  background-size: contain;
 }
 .comments__all:visited {
   text-decoration: none;
@@ -1477,9 +1482,17 @@ main .next--smaller {
   width: 23px;
   background-image: url("../img/icon-home.png");
 }
+.private__menu-home:active,
+.private__menu-home:hover {
+  background-image: url("../img/icon-home--active.png");
+}
 .private__menu-search {
   width: 25px;
   background-image: url("../img/icon-search--private.png");
+}
+.private__menu-search:active,
+.private__menu-search:hover {
+  background-image: url("../img/icon-search--private--active.png");
 }
 .private .form {
   position: static;
@@ -1596,7 +1609,7 @@ main .next--smaller {
   padding: 5px 10px;
 }
 .friends {
-  font-size: 0;
+  text-align: center;
 }
 .friends__title {
   font-size: 16px;
@@ -1605,17 +1618,14 @@ main .next--smaller {
 }
 .friends__item {
   display: inline-block;
-  width: 16.66666667%;
-  padding: 0 5px;
+  width: 125px;
+  margin-right: 4.6%;
 }
-.friends__item:hover,
-.friends__item:active {
-  color: white;
-  text-decoration: none;
+.friends__item:last-of-type {
+  margin-right: 0;
 }
 .friends__img {
   position: relative;
-  width: 125px;
   height: 151px;
   background: #666565;
 }
@@ -1639,6 +1649,84 @@ main .next--smaller {
   text-align: center;
   border: 4px solid white;
   border-radius: 50%;
+}
+.friends__add:hover,
+.friends__add:active {
+  color: white;
+  text-decoration: none;
+}
+.friends__name {
+  margin: 0;
+  font-size: 20px;
+}
+.comments__private {
+  margin-bottom: 15px;
+}
+.comments__private:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+.comments__private:nth-of-type(2n) {
+  background: transparent;
+  border: none;
+}
+.comments__private .comments__header {
+  margin-bottom: 15px;
+  padding: 0;
+}
+.comments__private .comments__header:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+.comments__private .comments__header .img-box {
+  float: left;
+  width: 22%;
+  margin-right: 10px;
+}
+.comments__private .comments__header .img-box__title {
+  font-size: 16px;
+}
+.comments__private .comments__header .img-box__number {
+  display: inline-block;
+  margin-bottom: 10px;
+}
+.comments__private .comments-item {
+  margin-bottom: 20px;
+}
+.comments__private .comments-item__img {
+  width: 10%;
+}
+.comments__private .comments-item__head {
+  margin-bottom: -10px;
+  width: 100%;
+}
+.comments__private .comments-item__text {
+  margin-bottom: 10px;
+  font-size: 14px;
+  font-weight: bold;
+}
+.comments__private .comments-item__date {
+  font-size: 14px;
+  font-family: 'OpenSans-Italic', 'Arial', sans-serif;
+  color: #666565;
+  text-align: right;
+}
+.comments__private .comments-item__date .comments__date {
+  margin-left: 20px;
+}
+.comments__private .comments-item--answer {
+  margin-left: 5%;
+}
+.comments__private .comments__all {
+  position: static;
+  float: right;
+  font-size: 12px;
+}
+.comments__private .comments__all:before {
+  width: 20px;
+  height: 25px;
 }
 .popup-show {
   display: block;

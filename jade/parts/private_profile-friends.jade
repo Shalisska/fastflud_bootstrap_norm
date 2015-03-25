@@ -1,13 +1,13 @@
 mixin friend
-    a(href="#").friends__item
-        span.friends__img
+    .friends__item
+        .friends__img
             img(src="../img/content/avatar.jpg", alt="friend")
             a.friends__add(href="#") +
-        span.friends__name Anonym Anonym
+        p.friends__name Anonym Anonym
 
 mixin friend-add
     .friends__item
         .friends__img
             //img(src="../img/content/avatar.jpg", alt="friend")
             a.friends__add(href="#") +
-        p.friends__name Anonym Anonym
+        p.friends__name Добавить друга
