@@ -1695,9 +1695,6 @@ main .next--smaller {
 .comments__private .comments-item {
   margin-bottom: 20px;
 }
-.comments__private .comments-item__img {
-  width: 10%;
-}
 .comments__private .comments-item__head {
   margin-bottom: -10px;
   width: 100%;
