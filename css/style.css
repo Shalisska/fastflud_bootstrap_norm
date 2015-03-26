@@ -1218,12 +1218,11 @@ main .next--smaller {
   margin-right: 5px;
   width: 65px;
   height: 56px;
-  background: url("../img/content/cloud-author.png") no-repeat center center;
-  background-size: 100%;
   text-align: center;
 }
 .comments-item__img img {
-  width: 94%;
+  width: 100%;
+  height: 100%;
   margin-top: 6%;
 }
 .comments-item__head {
@@ -1333,6 +1332,22 @@ main .next--smaller {
   background: url("../img/icon_up.png") no-repeat center center;
   background-size: 100%;
 }
+@-webkit-keyframes show {
+  0% {
+    height: 0;
+  }
+  100% {
+    height: 100px;
+  }
+}
+@keyframes show {
+  0% {
+    height: 0;
+  }
+  100% {
+    height: 100px;
+  }
+}
 .private .title,
 .private .rang {
   margin: 0;
@@ -1369,6 +1384,9 @@ main .next--smaller {
 }
 .private .rang__input:checked ~ .rang__info {
   display: block;
+  -webkit-animation: show .5s;
+          animation: show .5s;
+  overflow: hidden;
 }
 .private .rang__info {
   display: none;
@@ -1380,6 +1398,9 @@ main .next--smaller {
   text-align: left;
   font-size: 13px;
   border: 1px dashed #e82a2c;
+}
+.private .rang__info p {
+  margin: 0;
 }
 .private .rang__items {
   list-style: none;
@@ -1695,6 +1716,12 @@ main .next--smaller {
 .comments__private .comments-item {
   margin-bottom: 20px;
 }
+.comments__private .comments-item__head,
+.comments__private .comments-item__text,
+.comments__private .comments-item__date,
+.comments__private .comments-item__counter-l {
+  padding-right: 5px;
+}
 .comments__private .comments-item__head {
   margin-bottom: -10px;
   width: 100%;
@@ -1724,6 +1751,25 @@ main .next--smaller {
 .comments__private .comments__all:before {
   width: 20px;
   height: 25px;
+}
+.comments__private--answer .comments-item--answer {
+  position: relative;
+  padding: 10px 5px 15px 10px;
+  background: #defd23;
+  border: 1px solid #d7f429;
+}
+.comments__private--answer .comments-item--answer .comments-item__head {
+  width: auto;
+}
+.comments__private--answer .comments-item--answer .comments-item__rang {
+  position: absolute;
+  right: 5px;
+}
+.comments__private--answer .comments-item--answer .comments-item__answer {
+  margin-left: 70px;
+}
+.comments__private--answer .comments-item--answer .comments-item__counter-l {
+  padding-right: 15px;
 }
 .popup-show {
   display: block;
