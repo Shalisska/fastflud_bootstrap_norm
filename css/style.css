@@ -230,42 +230,48 @@ body {
   margin-bottom: 20px;
   width: 250px;
 }
-.form--add .form__title-l {
+.form .form__title-l {
   background: #eb2629;
 }
-.form--add .form__title--regular {
+.form .form__title--regular {
   font-size: 14px;
   text-align: right;
   margin-right: 10%;
   margin-bottom: 0;
 }
-.form--add .form__title--add {
+.form .form__title--add {
   font-size: 40px;
   color: #eb2629;
   background: transparent;
 }
-.form--add .top-menu {
+.form .top-menu {
   padding-bottom: 10px;
 }
-.form--add .top-menu ul li {
+.form .top-menu ul {
+  padding: 0;
+}
+.form .top-menu ul li {
   width: 15%;
   min-width: 139px;
 }
-.form--add .top-menu ul li a {
+.form .top-menu ul li label {
   color: white;
   font-size: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
   opacity: .65;
 }
-.form--add .top-menu ul li a:hover,
-.form--add .top-menu ul li a.active {
+.form .top-menu ul li label .top-menu__img {
+  opacity: .65;
+}
+.form .top-menu ul li label:hover {
   color: white;
   opacity: 1;
 }
-.form--add .top-menu ul li a:hover .top-menu__img img,
-.form--add .top-menu ul li a.active .top-menu__img img {
-  display: block;
+.form .top-menu ul li label:hover .top-menu__img {
+  opacity: 1;
 }
-.form--add .top-menu__img {
+.form .top-menu__img {
   margin-bottom: 5px;
 }
 .form--add fieldset {
@@ -294,7 +300,8 @@ body {
 .form--add .form__reg .capcha-l {
   margin-top: -20px;
 }
-.form fieldset.form__add {
+.form form.form__add {
+  margin: 0;
   padding: 5px 28.5px 15px;
   border-bottom: 60px solid #eb2629;
 }
@@ -523,6 +530,29 @@ body {
   background-size: 100%;
   border: none;
 }
+.form__add-site,
+.form__add-logo,
+.form__add-trash {
+  display: none;
+}
+.form-menu__controls {
+  display: none;
+}
+.form-menu__controls[id="for-form-site"]:checked ~ .form__title-l label[for="for-form-site"],
+.form-menu__controls[id="for-form-logo"]:checked ~ .form__title-l label[for="for-form-logo"],
+.form-menu__controls[id="for-form-trash"]:checked ~ .form__title-l label[for="for-form-trash"] {
+  opacity: 1;
+}
+.form-menu__controls[id="for-form-site"]:checked ~ .form__title-l label[for="for-form-site"] .top-menu__img,
+.form-menu__controls[id="for-form-logo"]:checked ~ .form__title-l label[for="for-form-logo"] .top-menu__img,
+.form-menu__controls[id="for-form-trash"]:checked ~ .form__title-l label[for="for-form-trash"] .top-menu__img {
+  opacity: 1;
+}
+.form-menu__controls[id="for-form-site"]:checked ~ .form__add-site,
+.form-menu__controls[id="for-form-logo"]:checked ~ .form__add-logo,
+.form-menu__controls[id="for-form-trash"]:checked ~ .form__add-trash {
+  display: block;
+}
 /* ширма (полупрозрачное затенение под модальным окном) */
 .shim {
   /* фиксируем, растягиваем на весь доступный экран */
@@ -532,7 +562,6 @@ body {
   top: 0;
   right: 0;
   z-index: 50;
-  display: none;
   /* если в модальном окне много содержимого, показываем скроллбар */
   overflow: auto;
   /* однопальцевый скролл для iPad*/

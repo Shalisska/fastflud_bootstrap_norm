@@ -1,95 +1,129 @@
 extends form-add_parts
 block form-add_site
-    p.form__title.form__title--add Добавить по теме "Сайты"
-    
-    fieldset.form__add-link
-        .row
-            .col-md-12
-                label
-                    span.form__number 1
-                    input(type="text" placeholder='ссылка на сайт "у кого"' name="from-whom")
-            .col-md-12
-                label
-                    span.form__number 2
-                    input(type="text" placeholder='ссылка на сайт "кто"' name="who")
-                p.form__add-link-more
-                    | массовое копирование сайта 
-                    a(href="#") добавить еще
-            
-    fieldset.form__add-description
-        .row
-            .col-md-12
-        label
-            span.form__number 3
-            .form__add-description-l
-                textarea(name="description" rows="6" placeholder="Ваши комментарии")
-                .form__add-screen.file_upload-l
-                    label.file_upload
-                        .screen
-                        .file_upload__field добавить скриншоты
-                        a.file_upload__btn.add-screen(href="#")
-                        input(type="file" name="file_screen")
-                
-    fieldset.form__add-send
-        .row
-            .col-md-4
-                .form__add-accept
-                    input(type="checkbox" name="accept" id="accept" checked)
-                    label(for="accept")
-                    a(href="#") Принять условия
-            .col-md-4
-                input(type="submit" value="Отправить")
-
-
-block form-add_logo
-    p.form__title.form__title--add Добавить по теме "Логотипы"
+    form.form__add.form__add-site(action="#" method="post" name="add-site" id="add-site" enctype="multipart/form-data")
+        p.form__title.form__title--add Добавить по теме "Сайты"
 
         fieldset.form__add-link
-            .form__add-link-files
-                .row
-                    .col-md-6
-                        .file_upload-l
-                            span.form__number.form__number--file 1
-                            label.file_upload
-                                .file_upload__field добавить файл "у кого"
-                                a.file_upload__btn.btn(href="#")
-                                input(type="file" name="file_from-whom")
-                    .col-md-6
-                        .file_upload-l.file_upload-l--r
-                           span.form__number.form__number--file.form__number--file 2
-                           label.file_upload
-                                .file_upload__field добавить файл "у кого"
-                                a.file_upload__btn.btn(href="#")
-                                input(type="file" name="file_who")
-                        p.form__add-link-more
-                            | массовое копирование логотипа 
-                            a(href="#") добавить еще
             .row
                 .col-md-12
                     label
-                        span.form__number 3
+                        span.form__number 1
                         input(type="text" placeholder='ссылка на сайт "у кого"' name="from-whom")
                 .col-md-12
                     label
-                        span.form__number 4
+                        span.form__number 2
                         input(type="text" placeholder='ссылка на сайт "кто"' name="who")
                     p.form__add-link-more
+                        | массовое копирование сайта 
                         a(href="#") добавить еще
 
         fieldset.form__add-description
             .row
                 .col-md-12
-                    label
-                        span.form__number 5
-                        .form__add-description-l
-                            textarea(name="description" rows="6" placeholder="Ваши комментарии")
-                            .form__add-screen.file_upload-l
+            label
+                span.form__number 3
+                .form__add-description-l
+                    textarea(name="description" rows="6" placeholder="Ваши комментарии")
+                    .form__add-screen.file_upload-l
+                        label.file_upload
+                            .screen
+                            .file_upload__field добавить скриншоты
+                            a.file_upload__btn.add-screen(href="#")
+                            input(type="file" name="file_screen")
+
+        fieldset.form__add-send
+            .row
+                .col-md-4
+                    .form__add-accept
+                        input(type="checkbox" name="accept" id="accept" checked)
+                        label(for="accept")
+                        a(href="#") Принять условия
+                .col-md-4
+                    input(type="submit" value="Отправить")
+
+
+block form-add_logo
+    form.form__add.form__add-logo(action="#" method="post" name="add-logo" id="add-logo" enctype="multipart/form-data")
+        p.form__title.form__title--add Добавить по теме "Логотипы"
+
+            fieldset.form__add-link
+                .form__add-link-files
+                    .row
+                        .col-md-6
+                            .file_upload-l
+                                span.form__number.form__number--file 1
                                 label.file_upload
-                                    .screen
-                                    .file_upload__field добавить скриншоты
-                                    a.file_upload__btn.add-screen(href="#")
-                                    input(type="file" name="file_screen")
-                            
+                                    .file_upload__field добавить файл "у кого"
+                                    a.file_upload__btn.btn(href="#")
+                                    input(type="file" name="file_from-whom")
+                        .col-md-6
+                            .file_upload-l.file_upload-l--r
+                               span.form__number.form__number--file.form__number--file 2
+                               label.file_upload
+                                    .file_upload__field добавить файл "у кого"
+                                    a.file_upload__btn.btn(href="#")
+                                    input(type="file" name="file_who")
+                            p.form__add-link-more
+                                | массовое копирование логотипа 
+                                a(href="#") добавить еще
+                .row
+                    .col-md-12
+                        label
+                            span.form__number 3
+                            input(type="text" placeholder='ссылка на сайт "у кого"' name="from-whom")
+                    .col-md-12
+                        label
+                            span.form__number 4
+                            input(type="text" placeholder='ссылка на сайт "кто"' name="who")
+                        p.form__add-link-more
+                            a(href="#") добавить еще
+
+            fieldset.form__add-description
+                .row
+                    .col-md-12
+                        label
+                            span.form__number 5
+                            .form__add-description-l
+                                textarea(name="description" rows="6" placeholder="Ваши комментарии")
+                                .form__add-screen.file_upload-l
+                                    label.file_upload
+                                        .screen
+                                        .file_upload__field добавить скриншоты
+                                        a.file_upload__btn.add-screen(href="#")
+                                        input(type="file" name="file_screen")
+
+
+            fieldset.form__add-send
+                .row
+                    .col-md-4
+                        .form__add-accept
+                            input(type="checkbox" name="accept" id="accept" checked)
+                            label(for="accept")                
+                            a(href="#") Принять условия
+                    .col-md-4
+                        input(type="submit" value="Отправить")
+
+
+block form-add_trash
+    form.form__add.form__add-trash(action="#" method="post" name="add-trash" id="add-trash" enctype="multipart/form-data")
+        p.form__title.form__title--add Добавить по теме "Прочий хлам"
+        p.form__title--sub Здесь вы можете добавить другие примеры недоброкачественной работы: аудио- и видеоматериалы, упаковки и т.п.
+
+        fieldset.form__add-description
+            .row
+                .col-md-12
+            label
+                span.form__number 1
+                .form__add-description-l
+                    textarea(name="description" rows="6" placeholder="Ваши комментарии")
+
+                    .form__add-screen.file_upload-l
+                        label.file_upload
+                            .screen
+                            .file_upload__field добавить скриншоты
+                            a.file_upload__btn.add-screen(href="#")
+                            input(type="file" name="file_screen")
+
 
         fieldset.form__add-send
             .row
@@ -100,34 +134,3 @@ block form-add_logo
                         a(href="#") Принять условия
                 .col-md-4
                     input(type="submit" value="Отправить")
-
-
-block form-add_trash
-    p.form__title.form__title--add Добавить по теме "Прочий хлам"
-    p.form__title--sub Здесь вы можете добавить другие примеры недоброкачественной работы: аудио- и видеоматериалы, упаковки и т.п.
-    
-    fieldset.form__add-description
-        .row
-            .col-md-12
-        label
-            span.form__number 1
-            .form__add-description-l
-                textarea(name="description" rows="6" placeholder="Ваши комментарии")
-                
-                .form__add-screen.file_upload-l
-                    label.file_upload
-                        .screen
-                        .file_upload__field добавить скриншоты
-                        a.file_upload__btn.add-screen(href="#")
-                        input(type="file" name="file_screen")
-                
-                
-    fieldset.form__add-send
-        .row
-            .col-md-4
-                .form__add-accept
-                    input(type="checkbox" name="accept" id="accept" checked)
-                    label(for="accept")                
-                    a(href="#") Принять условия
-            .col-md-4
-                input(type="submit" value="Отправить")

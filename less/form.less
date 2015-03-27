@@ -230,58 +230,68 @@ body textarea:required:valid {
             }
         }
     }
-    
-    &--add {
-        .form__title {
-            &-l {
-                background: #eb2629;
-            }
-            
-            &--regular {
-                font-size: 14px;
-                text-align: right;
-                margin-right: 10%;
-                margin-bottom: 0;
-            }
-            
-            &--add {
-                font-size: 40px;
-                color: #eb2629;
-                background: transparent;
-            }
+
+    .form__title {
+        &-l {
+            background: #eb2629;
         }
-        
-        .top-menu {
-            padding-bottom: 10px;
+
+        &--regular {
+            font-size: 14px;
+            text-align: right;
+            margin-right: 10%;
+            margin-bottom: 0;
+        }
+
+        &--add {
+            font-size: 40px;
+            color: #eb2629;
+            background: transparent;
+        }
+    }
+
+    .top-menu {
+        padding-bottom: 10px;
+
+        ul {
+            padding: 0;
             
-            ul {
-                li {
-                    width: 15%;
-                    min-width: 139px;
+            li {
+                width: 15%;
+                min-width: 139px;
+
+                label {
+                    color: white;
+                    font-size: 18px;
+                    font-weight: bold;
+                    text-transform: uppercase;
+                    opacity: .65;
                     
-                    a {
-                        color: white;
-                        font-size: 18px;
+                    .top-menu__img {
                         opacity: .65;
                         
-                        &:hover,
-                        &.active {
-                            color: white;
+                        img {
+                        }
+                    }
+
+                    &:hover {
+                        color: white;
+                        opacity: 1;
+
+                        .top-menu__img {
                             opacity: 1;
-                            
-                            .top-menu__img img {
-                                display: block;
-                            }
                         }
                     }
                 }
             }
+        }
             
             &__img {
                 margin-bottom: 5px;
             }
         }
-        
+
+    &--add {
         fieldset {
             padding: 5px 0 10px;
         }
@@ -320,13 +330,13 @@ body textarea:required:valid {
         }
     }
     
-    fieldset.form__add {
+    form.form__add {
+        margin: 0;
         padding: 5px 28.5px 15px;
         border-bottom: 60px solid #eb2629;
     }
     
     &__add {
-        
         fieldset {
             
             &:after {
@@ -594,13 +604,43 @@ body textarea:required:valid {
     }
 }
 
+//переключение форм Добавить
+.form__add-site,
+.form__add-logo,
+.form__add-trash {
+    display: none;
+}
+
+.form-menu__controls {
+    display: none;
+    
+    &[id="for-form-site"]:checked~.form__title-l label[for="for-form-site"],
+    &[id="for-form-logo"]:checked~.form__title-l label[for="for-form-logo"],
+    &[id="for-form-trash"]:checked~.form__title-l label[for="for-form-trash"]{
+        opacity: 1;
+            .top-menu__img {
+                opacity: 1;
+            }
+    }
+    
+    &[id="for-form-site"]:checked~.form__add-site,
+    &[id="for-form-logo"]:checked~.form__add-logo,
+    &[id="for-form-trash"]:checked~.form__add-trash {
+        display: block;
+    }
+}
+
+
+
+
+
 /* ширма (полупрозрачное затенение под модальным окном) */
 .shim {
     /* фиксируем, растягиваем на весь доступный экран */
     position: fixed;
     bottom: 0; left: 0; top: 0; right: 0;
     z-index: 50;
-    display: none;
+//    display: none;
 
     /* если в модальном окне много содержимого, показываем скроллбар */
     overflow: auto;

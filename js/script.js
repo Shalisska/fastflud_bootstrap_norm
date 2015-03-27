@@ -70,7 +70,7 @@ clock();
     var adds = document.querySelectorAll('.add-form');
 	//ищем формы
 	var reg__form = document.querySelector('.form--reg').parentNode;
-    var add__form = document.querySelector('.form--add').parentNode;
+    var add__form = document.querySelector('.form--add').parentNode.parentNode;
 	
 	//открытие формы
 	for (var i = 0; i < regs.length; i++) {
