@@ -588,16 +588,6 @@ main {
         }
     }
     
-    //чекбоксы
-    input[type="checkbox"] {
-        display: none;
-        
-        //при нажатии выдвигается поле для коммента
-        &:checked~.comments__form--answer{
-            display: block;
-        }
-    }
-    
     //поле для комментов
     &__form {
         .clearfix();
@@ -735,7 +725,12 @@ main {
             font-size: 14px;
             font-family: @font-family--italic;
             color: #666565;
-            cursor: pointer;
+            
+            &:hover,
+            &:active {
+                color: darken(#666565, 30%);
+                text-decoration: none;
+            }
         }
         
         //счетчик

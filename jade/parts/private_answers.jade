@@ -38,8 +38,7 @@ mixin answer-block
                     .comments-item__more
                         //ответить
                         .col-md-10
-                            //лейбл для открытия окна ответа, можно заменить на ссылку
-                            label.comments-item__answer(for="answer") Ответить
+                            a.comments-item__answer(href="#") Ответить
                         //оценить
                         .col-md-2.comments-item__counter-l
                             button.comments-item__counter.comments-item__counter--plus(disabled) +1
@@ -47,8 +46,6 @@ mixin answer-block
                 //скрытое поле для ответа на коммент
                 .row
                     .col-md-12
-                        //кнопка открытия окна ответа, надо менять ид чекбокса
-                        input(type="checkbox" id="answer")
                         form.comments__form.comments__form--answer(action="#" method="get" name="comments__answer")
                             textarea(name="comment" placeholder="Anonym, я говорю.../"  rows="5")
                             input(type="submit")
@@ -63,3 +60,14 @@ mixin answer-block
 mixin answer-block
 mixin answer-block
 mixin answer-block
+
+script(type="text/html" id="answer_field")
+    .row
+        .col-md-12
+            form.comments__form.comments__form--answer(action="#" method="get" name="comments__answer")
+                textarea(name="comment" placeholder="{{name}}, я говорю.../"  rows="5")
+                input(type="submit")
+                //доп. кнопки
+                .comments__more
+                    a.smile
+                    a.file

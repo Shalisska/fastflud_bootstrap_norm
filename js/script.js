@@ -1,29 +1,29 @@
 //дата в верхнем меню - Новенькое
-(function (document) {
-function clock() {
-    var d = new Date();
-    var month_num = d.getMonth()
-    var day = d.getDate();
-    var month = new Array("января", "февраля", "марта", "апреля", "мая", "июня",
-"июля", "августа", "сентября", "октября", "ноября", "декабря");
-    if (day <= 9) day = "0" + day;
-    
-    var date = document.querySelector('.top-menu .date');
-    
-    var date_day = date.querySelector('.date__day');
-    var date_month = date.querySelector('.date__month');
-    
-    date_day.innerHTML = day;
-    date_month.innerHTML = month[month_num];
-}
-clock();
-})(document);
+//(function (document) {
+//function clock() {
+//    var d = new Date();
+//    var month_num = d.getMonth()
+//    var day = d.getDate();
+//    var month = new Array("января", "февраля", "марта", "апреля", "мая", "июня",
+//"июля", "августа", "сентября", "октября", "ноября", "декабря");
+//    if (day <= 9) day = "0" + day;
+//    
+//    var date = document.querySelector('.top-menu .date');
+//    
+//    var date_day = date.querySelector('.date__day');
+//    var date_month = date.querySelector('.date__month');
+//    
+//    date_day.innerHTML = day;
+//    date_month.innerHTML = month[month_num];
+//}
+//clock();
+//})(document);
 
 
 //загрузка файлов - http://habrahabr.ru/post/189570/
 (function (document) {
     var wrapper = $( ".file_upload" ),
-        inp = wrapper.find( "input" ),
+        inp = wrapper.find( ".file_upload__input" ),
         btn = wrapper.find( ".file_upload__btn" ),
         lbl = wrapper.find( ".file_upload__field" );
     
@@ -135,6 +135,32 @@ clock();
 })(document);
 
 
+//чат ответы
+(function (document) {
+    
+    var answer_btn = $('.comments-item__answer');
+    console.log(answer_btn);
+
+    answer_btn.click(function(event) {
+        event.preventDefault();
+    });
+    
+    var template = $('#answer_field').html();
+    console.log(template);
+    var user = $('.head__registration--known .user').html();
+    console.log(user);
+    
+    var html = Mustache.render(template, {
+        name:user
+    });
+    
+    var div = document.createElement('div');
+    var area = $('.comments-item--answer');
+    console.log(area);
+    div.innerHTML = html;
+//    area.appendChild(div);
+    
+})(document);
 
 
 

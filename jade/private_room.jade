@@ -43,5 +43,13 @@ html(lang="ru")
                             
             .row
                 .col-md-12
-                    include parts/private_profile
+                    include parts/private_answers
+
+        .container
+            include parts/footer
+        a#toTop(href="/").scroll_top
+        
+        include parts/hidden_elem
+        include parts/scripts
+        block scripts
 

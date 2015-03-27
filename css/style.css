@@ -260,6 +260,7 @@ body {
   font-weight: bold;
   text-transform: uppercase;
   opacity: .65;
+  cursor: pointer;
 }
 .form .top-menu ul li label .top-menu__img {
   opacity: .65;
@@ -562,6 +563,7 @@ body {
   top: 0;
   right: 0;
   z-index: 50;
+  display: none;
   /* если в модальном окне много содержимого, показываем скроллбар */
   overflow: auto;
   /* однопальцевый скролл для iPad*/
@@ -1166,12 +1168,6 @@ main .next--smaller {
 .comments__reg:active {
   color: #666565;
 }
-.comments input[type="checkbox"] {
-  display: none;
-}
-.comments input[type="checkbox"]:checked ~ .comments__form--answer {
-  display: block;
-}
 .comments__form {
   background: white;
   border-radius: 5px;
@@ -1287,7 +1283,11 @@ main .next--smaller {
   font-size: 14px;
   font-family: 'OpenSans-Italic', 'Arial', sans-serif;
   color: #666565;
-  cursor: pointer;
+}
+.comments-item__answer:hover,
+.comments-item__answer:active {
+  color: #191919;
+  text-decoration: none;
 }
 .comments-item__counter {
   background: #666565;
@@ -1701,7 +1701,9 @@ main .next--smaller {
   border-radius: 50%;
 }
 .friends__add:hover,
-.friends__add:active {
+.friends__add:active,
+.friends__add:visited,
+.friends__add:focus {
   color: white;
   text-decoration: none;
 }

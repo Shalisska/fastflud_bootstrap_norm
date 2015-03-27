@@ -34,7 +34,7 @@
             .comments-item__more
                 //ответить
                 .col-md-7
-                    label.comments-item__answer(for="answer") Ответить
+                    a.comments-item__answer(href="#") Ответить
                 //оценить
                 .col-md-5.comments-item__counter-l
                     button.comments-item__counter.comments-item__counter--plus +1
@@ -42,7 +42,6 @@
         //скрытое поле для ответа на коммент
         .row
             .col-md-12
-                input(type="checkbox" id="answer")
                 form.comments__form.comments__form--answer(action="#" method="get" name="comments__answer")
                     textarea(name="comment" placeholder="Anonym, я говорю.../"  rows="5")
                     input(type="submit")
@@ -66,7 +65,7 @@
             .comments-item__more
                 //ответить
                 .col-md-7
-                    label.comments-item__answer(for="answer1") Ответить
+                    a.comments-item__answer(href="#") Ответить
                 //оценить
                 .col-md-5.comments-item__counter-l
                     button.comments-item__counter.comments-item__counter--plus +1
@@ -74,7 +73,6 @@
         //скрытое поле для ответа на коммент
         .row
             .col-md-12
-                input(type="checkbox" id="answer1")
                 form.comments__form.comments__form--answer(action="#" method="get" name="comments__answer")
                     textarea(name="comment" placeholder="Anonym, я говорю.../"  rows="5")
                     input(type="submit")

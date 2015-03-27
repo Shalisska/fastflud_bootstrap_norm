@@ -8,6 +8,7 @@
     <link href="../css/style.css" rel="stylesheet">
     <script src="../js/jquery-1.11.2.min.js"></script>
     <script src="../js/auto-height.js"></script>
+    <script src="../libs/mustache-v.2-0-0.min.js"></script>
     <script src="../js/auto-width.js"></script>
   </head>
   <body>
@@ -70,111 +71,635 @@
       </div>
       <div class="row">
         <div class="col-md-12">
-          <form action="post" class="form form--profile">
-            <div class="avatar-l">
-              <label class="avatar file_upload">
-                <div class="file_upload__field"><img src="../img/content/avatar.jpg" alt="foto"></div><a href="#" class="file_upload__btn add-screen">Обновить</a>
-                <input type="file" name="file_screen">
-              </label>
-            </div>
-            <div class="info-l">
-              <div class="info clearfix">
-                <div class="info__part">
-                  <label class="info__item"><span>Nickname</span>
-                    <input type="text" name="nick" value="Anonym">
-                  </label>
-                  <label class="info__item"><span>Имя</span>
-                    <input type="text" name="name" value="Анна">
-                  </label>
-                  <label class="info__item"><span>Фамилия</span>
-                    <input type="text" name="surname" value="Петрова">
-                  </label>
-                  <fieldset class="info__item info__item--radio"><span>Пол</span>
-                    <input type="radio" name="gender" value="woman" id="woman" checked>
-                    <input type="radio" name="gender" value="man" id="man">
-                    <label for="woman">Ж</label>
-                    <label for="man">М</label>
-                  </fieldset>
-                  <label class="info__item"><span>Дата рождения</span>
-                    <input type="date" name="date" value="1986-12-12">
-                  </label>
-                  <label class="info__item"><span>E-mail</span>
-                    <input type="email" value="fffff@hhjj.ru">
-                  </label>
-                </div>
-                <div class="info__part">
-                  <label class="info__item"><span>Страна</span>
-                    <input type="text" name="country" value="РФ">
-                  </label>
-                  <label class="info__item"><span>Город</span>
-                    <input type="text" name="city" value="Москва">
-                  </label>
-                  <fieldset class="info__item--pass-l"><span>Смена пароля:</span>
-                    <label class="info__item info__item--pass"><span>Старый пароль</span>
-                      <input type="password" name="pass-old">
-                    </label>
-                    <label class="info__item info__item--pass"><span>Новый пароль</span>
-                      <input type="password" name="pass-new">
-                    </label>
-                    <label class="info__item info__item--pass"><span>Повторите новый пароль</span>
-                      <input type="password" name="pass-repeat">
-                    </label>
-                  </fieldset>
-                </div>
+          <!--блок с комментами-->
+                    <div class="comments comments__private comments__private--answer">
+                      <div class="comments__header content__item">
+                        <div class="img-box">
+                          <div class="img-box__part"><img src="../img/content/site1.jpg" alt="site1"></div>
+                          <div class="img-box__part"><img src="../img/content/site2.jpg" alt="site2"></div>
+                        </div>
+                        <p class="img-box__title"><span class="img-box__number">#208</span><br>Металлоперерабатывающий завод vs завод железобетонных блоков</p>
+                      </div>
+                      <!--поле с комментом-->
+                      <div class="comments-item">
+                        <div class="comments-item__head">
+                          <p class="comments-item__author">Я,</p>
+                          <p class="comments-item__rang">Профи</p>
+                        </div>
+                        <p class="comments-item__text">Купи себе лесизаблудись в нем Купи себе лес и заблудись в немм Купи себе лес и заблудись в нем Купи себе лес и заблудись в нем</p>
+                        <!--действия на коммент-->
+                        <div class="comments-item__more">
+                          <div class="comments-item__date"><span class="comments__time">20:38:59</span><span class="comments__date">12.12.2014</span></div>
+                          <!--оценить-->
+                          <div class="comments-item__counter-l">
+                            <button disabled class="comments-item__counter comments-item__counter--plus">+1</button>
+                            <button disabled class="comments-item__counter comments-item__counter--minus">-10</button>
+                          </div>
+                        </div>
+                        <!--поле с комментом answer-->
+                        <div class="comments-item comments-item--answer">
+                          <div class="comments-item__img"><img src="../img/content/site1.jpg" alt=""></div>
+                          <div class="comments-item__head">
+                            <p class="comments-item__author">Anonym</p>
+                            <p class="comments-item__rang">Эксперт</p>
+                          </div>
+                          <p class="comments-item__text">Купи себе лесизаблудись в нем Купи себе лес и заблудись в немм Купи себе лес и заблудись в нем Купи себе лес и заблудись в нем</p>
+                          <!--действия на коммент-->
+                          <div class="row">
+                            <div class="comments-item__more">
+                              <!--ответить-->
+                              <div class="col-md-10"><a href="#" class="comments-item__answer">Ответить</a></div>
+                              <!--оценить-->
+                              <div class="col-md-2 comments-item__counter-l">
+                                <button disabled class="comments-item__counter comments-item__counter--plus">+1</button>
+                                <button disabled class="comments-item__counter comments-item__counter--minus">-10</button>
+                              </div>
+                            </div>
+                          </div>
+                          <!--скрытое поле для ответа на коммент-->
+                          <div class="row">
+                            <div class="col-md-12">
+                              <form action="#" method="get" name="comments__answer" class="comments__form comments__form--answer">
+                                <textarea name="comment" placeholder="Anonym, я говорю.../" rows="5"></textarea>
+                                <input type="submit">
+                                <!--доп. кнопки-->
+                                <div class="comments__more"><a class="smile"></a><a class="file"></a></div>
+                              </form>
+                            </div>
+                          </div>
+                        </div>
+                      </div><a href="#" class="comments__all">Все комментарии</a>
+                    </div>
+                    <div class="comments comments__private comments__private--answer">
+                      <div class="comments__header content__item">
+                        <div class="img-box">
+                          <div class="img-box__part"><img src="../img/content/site1.jpg" alt="site1"></div>
+                          <div class="img-box__part"><img src="../img/content/site2.jpg" alt="site2"></div>
+                        </div>
+                        <p class="img-box__title"><span class="img-box__number">#208</span><br>Металлоперерабатывающий завод vs завод железобетонных блоков</p>
+                      </div>
+                      <!--поле с комментом-->
+                      <div class="comments-item">
+                        <div class="comments-item__head">
+                          <p class="comments-item__author">Я,</p>
+                          <p class="comments-item__rang">Профи</p>
+                        </div>
+                        <p class="comments-item__text">Купи себе лесизаблудись в нем Купи себе лес и заблудись в немм Купи себе лес и заблудись в нем Купи себе лес и заблудись в нем</p>
+                        <!--действия на коммент-->
+                        <div class="comments-item__more">
+                          <div class="comments-item__date"><span class="comments__time">20:38:59</span><span class="comments__date">12.12.2014</span></div>
+                          <!--оценить-->
+                          <div class="comments-item__counter-l">
+                            <button disabled class="comments-item__counter comments-item__counter--plus">+1</button>
+                            <button disabled class="comments-item__counter comments-item__counter--minus">-10</button>
+                          </div>
+                        </div>
+                        <!--поле с комментом answer-->
+                        <div class="comments-item comments-item--answer">
+                          <div class="comments-item__img"><img src="../img/content/site1.jpg" alt=""></div>
+                          <div class="comments-item__head">
+                            <p class="comments-item__author">Anonym</p>
+                            <p class="comments-item__rang">Эксперт</p>
+                          </div>
+                          <p class="comments-item__text">Купи себе лесизаблудись в нем Купи себе лес и заблудись в немм Купи себе лес и заблудись в нем Купи себе лес и заблудись в нем</p>
+                          <!--действия на коммент-->
+                          <div class="row">
+                            <div class="comments-item__more">
+                              <!--ответить-->
+                              <div class="col-md-10"><a href="#" class="comments-item__answer">Ответить</a></div>
+                              <!--оценить-->
+                              <div class="col-md-2 comments-item__counter-l">
+                                <button disabled class="comments-item__counter comments-item__counter--plus">+1</button>
+                                <button disabled class="comments-item__counter comments-item__counter--minus">-10</button>
+                              </div>
+                            </div>
+                          </div>
+                          <!--скрытое поле для ответа на коммент-->
+                          <div class="row">
+                            <div class="col-md-12">
+                              <form action="#" method="get" name="comments__answer" class="comments__form comments__form--answer">
+                                <textarea name="comment" placeholder="Anonym, я говорю.../" rows="5"></textarea>
+                                <input type="submit">
+                                <!--доп. кнопки-->
+                                <div class="comments__more"><a class="smile"></a><a class="file"></a></div>
+                              </form>
+                            </div>
+                          </div>
+                        </div>
+                      </div><a href="#" class="comments__all">Все комментарии</a>
+                    </div>
+                    <div class="comments comments__private comments__private--answer">
+                      <div class="comments__header content__item">
+                        <div class="img-box">
+                          <div class="img-box__part"><img src="../img/content/site1.jpg" alt="site1"></div>
+                          <div class="img-box__part"><img src="../img/content/site2.jpg" alt="site2"></div>
+                        </div>
+                        <p class="img-box__title"><span class="img-box__number">#208</span><br>Металлоперерабатывающий завод vs завод железобетонных блоков</p>
+                      </div>
+                      <!--поле с комментом-->
+                      <div class="comments-item">
+                        <div class="comments-item__head">
+                          <p class="comments-item__author">Я,</p>
+                          <p class="comments-item__rang">Профи</p>
+                        </div>
+                        <p class="comments-item__text">Купи себе лесизаблудись в нем Купи себе лес и заблудись в немм Купи себе лес и заблудись в нем Купи себе лес и заблудись в нем</p>
+                        <!--действия на коммент-->
+                        <div class="comments-item__more">
+                          <div class="comments-item__date"><span class="comments__time">20:38:59</span><span class="comments__date">12.12.2014</span></div>
+                          <!--оценить-->
+                          <div class="comments-item__counter-l">
+                            <button disabled class="comments-item__counter comments-item__counter--plus">+1</button>
+                            <button disabled class="comments-item__counter comments-item__counter--minus">-10</button>
+                          </div>
+                        </div>
+                        <!--поле с комментом answer-->
+                        <div class="comments-item comments-item--answer">
+                          <div class="comments-item__img"><img src="../img/content/site1.jpg" alt=""></div>
+                          <div class="comments-item__head">
+                            <p class="comments-item__author">Anonym</p>
+                            <p class="comments-item__rang">Эксперт</p>
+                          </div>
+                          <p class="comments-item__text">Купи себе лесизаблудись в нем Купи себе лес и заблудись в немм Купи себе лес и заблудись в нем Купи себе лес и заблудись в нем</p>
+                          <!--действия на коммент-->
+                          <div class="row">
+                            <div class="comments-item__more">
+                              <!--ответить-->
+                              <div class="col-md-10"><a href="#" class="comments-item__answer">Ответить</a></div>
+                              <!--оценить-->
+                              <div class="col-md-2 comments-item__counter-l">
+                                <button disabled class="comments-item__counter comments-item__counter--plus">+1</button>
+                                <button disabled class="comments-item__counter comments-item__counter--minus">-10</button>
+                              </div>
+                            </div>
+                          </div>
+                          <!--скрытое поле для ответа на коммент-->
+                          <div class="row">
+                            <div class="col-md-12">
+                              <form action="#" method="get" name="comments__answer" class="comments__form comments__form--answer">
+                                <textarea name="comment" placeholder="Anonym, я говорю.../" rows="5"></textarea>
+                                <input type="submit">
+                                <!--доп. кнопки-->
+                                <div class="comments__more"><a class="smile"></a><a class="file"></a></div>
+                              </form>
+                            </div>
+                          </div>
+                        </div>
+                      </div><a href="#" class="comments__all">Все комментарии</a>
+                    </div>
+                    <div class="comments comments__private comments__private--answer">
+                      <div class="comments__header content__item">
+                        <div class="img-box">
+                          <div class="img-box__part"><img src="../img/content/site1.jpg" alt="site1"></div>
+                          <div class="img-box__part"><img src="../img/content/site2.jpg" alt="site2"></div>
+                        </div>
+                        <p class="img-box__title"><span class="img-box__number">#208</span><br>Металлоперерабатывающий завод vs завод железобетонных блоков</p>
+                      </div>
+                      <!--поле с комментом-->
+                      <div class="comments-item">
+                        <div class="comments-item__head">
+                          <p class="comments-item__author">Я,</p>
+                          <p class="comments-item__rang">Профи</p>
+                        </div>
+                        <p class="comments-item__text">Купи себе лесизаблудись в нем Купи себе лес и заблудись в немм Купи себе лес и заблудись в нем Купи себе лес и заблудись в нем</p>
+                        <!--действия на коммент-->
+                        <div class="comments-item__more">
+                          <div class="comments-item__date"><span class="comments__time">20:38:59</span><span class="comments__date">12.12.2014</span></div>
+                          <!--оценить-->
+                          <div class="comments-item__counter-l">
+                            <button disabled class="comments-item__counter comments-item__counter--plus">+1</button>
+                            <button disabled class="comments-item__counter comments-item__counter--minus">-10</button>
+                          </div>
+                        </div>
+                        <!--поле с комментом answer-->
+                        <div class="comments-item comments-item--answer">
+                          <div class="comments-item__img"><img src="../img/content/site1.jpg" alt=""></div>
+                          <div class="comments-item__head">
+                            <p class="comments-item__author">Anonym</p>
+                            <p class="comments-item__rang">Эксперт</p>
+                          </div>
+                          <p class="comments-item__text">Купи себе лесизаблудись в нем Купи себе лес и заблудись в немм Купи себе лес и заблудись в нем Купи себе лес и заблудись в нем</p>
+                          <!--действия на коммент-->
+                          <div class="row">
+                            <div class="comments-item__more">
+                              <!--ответить-->
+                              <div class="col-md-10"><a href="#" class="comments-item__answer">Ответить</a></div>
+                              <!--оценить-->
+                              <div class="col-md-2 comments-item__counter-l">
+                                <button disabled class="comments-item__counter comments-item__counter--plus">+1</button>
+                                <button disabled class="comments-item__counter comments-item__counter--minus">-10</button>
+                              </div>
+                            </div>
+                          </div>
+                          <!--скрытое поле для ответа на коммент-->
+                          <div class="row">
+                            <div class="col-md-12">
+                              <form action="#" method="get" name="comments__answer" class="comments__form comments__form--answer">
+                                <textarea name="comment" placeholder="Anonym, я говорю.../" rows="5"></textarea>
+                                <input type="submit">
+                                <!--доп. кнопки-->
+                                <div class="comments__more"><a class="smile"></a><a class="file"></a></div>
+                              </form>
+                            </div>
+                          </div>
+                        </div>
+                      </div><a href="#" class="comments__all">Все комментарии</a>
+                    </div>
+          <script type="text/html" id="answer_field">
+            <div class="row">
+              <div class="col-md-12">
+                <form action="#" method="get" name="comments__answer" class="comments__form comments__form--answer">
+                  <textarea name="comment" placeholder="{{name}}, я говорю.../" rows="5"></textarea>
+                  <input type="submit">
+                  <!--доп. кнопки-->
+                  <div class="comments__more"><a class="smile"></a><a class="file"></a></div>
+                </form>
               </div>
             </div>
-            <input id="rang-info" type="checkbox" class="rang__input">
-            <div class="rang-l">
-              <p class="rang__title">Статус на FF</p>
-              <label for="rang-info" class="rang">Профи</label>
-            </div>
-            <div class="rang__info">
-              <p>Для того чтобы повысить свой статус на FF необходимо предлагать посты!</p>
-              <ul class="rang__items">
-                <li>Новичок-стажер - 1 пост</li>
-                <li>Стажер-середина - 3 поста</li>
-                <li>Середина-профи - 7 постов</li>
-                <li>профи-эксперт - 15 постов</li>
-              </ul>
-            </div>
-            <textarea name="cite" rows="5" class="info__text info__text--area">Ножницы режут бумагу, бумага заворачивает камень, камень давит ящерицу, ящерица травит Спока, Спок ломает ножницы, ножницы отрезают голову ящерице, ящерица ест бумагу, бумага подставляет Спока, Спок испаряет камень, и, как обычно, камень разбивает ножницы. &#169;</textarea>
-            <input type="submit" value="Сохранить" class="btn btn--profile">
-          </form>
-          <div class="friends">
-            <p class="friends__title">Друзья из соц. сетей на FF</p>
-                        <div class="friends__item">
-                          <div class="friends__img"><img src="../img/content/avatar.jpg" alt="friend"><a href="#" class="friends__add">+</a></div>
-                          <p class="friends__name">Anonym Anonym</p>
-                        </div>
-                        <div class="friends__item">
-                          <div class="friends__img"><img src="../img/content/avatar.jpg" alt="friend"><a href="#" class="friends__add">+</a></div>
-                          <p class="friends__name">Anonym Anonym</p>
-                        </div>
-                        <div class="friends__item">
-                          <div class="friends__img"><img src="../img/content/avatar.jpg" alt="friend"><a href="#" class="friends__add">+</a></div>
-                          <p class="friends__name">Anonym Anonym</p>
-                        </div>
-                        <div class="friends__item">
-                          <div class="friends__img">
-                            <!--img(src="../img/content/avatar.jpg", alt="friend")--><a href="#" class="friends__add">+</a>
-                          </div>
-                          <p class="friends__name">Добавить друга</p>
-                        </div>
-                        <div class="friends__item">
-                          <div class="friends__img">
-                            <!--img(src="../img/content/avatar.jpg", alt="friend")--><a href="#" class="friends__add">+</a>
-                          </div>
-                          <p class="friends__name">Добавить друга</p>
-                        </div>
-                        <div class="friends__item">
-                          <div class="friends__img">
-                            <!--img(src="../img/content/avatar.jpg", alt="friend")--><a href="#" class="friends__add">+</a>
-                          </div>
-                          <p class="friends__name">Добавить друга</p>
-                        </div>
-          </div>
+          </script>
         </div>
       </div>
     </main>
+    <div class="container">
+      <footer class="footer">
+        <div class="col-md-5">
+          <!--нижнее меню-->
+          <nav class="footer__menu">
+            <ul>
+              <li><a href="#" class="footer__menu--vk"></a></li>
+              <li><a href="#" class="footer__menu--fb"></a></li>
+              <li><a href="#" class="footer__menu--twitter"></a></li>
+              <li><a href="#" class="footer__menu--odnoklassniki"></a></li>
+              <li><a href="#" class="footer__menu--google"></a></li>
+            </ul>
+          </nav>
+          <!--подменю-->
+          <div class="footer__submenu"><a href="#">О проекте</a><a href="#">Размещение рекламы</a></div>
+        </div>
+        <!--копирайт-->
+        <div class="col-md-2 col-md-offset-5 footer__copyright">
+          <p class="footer__copyright-text">Создание сайта:</p><a href="#" class="footer__copyright-logo"><img src="../img/logo-artbrother.png" alt=""></a>
+        </div>
+      </footer>
+    </div><a id="toTop" href="/" class="scroll_top"></a>
+    <!--скрытые элементы на странице-->
+    <div class="shim">
+      <!--форма регистрации-->
+      <div class="form--add-container form">
+        <input type="radio" name="menu-controls" id="for-form-site" value="site" checked class="form-menu__controls">
+        <input type="radio" name="menu-controls" id="for-form-logo" value="logo" class="form-menu__controls">
+        <input type="radio" name="menu-controls" id="for-form-trash" value="trash" class="form-menu__controls">
+        <div class="form__title-l">
+          <p class="form__title form__title">Хочу предложить пост
+            <nav class="top-menu row">
+              <ul>
+                <li>
+                  <label for="for-form-site">
+                    <div class="top-menu__img"><img src="../img/icon-site--white.png"></div>Сайты
+                  </label>
+                </li>
+                <li>
+                  <label for="for-form-logo">
+                    <div class="top-menu__img"><img src="../img/icon-logo--white.png"></div>Логотипы
+                  </label>
+                </li>
+                <li>
+                  <label for="for-form-trash">
+                    <div class="top-menu__img"><img src="../img/icon-more--white.png"></div>Прочий хлам
+                  </label>
+                </li>
+              </ul>
+            </nav>
+          </p>
+        </div><a href="#" class="form__esc"></a>
+        <form action="#" method="post" name="add" id="add" enctype="multipart/form-data" class="form--add">
+          <!--идентификация-->
+          <div class="form__identification">
+            <!--поле входа-->
+            <fieldset class="form__enter">
+              <div class="row">
+                <div class="col-md-4 col-md-offset-2">
+                  <input type="text" name="login" placeholder="Логин" class="form__input">
+                </div>
+                <div class="col-md-4">
+                  <input type="password" name="pass" placeholder="Пароль" class="form__input">
+                </div>
+                <div class="col-md-12">
+                  <!--запомнить меня-->
+                  <div class="form__remember">
+                    <input type="checkbox" name="remember" id="remember" checked>
+                    <label for="remember"><span></span>Запомнить меня</label>
+                  </div>
+                </div>
+                <div class="col-md-12">
+                  <input type="submit" value="Войти">
+                </div>
+              </div>
+              <!--забыли пароль--><a href="#" class="form__forget">Забыли пароль?</a>
+            </fieldset>
+            <!--регистрация через соц. сети-->
+            <fieldset class="form__socials">
+              <p class="form__title form__title--regular">Войти с помощью:</p>
+              <div class="row">
+                <div class="col-md-12">
+                  <ul>
+                    <li><a href="#" class="form__socials--vk"></a></li>
+                    <li><a href="#" class="form__socials--fb"></a></li>
+                    <li><a href="#" class="form__socials--twitter"></a></li>
+                    <li><a href="#" class="form__socials--odnoklassniki"></a></li>
+                    <li><a href="#" class="form__socials--google"></a></li>
+                  </ul>
+                </div>
+              </div>
+            </fieldset>
+            <!--регистрация-->
+            <fieldset class="form__reg">
+              <p class="form__title form__title--regular">Регистрация в Fastflud:</p>
+              <div class="form__input">
+                <div class="row">
+                  <div class="col-md-4 col-md-offset-2">
+                    <div class="form__required-l">
+                      <input type="email" name="email" placeholder="E-mail"><span class="form__required"></span>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="form__required-l">
+                      <input type="text" name="login" placeholder="Логин"><span class="form__required"></span>
+                    </div>
+                  </div>
+                  <div class="col-md-4 col-md-offset-2">
+                    <div class="form__required-l">
+                      <input type="password" name="pass" placeholder="Пароль"><span class="form__required"></span>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="form__required-l">
+                      <input type="password" name="pass-repeat" placeholder="Повторите пароль"><span class="form__required"></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!--капча-->
+              <div class="form__input capcha-l">
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="capcha"></div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form__required-l">
+                      <input type="text" name="capcha" placeholder="Капча" required><span class="form__required"></span>
+                    </div>
+                  </div>
+                  <div class="col-md-12">
+                    <input type="submit" value="Регистрация">
+                  </div>
+                </div>
+              </div>
+            </fieldset>
+          </div>
+        </form>
+        <form action="#" method="post" name="add-site" id="add-site" enctype="multipart/form-data" class="form__add form__add-site">
+          <p class="form__title form__title--add">Добавить по теме "Сайты"</p>
+          <fieldset class="form__add-link">
+            <div class="row">
+              <div class="col-md-12">
+                <label><span class="form__number">1</span>
+                  <input type="text" placeholder="ссылка на сайт &quot;у кого&quot;" name="from-whom">
+                </label>
+              </div>
+              <div class="col-md-12">
+                <label><span class="form__number">2</span>
+                  <input type="text" placeholder="ссылка на сайт &quot;кто&quot;" name="who">
+                </label>
+                <p class="form__add-link-more">массовое копирование сайта <a href="#">добавить еще</a></p>
+              </div>
+            </div>
+          </fieldset>
+          <fieldset class="form__add-description">
+            <div class="row">
+              <div class="col-md-12"></div>
+            </div>
+            <label><span class="form__number">3</span>
+              <div class="form__add-description-l">
+                <textarea name="description" rows="6" placeholder="Ваши комментарии"></textarea>
+                <div class="form__add-screen file_upload-l">
+                  <label class="file_upload">
+                    <div class="screen"></div>
+                    <div class="file_upload__field">добавить скриншоты</div><a href="#" class="file_upload__btn add-screen"></a>
+                    <input type="file" name="file_screen">
+                  </label>
+                </div>
+              </div>
+            </label>
+          </fieldset>
+          <fieldset class="form__add-send">
+            <div class="row">
+              <div class="col-md-4">
+                <div class="form__add-accept">
+                  <input type="checkbox" name="accept" id="accept" checked>
+                  <label for="accept"></label><a href="#">Принять условия</a>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <input type="submit" value="Отправить">
+              </div>
+            </div>
+          </fieldset>
+        </form>
+        <form action="#" method="post" name="add-logo" id="add-logo" enctype="multipart/form-data" class="form__add form__add-logo">
+          <p class="form__title form__title--add">Добавить по теме "Логотипы"
+            <fieldset class="form__add-link">
+              <div class="form__add-link-files">
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="file_upload-l"><span class="form__number form__number--file">1</span>
+                      <label class="file_upload">
+                        <div class="file_upload__field">добавить файл "у кого"</div><a href="#" class="file_upload__btn btn"></a>
+                        <input type="file" name="file_from-whom">
+                      </label>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="file_upload-l file_upload-l--r"><span class="form__number form__number--file form__number--file">2</span>
+                      <label class="file_upload">
+                        <div class="file_upload__field">добавить файл "у кого"</div><a href="#" class="file_upload__btn btn"></a>
+                        <input type="file" name="file_who">
+                      </label>
+                    </div>
+                    <p class="form__add-link-more">массовое копирование логотипа <a href="#">добавить еще</a></p>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12">
+                  <label><span class="form__number">3</span>
+                    <input type="text" placeholder="ссылка на сайт &quot;у кого&quot;" name="from-whom">
+                  </label>
+                </div>
+                <div class="col-md-12">
+                  <label><span class="form__number">4</span>
+                    <input type="text" placeholder="ссылка на сайт &quot;кто&quot;" name="who">
+                  </label>
+                  <p class="form__add-link-more"><a href="#">добавить еще</a></p>
+                </div>
+              </div>
+            </fieldset>
+            <fieldset class="form__add-description">
+              <div class="row">
+                <div class="col-md-12">
+                  <label><span class="form__number">5</span>
+                    <div class="form__add-description-l">
+                      <textarea name="description" rows="6" placeholder="Ваши комментарии"></textarea>
+                      <div class="form__add-screen file_upload-l">
+                        <label class="file_upload">
+                          <div class="screen"></div>
+                          <div class="file_upload__field">добавить скриншоты</div><a href="#" class="file_upload__btn add-screen"></a>
+                          <input type="file" name="file_screen">
+                        </label>
+                      </div>
+                    </div>
+                  </label>
+                </div>
+              </div>
+            </fieldset>
+            <fieldset class="form__add-send">
+              <div class="row">
+                <div class="col-md-4">
+                  <div class="form__add-accept">
+                    <input type="checkbox" name="accept" id="accept" checked>
+                    <label for="accept">               </label><a href="#">Принять условия</a>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <input type="submit" value="Отправить">
+                </div>
+              </div>
+            </fieldset>
+          </p>
+        </form>
+        <form action="#" method="post" name="add-trash" id="add-trash" enctype="multipart/form-data" class="form__add form__add-trash">
+          <p class="form__title form__title--add">Добавить по теме "Прочий хлам"</p>
+          <p class="form__title--sub">Здесь вы можете добавить другие примеры недоброкачественной работы: аудио- и видеоматериалы, упаковки и т.п.</p>
+          <fieldset class="form__add-description">
+            <div class="row">
+              <div class="col-md-12"></div>
+            </div>
+            <label><span class="form__number">1</span>
+              <div class="form__add-description-l">
+                <textarea name="description" rows="6" placeholder="Ваши комментарии"></textarea>
+                <div class="form__add-screen file_upload-l">
+                  <label class="file_upload">
+                    <div class="screen"></div>
+                    <div class="file_upload__field">добавить скриншоты</div><a href="#" class="file_upload__btn add-screen"></a>
+                    <input type="file" name="file_screen">
+                  </label>
+                </div>
+              </div>
+            </label>
+          </fieldset>
+          <fieldset class="form__add-send">
+            <div class="row">
+              <div class="col-md-4">
+                <div class="form__add-accept">
+                  <input type="checkbox" name="accept" id="accept" checked>
+                  <label for="accept">               </label><a href="#">Принять условия</a>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <input type="submit" value="Отправить">
+              </div>
+            </div>
+          </fieldset>
+        </form>
+      </div>
+    </div>
+    <div class="shim">
+      <!--форма регистрации-->
+      <form action="#" method="post" name="registration" id="registration" class="form form--reg">
+        <p class="form__title">Регистрация/Вход</p><a href="#" class="form__esc"></a>
+        <!--поле входа-->
+        <fieldset class="form__enter">
+          <div class="row">
+            <div class="col-md-12">
+              <input type="text" name="login" placeholder="Логин" class="form__input">
+              <input type="password" name="pass" placeholder="Пароль" class="form__input">
+            </div>
+            <div class="col-md-12">
+              <!--запомнить меня-->
+              <div class="form__remember">
+                <input type="checkbox" name="remember" id="remember" checked>
+                <label for="remember"><span></span>Запомнить меня</label>
+              </div>
+              <input type="submit" value="Войти">
+            </div>
+            <!--забыли пароль-->
+            <div class="col-md-12"><a href="#" class="form__forget">Забыли пароль?</a>
+              <div class="error"><strong>Пароль</strong><br><span>Неверно введен пароль</span></div>
+            </div>
+          </div>
+        </fieldset>
+        <!--регистрация через соц. сети-->
+        <fieldset class="form__socials">
+          <p class="form__title form__title--regular">Войти с помощью:</p>
+          <div class="row">
+            <div class="col-md-12">
+              <ul>
+                <li><a href="#" class="form__socials--vk"></a></li>
+                <li><a href="#" class="form__socials--fb"></a></li>
+                <li><a href="#" class="form__socials--twitter"></a></li>
+                <li><a href="#" class="form__socials--odnoklassniki"></a></li>
+                <li><a href="#" class="form__socials--google"></a></li>
+              </ul>
+            </div>
+          </div>
+        </fieldset>
+        <!--регистрация-->
+        <fieldset class="form__reg">
+          <p class="form__title form__title--regular">Регистрация в Fastflud:</p>
+          <div class="form__input">
+            <div class="row">
+              <div class="col-md-4 col-md-offset-2">
+                <div class="form__required-l">
+                  <input type="email" name="email" placeholder="E-mail"><span class="form__required"></span>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="form__required-l">
+                  <input type="text" name="login" placeholder="Логин"><span class="form__required"></span>
+                </div>
+              </div>
+              <div class="col-md-4 col-md-offset-2">
+                <div class="form__required-l">
+                  <input type="password" name="pass" placeholder="Пароль"><span class="form__required"></span>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="form__required-l">
+                  <input type="password" name="pass-repeat" placeholder="Повторите пароль"><span class="form__required"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--капча-->
+          <div class="form__input capcha-l">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="capcha"></div>
+              </div>
+              <div class="col-md-6">
+                <div class="form__required-l">
+                  <input type="text" name="capcha" placeholder="Капча" required><span class="form__required"></span>
+                </div>
+              </div>
+              <div class="col-md-12">
+                <input type="submit" value="Регистрация">
+              </div>
+            </div>
+          </div>
+        </fieldset>
+      </form>
+    </div>
+    <script src="../libs/fancybox/jquery.fancybox.pack.js"></script>
+    <script src="../js/common.js"></script>
+    <script src="../js/script.js"></script>
   </body>
 </html>
