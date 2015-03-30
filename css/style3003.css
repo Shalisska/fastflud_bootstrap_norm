@@ -63,6 +63,59 @@ body {
   border-radius: 6px;
   text-align: center;
 }
+ /*чекбокс запомнить меня*/
+.form__remember {
+  margin-top: 15px;
+  margin-bottom: 20px;
+  /*стилизованный чекбокс*/
+}
+.form__remember input[type="checkbox"] {
+  display: none;
+  /*галка при включенном чекбоксе*/
+}
+.form__remember input[type="checkbox"]:checked ~ label[for="remember"] span:before {
+  content: "";
+  position: absolute;
+  width: 27px;
+  height: 26px;
+  left: -4px;
+  bottom: 0;
+  background: url("../img/icon-checkbox.png") no-repeat center center;
+}
+.form__remember label {
+  font-style: italic;
+  font-size: 18px;
+  font-family: 'OpenSans Light', 'Arial', sans-serif;
+  font-weight: bold;
+  color: #666565;
+}
+.form__remember span {
+  position: relative;
+  display: inline-block;
+  margin-right: 10px;
+  margin-bottom: 5px;
+  width: 18px;
+  height: 18px;
+  border: 1px solid #757576;
+  vertical-align: middle;
+}
+.success, .error{
+    width: 70%;
+    margin: 20px auto;
+    padding: 5px;
+    text-align: left;
+    font-size: 16px;
+    border-radius: 5px;
+}
+.success{
+    border: 3px solid green;
+    color: green;
+}
+.error{
+    display: none;
+    border: 3px solid red;
+    color: red;
+}
 .form__esc {
   position: absolute;
   width: 20px;
@@ -119,6 +172,7 @@ body {
 .form fieldset {
   position: relative;
   margin: 0;
+  padding: 25px 0;
   border: none;
 }
 .form fieldset:not(:last-child):after {
@@ -134,7 +188,6 @@ body {
   padding-bottom: 15px;
 }
 .form__input {
-  margin-top: 25px;
   margin-bottom: 15px;
 }
 .form__forget {
@@ -172,29 +225,27 @@ body {
 .form__socials ul li:last-child {
   margin-right: 0;
 }
-.form__socials ul li a {
-  width: 35px;
-  height: 35px;
-  background-position: center center;
-  background-repeat: no-repeat;
-  width: 56px;
-  height: 56px;
-  background-size: contain;
+.form__socials--vkontakte {
+  background: url("../img/icon-vk_red.png") no-repeat center center;
 }
-.form__socials--vk {
-  background-image: url("../img/icon-vk_red.png");
-}
-.form__socials--fb {
-  background-image: url("../img/icon-fb_red.png");
+.form__socials--facebook {
+  background: url("../img/icon-fb_red.png") no-repeat center center;
 }
 .form__socials--twitter {
-  background-image: url("../img/icon-twitter_red.png");
+  background: url("../img/icon-twitter_red.png") no-repeat center center;
 }
 .form__socials--odnoklassniki {
-  background-image: url("../img/icon-odnoklassniki_red.png");
+  background: url("../img/icon-odnoklassniki_red.png") no-repeat center center;
 }
-.form__socials--google {
-  background-image: url("../img/icon-google_red.png");
+.form__socials--yandex {
+  background: url("../img/icon-yandex_red.png") no-repeat center center;
+}
+.form__socials--google_oauth {
+  background: url("../img/icon-google_red.png") no-repeat center center;
+}
+.form__socials ul li a {
+  width: 56px;
+  height: 56px;
 }
 .form__required {
   position: absolute;
@@ -212,8 +263,12 @@ body {
   height: 63px;
   margin-right: 5%;
   margin-bottom: 30px;
-  background: #acacac url("../img/content/capcha.png") no-repeat center center;
+  /*background: #acacac url("../img/content/capcha.png") no-repeat center center;*/
   border: 3px solid #eb2629;
+}
+.form .capcha > img{
+    width: 100%;
+    height: 100%;
 }
 .form .capcha-l {
   margin: 45px auto 0;
@@ -230,6 +285,8 @@ body {
   margin-bottom: 20px;
   width: 250px;
 }
+
+/*--------------------------------------------------------------------------*/
 .form .form__title-l {
   background: #eb2629;
 }
@@ -306,6 +363,8 @@ body {
   padding: 5px 28.5px 15px;
   border-bottom: 60px solid #eb2629;
 }
+
+/*-----------------------------------------------------*/
 .form__add fieldset:after {
   display: none;
 }
@@ -412,42 +471,6 @@ body {
 }
 .form__number--file {
   width: 12.7%;
-}
-/*чекбокс запомнить меня*/
-.form__remember {
-  margin-top: 15px;
-  margin-bottom: 20px;
-  /*стилизованный чекбокс*/
-}
-.form__remember input[type="checkbox"] {
-  display: none;
-  /*галка при включенном чекбоксе*/
-}
-.form__remember input[type="checkbox"]:checked ~ label[for="remember"] span:before {
-  content: "";
-  position: absolute;
-  width: 27px;
-  height: 26px;
-  left: -4px;
-  bottom: 0;
-  background: url("../img/icon-checkbox.png") no-repeat center center;
-}
-.form__remember label {
-  font-style: italic;
-  font-size: 18px;
-  font-family: 'OpenSans Light', 'Arial', sans-serif;
-  font-weight: bold;
-  color: #666565;
-}
-.form__remember span {
-  position: relative;
-  display: inline-block;
-  margin-right: 10px;
-  margin-bottom: 5px;
-  width: 18px;
-  height: 18px;
-  border: 1px solid #757576;
-  vertical-align: middle;
 }
 .file_upload {
   float: left;
@@ -576,17 +599,6 @@ body {
 /* декоративная часть ширмы: делаем полупрозрачной и чёрной */
 .shim {
   background: rgba(0, 0, 0, 0.5);
-}
-.error {
-  display: none;
-  width: 70%;
-  margin: 20px auto;
-  padding: 5px;
-  border: 3px solid red;
-  color: red;
-  text-align: left;
-  font-size: 16px;
-  border-radius: 5px;
 }
 .header {
   margin-bottom: 60px;
@@ -1000,7 +1012,6 @@ main .next--smaller {
   font-size: 23px;
 }
 .footer {
-  position: absolute;
   padding: 40px 20px;
   background: #e82a2c;
 }
@@ -1169,6 +1180,12 @@ main .next--smaller {
 .comments__reg:active {
   color: #666565;
 }
+.comments input[type="checkbox"] {
+  display: none;
+}
+.comments input[type="checkbox"]:checked ~ .comments__form--answer {
+  display: block;
+}
 .comments__form {
   background: white;
   border-radius: 5px;
@@ -1244,11 +1261,12 @@ main .next--smaller {
   margin-right: 5px;
   width: 65px;
   height: 56px;
+  background: url("../img/content/cloud-author.png") no-repeat center center;
+  background-size: 100%;
   text-align: center;
 }
 .comments-item__img img {
-  width: 100%;
-  height: 100%;
+  width: 94%;
   margin-top: 6%;
 }
 .comments-item__head {
@@ -1284,11 +1302,7 @@ main .next--smaller {
   font-size: 14px;
   font-family: 'OpenSans-Italic', 'Arial', sans-serif;
   color: #666565;
-}
-.comments-item__answer:hover,
-.comments-item__answer:active {
-  color: #191919;
-  text-decoration: none;
+  cursor: pointer;
 }
 .comments-item__counter {
   background: #666565;
@@ -1320,7 +1334,6 @@ main .next--smaller {
   vertical-align: bottom;
   margin-right: 10px;
   background: url("../img/icon_down.png") no-repeat center center;
-  background-size: contain;
 }
 .comments__all:visited {
   text-decoration: none;
@@ -1362,22 +1375,6 @@ main .next--smaller {
   background: url("../img/icon_up.png") no-repeat center center;
   background-size: 100%;
 }
-@-webkit-keyframes show {
-  0% {
-    height: 0;
-  }
-  100% {
-    height: 100px;
-  }
-}
-@keyframes show {
-  0% {
-    height: 0;
-  }
-  100% {
-    height: 100px;
-  }
-}
 .private .title,
 .private .rang {
   margin: 0;
@@ -1387,55 +1384,10 @@ main .next--smaller {
   line-height: 1;
 }
 .private .rang {
+  margin-bottom: 15px;
   color: #e82a2c;
   font-family: 'OpenSans-Bold', 'Arial', sans-serif;
   text-transform: uppercase;
-  text-decoration: underline;
-  cursor: pointer;
-}
-.private .rang--header {
-  margin-bottom: 15px;
-  text-decoration: none;
-  cursor: default;
-}
-.private .rang-l {
-  margin-bottom: 25px;
-  width: 185px;
-}
-.private .rang__title {
-  margin: 0;
-  font-size: 23px;
-}
-.private .rang__input {
-  display: none;
-}
-.private .rang__input:checked ~ .rang-l {
-  margin-bottom: 15px;
-}
-.private .rang__input:checked ~ .rang__info {
-  display: block;
-  -webkit-animation: show .5s;
-          animation: show .5s;
-  overflow: hidden;
-}
-.private .rang__info {
-  display: none;
-  margin-left: 35px;
-  margin-bottom: 25px;
-  padding: 2px 5px 5px 25px;
-  font-family: 'OpenSans-Italic', 'Arial', sans-serif;
-  font-weight: bold;
-  text-align: left;
-  font-size: 13px;
-  border: 1px dashed #e82a2c;
-}
-.private .rang__info p {
-  margin: 0;
-}
-.private .rang__items {
-  list-style: none;
-  margin: 0;
-  padding: 0;
 }
 .private .subtext {
   font-size: 16px;
@@ -1451,7 +1403,7 @@ main .next--smaller {
   float: left;
   width: 25%;
 }
-.private .avatar--header-l:after {
+.private .avatar-l:after {
   content: "";
   position: absolute;
   width: 2px;
@@ -1470,10 +1422,7 @@ main .next--smaller {
 }
 .private .info__part {
   float: left;
-  width: 49%;
-}
-.private .info__part:last-of-type {
-  float: right;
+  width: 50%;
 }
 .private .info__part--options-item {
   margin-bottom: 15px;
@@ -1533,17 +1482,9 @@ main .next--smaller {
   width: 23px;
   background-image: url("../img/icon-home.png");
 }
-.private__menu-home:active,
-.private__menu-home:hover {
-  background-image: url("../img/icon-home--active.png");
-}
 .private__menu-search {
   width: 25px;
   background-image: url("../img/icon-search--private.png");
-}
-.private__menu-search:active,
-.private__menu-search:hover {
-  background-image: url("../img/icon-search--private--active.png");
 }
 .private .form {
   position: static;
@@ -1589,16 +1530,7 @@ main .next--smaller {
   font-size: 16px;
   color: black;
 }
-.private .form .info__item:after {
-  content: '';
-  display: table;
-  clear: both;
-}
-.private .form .info__item:after {
-  display: none;
-}
 .private .form .info__item input {
-  float: right;
   padding: 0;
   font-size: 16px;
   font-style: normal;
@@ -1608,200 +1540,6 @@ main .next--smaller {
 }
 .private .form .info__item input[type="text"] {
   text-transform: capitalize;
-}
-.private .form .info__item--radio input[type="radio"] {
-  display: none;
-}
-.private .form .info__item--radio label {
-  margin-right: 5%;
-}
-.private .form .info__item--radio label:first-of-type {
-  margin-left: 15%;
-}
-.private .form .info__item--radio label:after {
-  content: "";
-  display: inline-block;
-  width: 11px;
-  height: 11px;
-  margin-left: 3px;
-  background: #defd23;
-  border: 1px solid #d0eb2e;
-  border-radius: 50%;
-}
-.private .form .info__item--radio input[id="woman"]:checked ~ label[for="woman"]:after,
-.private .form .info__item--radio input[id="man"]:checked ~ label[for="man"]:after {
-  background-color: black;
-  border-color: black;
-}
-.private .form .info__item--pass-l {
-  padding: 2px 0 0;
-  text-align: left;
-  font-size: 16px;
-  color: black;
-}
-.private .form .info__item--pass-l > span {
-  display: inline-block;
-  margin-bottom: 10px;
-}
-.private .form .info__item--pass input {
-  width: 65%;
-}
-.private .form .info__item--pass input[name="pass-repeat"] {
-  width: 100%;
-  margin-top: 5px;
-}
-.private .form .info__text {
-  width: 100%;
-  max-width: 100%;
-  background-color: #defd23;
-  border-color: #d0eb2e;
-}
-.private .form .info__text--area {
-  padding: 5px 10px;
-}
-.friends {
-  text-align: center;
-}
-.friends__title {
-  font-size: 16px;
-  font-weight: bold;
-  border-bottom: 1px solid black;
-}
-.friends__item {
-  display: inline-block;
-  width: 125px;
-  margin-right: 4.6%;
-}
-.friends__item:last-of-type {
-  margin-right: 0;
-}
-.friends__img {
-  position: relative;
-  height: 151px;
-  background: #666565;
-}
-.friends__img img {
-  position: relative;
-  width: 100%;
-  height: auto;
-  z-index: 10;
-}
-.friends__add {
-  position: absolute;
-  width: 80px;
-  height: 80px;
-  top: 50%;
-  margin-top: -40px;
-  left: 50%;
-  margin-left: -40px;
-  color: white;
-  font-size: 100px;
-  line-height: 73px;
-  text-align: center;
-  border: 4px solid white;
-  border-radius: 50%;
-}
-.friends__add:hover,
-.friends__add:active,
-.friends__add:visited,
-.friends__add:focus {
-  color: white;
-  text-decoration: none;
-}
-.friends__name {
-  margin: 0;
-  font-size: 20px;
-}
-.comments__private {
-  margin-bottom: 15px;
-}
-.comments__private:after {
-  content: '';
-  display: table;
-  clear: both;
-}
-.comments__private:nth-of-type(2n) {
-  background: transparent;
-  border: none;
-}
-.comments__private .comments__header {
-  margin-bottom: 15px;
-  padding: 0;
-}
-.comments__private .comments__header:after {
-  content: '';
-  display: table;
-  clear: both;
-}
-.comments__private .comments__header .img-box {
-  float: left;
-  width: 22%;
-  margin-right: 10px;
-}
-.comments__private .comments__header .img-box__title {
-  font-size: 16px;
-}
-.comments__private .comments__header .img-box__number {
-  display: inline-block;
-  margin-bottom: 10px;
-}
-.comments__private .comments-item {
-  margin-bottom: 20px;
-}
-.comments__private .comments-item__head,
-.comments__private .comments-item__text,
-.comments__private .comments-item__date,
-.comments__private .comments-item__counter-l {
-  padding-right: 5px;
-}
-.comments__private .comments-item__head {
-  margin-bottom: -10px;
-  width: 100%;
-}
-.comments__private .comments-item__text {
-  margin-bottom: 10px;
-  font-size: 14px;
-  font-weight: bold;
-}
-.comments__private .comments-item__date {
-  font-size: 14px;
-  font-family: 'OpenSans-Italic', 'Arial', sans-serif;
-  color: #666565;
-  text-align: right;
-}
-.comments__private .comments-item__date .comments__date {
-  margin-left: 20px;
-}
-.comments__private .comments-item--answer {
-  margin-left: 5%;
-}
-.comments__private .comments__all {
-  position: static;
-  float: right;
-  font-size: 12px;
-}
-.comments__private .comments__all:before {
-  width: 20px;
-  height: 25px;
-}
-.comments__private--answer .comments-item--answer {
-  position: relative;
-  padding: 10px 5px 15px 10px;
-  background: #defd23;
-  border: 1px solid #d7f429;
-}
-.comments__private--answer .comments-item--answer .comments-item__head {
-  width: auto;
-}
-.comments__private--answer .comments-item--answer .comments-item__rang {
-  position: absolute;
-  right: 5px;
-}
-.comments__private--answer .comments-item--answer .comments-item__answer {
-  margin-left: 70px;
-}
-.comments__private--answer .comments-item--answer .comments-item__counter-l {
-  padding-right: 15px;
 }
 .popup-show {
   display: block;

@@ -21,7 +21,7 @@
 
 
 //загрузка файлов - http://habrahabr.ru/post/189570/
-(function (document) {
+//(function (document) {
     var wrapper = $( ".file_upload" ),
         inp = wrapper.find( ".file_upload__input" ),
         btn = wrapper.find( ".file_upload__btn" ),
@@ -61,7 +61,7 @@
         $( ".file_upload input" ).triggerHandler( "change" );
     });
     
-})(document);
+//})(document);
 
 //модальные окна
 (function(document) {
