@@ -305,15 +305,13 @@
                       </div><a href="#" class="comments__all">Все комментарии</a>
                     </div>
           <script type="text/html" id="answer_field">
-            <div class="row">
-              <div class="col-md-12">
-                <form action="#" method="get" name="comments__answer" class="comments__form comments__form--answer">
-                  <textarea name="comment" placeholder="{{name}}, я говорю.../" rows="5"></textarea>
-                  <input type="submit">
-                  <!--доп. кнопки-->
-                  <div class="comments__more"><a class="smile"></a><a class="file"></a></div>
-                </form>
-              </div>
+            <div class="col-md-12">
+              <form action="#" method="get" name="comments__answer" class="comments__form comments__form--answer1">
+                <textarea name="comment" placeholder="{{name}}, я говорю.../" rows="5"></textarea>
+                <input type="submit">
+                <!--доп. кнопки-->
+                <div class="comments__more"><a class="smile"></a><a class="file"></a></div>
+              </form>
             </div>
           </script>
         </div>
@@ -601,7 +599,7 @@
               <div class="col-md-4">
                 <div class="form__add-accept">
                   <input type="checkbox" name="accept" id="accept" checked>
-                  <label for="accept">               </label><a href="#">Принять условия</a>
+                  <label for="accept"></label><a href="#">Принять условия</a>
                 </div>
               </div>
               <div class="col-md-4">
@@ -698,8 +696,9 @@
         </fieldset>
       </form>
     </div>
-    <script src="../libs/fancybox/jquery.fancybox.pack.js"></script>
+    <!--script(src="../libs/fancybox/jquery.fancybox.pack.js")-->
     <script src="../js/common.js"></script>
     <script src="../js/script.js"></script>
+    <!--script(src="../js/chat.js")-->
   </body>
 </html>

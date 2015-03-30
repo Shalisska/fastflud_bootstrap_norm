@@ -1000,6 +1000,7 @@ main .next--smaller {
   font-size: 23px;
 }
 .footer {
+  position: absolute;
   padding: 40px 20px;
   background: #e82a2c;
 }

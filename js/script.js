@@ -91,9 +91,9 @@
 		event.preventDefault();
 		if (add__form.classList.contains('popup-show') != true) {
             add__form.classList.add('popup-show');
-		}
-	})
-}
+            }
+        })
+    }
 	
 	//закрытие окон
 	var esc = document.querySelectorAll('.form__esc');
@@ -135,32 +135,7 @@
 })(document);
 
 
-//чат ответы
-(function (document) {
-    
-    var answer_btn = $('.comments-item__answer');
-    console.log(answer_btn);
 
-    answer_btn.click(function(event) {
-        event.preventDefault();
-    });
-    
-    var template = $('#answer_field').html();
-    console.log(template);
-    var user = $('.head__registration--known .user').html();
-    console.log(user);
-    
-    var html = Mustache.render(template, {
-        name:user
-    });
-    
-    var div = document.createElement('div');
-    var area = $('.comments-item--answer');
-    console.log(area);
-    div.innerHTML = html;
-//    area.appendChild(div);
-    
-})(document);
 
 
 
