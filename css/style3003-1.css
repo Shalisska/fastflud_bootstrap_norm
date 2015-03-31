@@ -172,7 +172,6 @@ body {
 .form fieldset {
   position: relative;
   margin: 0;
-  padding: 25px 0;
   border: none;
 }
 .form fieldset:not(:last-child):after {
@@ -188,6 +187,7 @@ body {
   padding-bottom: 15px;
 }
 .form__input {
+  margin-top: 25px;
   margin-bottom: 15px;
 }
 .form__forget {

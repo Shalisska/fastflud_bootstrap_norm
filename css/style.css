@@ -35,6 +35,9 @@ body {
   display: table;
   clear: both;
 }
+.main-wrapper {
+  position: relative;
+}
 *::-webkit-input-placeholder {
   color: #666565;
   opacity: 1;
@@ -1001,6 +1004,9 @@ main .next--smaller {
 }
 .footer {
   position: absolute;
+  width: 1000px;
+  height: 182px;
+  bottom: -210px;
   padding: 40px 20px;
   background: #e82a2c;
 }
