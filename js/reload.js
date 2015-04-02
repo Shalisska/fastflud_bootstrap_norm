@@ -3,13 +3,13 @@ timeReload = timeReload*60;
 var timenow=0;
 
 function isReload()
-    {
-    timenow = timenow + 0.2;
-    if (timenow>=timeReload) {
-    timenow=0;
+	{
+	timenow = timenow + 0.2;
+	if (timenow>=timeReload) {
+	timenow=0;
 
-    document.location.reload();
-    }
-    }
+	document.location.reload();
+	}
+	}
 
-//    var t=setInterval("isReload()",1000);
+//	var t=setInterval("isReload()",1000);

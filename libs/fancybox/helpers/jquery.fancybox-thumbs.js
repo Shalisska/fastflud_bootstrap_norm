@@ -4,14 +4,14 @@
  * @requires fancyBox v2.0 or later
  *
  * Usage:
- *     $(".fancybox").fancybox({
- *         helpers : {
- *             thumbs: {
- *                 width  : 50,
- *                 height : 50
- *             }
- *         }
- *     });
+ *	 $(".fancybox").fancybox({
+ *		 helpers : {
+ *			 thumbs: {
+ *				 width  : 50,
+ *				 height : 50
+ *			 }
+ *		 }
+ *	 });
  *
  */
 (function ($) {
@@ -21,8 +21,8 @@
 	//Add helper object
 	F.helpers.thumbs = {
 		defaults : {
-			width    : 50,       // thumbnail width
-			height   : 50,       // thumbnail height
+			width	: 50,	   // thumbnail width
+			height   : 50,	   // thumbnail height
 			position : 'bottom', // 'top' or 'bottom'
 			source   : function ( item ) {  // function to obtain the URL of the thumbnail image
 				var href;
@@ -97,7 +97,7 @@
 					$(this).css({
 						width  : width,
 						height : height,
-						top    : Math.floor(thumbHeight / 2 - height / 2),
+						top	: Math.floor(thumbHeight / 2 - height / 2),
 						left   : Math.floor(thumbWidth / 2 - width / 2)
 					});
 

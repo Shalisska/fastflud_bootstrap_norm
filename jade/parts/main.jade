@@ -1,25 +1,26 @@
 //2 колонки
 doctype html
 html(lang="ru")
-    head
-        include head    
-    body
-        include header
-        
-        .container.main-wrapper
-            main.row
-                //основной контент
-                .main.col-md-8
-                    block content
-                //правая колонка
-                .sidebar.col-md-4
-                    block sidebar
-                .row
-                    block next
-                    
-            include footer
-        a#toTop(href="/").scroll_top
-        //.hidden_elem
-        include hidden_elem
-        include scripts
-        block scripts
+	head
+		include head
+	body
+		include header
+		
+		.main-wrapper
+			.container
+				main.row
+					//основной контент
+					.main.col-md-8
+						block content
+					//правая колонка
+					.sidebar.col-md-4
+						block sidebar
+					.row
+						block next
+					
+			include footer
+		a#toTop(href="/").scroll_top
+		//.hidden_elem
+		include hidden_elem
+		include scripts
+		block scripts

@@ -31,24 +31,24 @@ html(lang="ru")
 				.row
 					nav.col-md-12
 						ul.private__menu
-							li.active: a(href="private_room.html") Редактировать профиль
+							li: a(href="private_room.html") Редактировать профиль
 							li: a(href="private_room--comments.html") Мои комментарии
 							li: a(href="private_room--answers.html")
-								|Ответы ( 
+								| Ответы ( 
 								span.private__menu-answers 5
-								|)
-							li: a(href="private_room--posts.html") 10 последних просмотренных постов
+								| )
+							li.active: a(href="private_room--posts.html") 10 последних просмотренных постов
 							li.additional-buttons
 								a.private__menu-home(href="private_room.html")
 								a.private__menu-search(href="#")
 
 				.row
 					.col-md-12
-						include parts/private_profile
+						include parts/private_last-posts
 
 			include parts/footer
 		a#toTop(href="/").scroll_top
-		
+
 		include parts/hidden_elem
 		include parts/scripts
 		block scripts

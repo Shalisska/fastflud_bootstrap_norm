@@ -1193,7 +1193,7 @@ main .next--smaller {
   height: 14px;
   background: linear-gradient(to right top, #ffffff 49%, transparent 51%);
   -webkit-transform: skewX(15deg);
-          transform: skewX(15deg);
+		  transform: skewX(15deg);
 }
 .comments__form textarea {
   width: 100%;
@@ -1364,18 +1364,18 @@ main .next--smaller {
 }
 @-webkit-keyframes show {
   0% {
-    height: 0;
+	height: 0;
   }
   100% {
-    height: 100px;
+	height: 100px;
   }
 }
 @keyframes show {
   0% {
-    height: 0;
+	height: 0;
   }
   100% {
-    height: 100px;
+	height: 100px;
   }
 }
 .private .title,
@@ -1415,7 +1415,7 @@ main .next--smaller {
 .private .rang__input:checked ~ .rang__info {
   display: block;
   -webkit-animation: show .5s;
-          animation: show .5s;
+		  animation: show .5s;
   overflow: hidden;
 }
 .private .rang__info {

@@ -1,31 +1,31 @@
 //блок с комментами
 mixin comments-block
-    .comments.comments__private
-        .comments__header.content__item
-            .img-box
-                .img-box__part: img(src="../img/content/site1.jpg", alt="site1")
-                .img-box__part: img(src="../img/content/site2.jpg", alt="site2")
-            p.img-box__title
-                span.img-box__number #208
-                br
-                | Металлоперерабатывающий завод vs завод железобетонных блоков
+	.comments.comments__private
+		.comments__header.content__item
+			.img-box
+				.img-box__part: img(src="../img/content/site1.jpg", alt="site1")
+				.img-box__part: img(src="../img/content/site2.jpg", alt="site2")
+			p.img-box__title
+				span.img-box__number #208
+				br
+				| Металлоперерабатывающий завод vs завод железобетонных блоков
 
-        //поле с комментом
-        .comments-item
-            .comments-item__head
-                p.comments-item__author Я,
-            p.comments-item__text Купи себе лесизаблудись в нем Купи себе лес и заблудись в немм Купи себе лес и заблудись в нем Купи себе лес и заблудись в нем
-            //действия на коммент
-            .comments-item__more
-                .comments-item__date
-                    span.comments__time 20:38:59
-                    span.comments__date 12.12.2014
-                //оценить
-                .comments-item__counter-l
-                    button.comments-item__counter.comments-item__counter--plus(disabled) +1
-                    button.comments-item__counter.comments-item__counter--minus(disabled) -10
+		//поле с комментом
+		.comments-item
+			.comments-item__head
+				p.comments-item__author Я,
+			p.comments-item__text Купи себе лесизаблудись в нем Купи себе лес и заблудись в немм Купи себе лес и заблудись в нем Купи себе лес и заблудись в нем
+			//действия на коммент
+			.comments-item__more
+				.comments-item__date
+					span.comments__time 20:38:59
+					span.comments__date 12.12.2014
+				//оценить
+				.comments-item__counter-l
+					button.comments-item__counter.comments-item__counter--plus(disabled) +1
+					button.comments-item__counter.comments-item__counter--minus(disabled) -10
 
-        a.comments__all(href="#") Все комментарии
+		a.comments__all(href="#") Все комментарии
 
 mixin comments-block
 mixin comments-block

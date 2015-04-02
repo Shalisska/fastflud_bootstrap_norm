@@ -4,13 +4,13 @@
  * @requires fancyBox v2.0 or later
  *
  * Usage:
- *     $(".fancybox").fancybox({
- *         helpers : {
- *             buttons: {
- *                 position : 'top'
- *             }
- *         }
- *     });
+ *	 $(".fancybox").fancybox({
+ *		 helpers : {
+ *			 buttons: {
+ *				 position : 'top'
+ *			 }
+ *		 }
+ *	 });
  *
  */
 (function ($) {
@@ -22,7 +22,7 @@
 		defaults : {
 			skipSingle : false, // disables if gallery contains single image
 			position   : 'top', // 'top' or 'bottom'
-			tpl        : '<div id="fancybox-buttons"><ul><li><a class="btnPrev" title="Previous" href="javascript:;"></a></li><li><a class="btnPlay" title="Start slideshow" href="javascript:;"></a></li><li><a class="btnNext" title="Next" href="javascript:;"></a></li><li><a class="btnToggle" title="Toggle size" href="javascript:;"></a></li><li><a class="btnClose" title="Close" href="javascript:;"></a></li></ul></div>'
+			tpl		: '<div id="fancybox-buttons"><ul><li><a class="btnPrev" title="Previous" href="javascript:;"></a></li><li><a class="btnPlay" title="Start slideshow" href="javascript:;"></a></li><li><a class="btnNext" title="Next" href="javascript:;"></a></li><li><a class="btnToggle" title="Toggle size" href="javascript:;"></a></li><li><a class="btnClose" title="Close" href="javascript:;"></a></li></ul></div>'
 		},
 
 		list : null,
@@ -114,7 +114,7 @@
 				this.list.remove();
 			}
 
-			this.list    = null;
+			this.list	= null;
 			this.buttons = null;
 		}
 	};

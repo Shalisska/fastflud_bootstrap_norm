@@ -1005,6 +1005,8 @@ main .next--smaller {
 .footer {
   position: absolute;
   width: 1000px;
+  left: 50%;
+  margin-left: -500px;
   height: 182px;
   bottom: -210px;
   padding: 40px 20px;
@@ -1820,3 +1822,25 @@ main .next--smaller {
   display: table;
   clear: both;
 }
+/*==========  Desktop First Method  ==========*/
+/* Large Devices, Wide Screens */
+@media only screen and (max-width: 1200px) {
+  .top-menu li a {
+    font-size: 20px;
+  }
+}
+@media only screen and (max-width: 1000px) {
+  .footer {
+    width: 100%;
+  }
+}
+/* Medium Devices, Desktops */
+/* Small Devices, Tablets */
+/* Extra Small Devices, Phones */
+/* Custom, iPhone Retina */
+/*==========  Mobile First Method  ==========*/
+/* Custom, iPhone Retina */
+/* Extra Small Devices, Phones */
+/* Small Devices, Tablets */
+/* Medium Devices, Desktops */
+/* Large Devices, Wide Screens */

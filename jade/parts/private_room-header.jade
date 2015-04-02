@@ -1,19 +1,19 @@
 -var breadCrumbs = ["Главная","Логотипы","Новость"]
 
 header.header.private
-    .head
-        .container
-            .row
-            
-                //хлебные крошки
-                nav.col-md-8
-                    ul.head__breadcrumb
-                        each item in breadCrumbs
-                            li: a(href="#") #{item}
+	.head
+		.container
+			.row
+			
+				//хлебные крошки
+				nav.col-md-8
+					ul.head__breadcrumb
+						each item in breadCrumbs
+							li: a(href="#") #{item}
 
-                //регистрация
-                .col-md-4
-                    .head__registration.hide
-                        a(href="#registration" class="registration") Регистрация / Вход
-                    .head__registration.head__registration--known
-                        a.user(href="#") Anonym Anonym
+				//регистрация
+				.col-md-4
+					.head__registration.hide
+						a(href="#registration" class="registration") Регистрация / Вход
+					.head__registration.head__registration--known
+						a.user(href="#") Anonym Anonym

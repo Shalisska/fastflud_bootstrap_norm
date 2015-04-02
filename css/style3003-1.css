@@ -100,21 +100,21 @@ body {
   vertical-align: middle;
 }
 .success, .error{
-    width: 70%;
-    margin: 20px auto;
-    padding: 5px;
-    text-align: left;
-    font-size: 16px;
-    border-radius: 5px;
+	width: 70%;
+	margin: 20px auto;
+	padding: 5px;
+	text-align: left;
+	font-size: 16px;
+	border-radius: 5px;
 }
 .success{
-    border: 3px solid green;
-    color: green;
+	border: 3px solid green;
+	color: green;
 }
 .error{
-    display: none;
-    border: 3px solid red;
-    color: red;
+	display: none;
+	border: 3px solid red;
+	color: red;
 }
 .form__esc {
   position: absolute;
@@ -267,8 +267,8 @@ body {
   border: 3px solid #eb2629;
 }
 .form .capcha > img{
-    width: 100%;
-    height: 100%;
+	width: 100%;
+	height: 100%;
 }
 .form .capcha-l {
   margin: 45px auto 0;
@@ -1210,7 +1210,7 @@ main .next--smaller {
   height: 14px;
   background: linear-gradient(to right top, #ffffff 49%, transparent 51%);
   -webkit-transform: skewX(15deg);
-          transform: skewX(15deg);
+		  transform: skewX(15deg);
 }
 .comments__form textarea {
   width: 100%;

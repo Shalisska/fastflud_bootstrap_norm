@@ -56,8 +56,8 @@
 			padding : 15,
 			margin  : 20,
 
-			width     : 800,
-			height    : 600,
+			width	 : 800,
+			height	: 600,
 			minWidth  : 100,
 			minHeight : 100,
 			maxWidth  : 9999,
@@ -72,22 +72,22 @@
 			autoCenter  : !isTouch,
 			fitToView   : true,
 			aspectRatio : false,
-			topRatio    : 0.5,
+			topRatio	: 0.5,
 			leftRatio   : 0.5,
 
 			scrolling : 'auto', // 'auto', 'yes' or 'no'
 			wrapCSS   : '',
 
-			arrows     : true,
+			arrows	 : true,
 			closeBtn   : true,
 			closeClick : false,
 			nextClick  : false,
 			mouseWheel : true,
 			autoPlay   : false,
 			playSpeed  : 3000,
-			preload    : 3,
-			modal      : false,
-			loop       : true,
+			preload	: 3,
+			modal	  : false,
+			loop	   : true,
 
 			ajax  : {
 				dataType : 'html',
@@ -108,13 +108,13 @@
 					13 : 'left', // enter
 					34 : 'up',   // page down
 					39 : 'left', // right arrow
-					40 : 'up'    // down arrow
+					40 : 'up'	// down arrow
 				},
 				prev : {
 					8  : 'right',  // backspace
 					33 : 'down',   // page up
 					37 : 'right',  // left arrow
-					38 : 'down'    // up arrow
+					38 : 'down'	// up arrow
 				},
 				close  : [27], // escape key
 				play   : [32], // space - start/stop slideshow
@@ -130,20 +130,20 @@
 
 			// Override some properties
 			index   : 0,
-			type    : null,
-			href    : null,
+			type	: null,
+			href	: null,
 			content : null,
 			title   : null,
 
 			// HTML templates
 			tpl: {
-				wrap     : '<div class="fancybox-wrap" tabIndex="-1"><div class="fancybox-skin"><div class="fancybox-outer"><div class="fancybox-inner"></div></div></div></div>',
-				image    : '<img class="fancybox-image" src="{href}" alt="" />',
+				wrap	 : '<div class="fancybox-wrap" tabIndex="-1"><div class="fancybox-skin"><div class="fancybox-outer"><div class="fancybox-inner"></div></div></div></div>',
+				image	: '<img class="fancybox-image" src="{href}" alt="" />',
 				iframe   : '<iframe id="fancybox-frame{rnd}" name="fancybox-frame{rnd}" class="fancybox-iframe" frameborder="0" vspace="0" hspace="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen' + (IE ? ' allowtransparency="true"' : '') + '></iframe>',
-				error    : '<p class="fancybox-error">The requested content cannot be loaded.<br/>Please try again later.</p>',
+				error	: '<p class="fancybox-error">The requested content cannot be loaded.<br/>Please try again later.</p>',
 				closeBtn : '<a title="Close" class="fancybox-item fancybox-close" href="javascript:;"></a>',
-				next     : '<a title="Next" class="fancybox-nav fancybox-next" href="javascript:;"><span></span></a>',
-				prev     : '<a title="Previous" class="fancybox-nav fancybox-prev" href="javascript:;"><span></span></a>'
+				next	 : '<a title="Next" class="fancybox-nav fancybox-next" href="javascript:;"><span></span></a>',
+				prev	 : '<a title="Previous" class="fancybox-nav fancybox-prev" href="javascript:;"><span></span></a>'
 			},
 
 			// Properties for each animation type
@@ -180,19 +180,19 @@
 			},
 
 			// Callbacks
-			onCancel     : $.noop, // If canceling
+			onCancel	 : $.noop, // If canceling
 			beforeLoad   : $.noop, // Before loading
-			afterLoad    : $.noop, // After loading
+			afterLoad	: $.noop, // After loading
 			beforeShow   : $.noop, // Before changing in current item
-			afterShow    : $.noop, // After opening
+			afterShow	: $.noop, // After opening
 			beforeChange : $.noop, // Before changing gallery item
 			beforeClose  : $.noop, // Before closing
 			afterClose   : $.noop  // After closing
 		},
 
 		//Current state
-		group    : {}, // Selected group
-		opts     : {}, // Group options
+		group	: {}, // Selected group
+		opts	 : {}, // Group options
 		previous : null,  // Previous element
 		coming   : null,  // Element being loaded
 		current  : null,  // Currently loaded element
@@ -206,7 +206,7 @@
 		inner : null,
 
 		player : {
-			timer    : null,
+			timer	: null,
 			isActive : false
 		},
 
@@ -216,7 +216,7 @@
 
 		// Some collections
 		transitions : {},
-		helpers     : {},
+		helpers	 : {},
 
 		/*
 		 *	Static methods
@@ -260,7 +260,7 @@
 
 					if (isQuery(element)) {
 						obj = {
-							href    : element.data('fancybox-href') || element.attr('href'),
+							href	: element.data('fancybox-href') || element.attr('href'),
 							title   : element.data('fancybox-title') || element.attr('title'),
 							isDom   : true,
 							element : element
@@ -279,7 +279,7 @@
 				title = opts.title !== undefined ? opts.title : obj.title || '';
 
 				content = opts.content || obj.content;
-				type    = content ? 'html' : (opts.type  || obj.type);
+				type	= content ? 'html' : (opts.type  || obj.type);
 
 				if (!type && obj.isDom) {
 					type = element.data('fancybox-type');
@@ -303,7 +303,7 @@
 							type = 'inline';
 
 						} else if (isString(element)) {
-							type    = 'html';
+							type	= 'html';
 							content = element;
 						}
 					}
@@ -312,7 +312,7 @@
 					// "/mypage.html #my_id" will load "/mypage.html" and display element having id "my_id"
 					if (type === 'ajax') {
 						hrefParts = href.split(/\s+/, 2);
-						href      = hrefParts.shift();
+						href	  = hrefParts.shift();
 						selector  = hrefParts.shift();
 					}
 				}
@@ -330,16 +330,16 @@
 						content = href;
 
 					} else if (!type && !href && obj.isDom) {
-						type    = 'inline';
+						type	= 'inline';
 						content = element;
 					}
 				}
 
 				$.extend(obj, {
-					href     : href,
-					type     : type,
+					href	 : href,
+					type	 : type,
 					content  : content,
-					title    : title,
+					title	: title,
 					selector : selector
 				});
 
@@ -506,7 +506,7 @@
 			index = getScalar(index);
 
 			F.direction = direction || current.direction[ (index >= current.index ? 'next' : 'prev') ];
-			F.router    = router || 'jumpto';
+			F.router	= router || 'jumpto';
 
 			if (current.loop) {
 				if (index < 0) {
@@ -526,7 +526,7 @@
 		// Center inside viewport and toggle position type to fixed or absolute if needed
 		reposition: function (e, onlyAbsolute) {
 			var current = F.current,
-				wrap    = current ? current.wrap : null,
+				wrap	= current ? current.wrap : null,
 				pos;
 
 			if (wrap) {
@@ -634,7 +634,7 @@
 
 		getViewport: function () {
 			var locked = (F.current && F.current.locked) || false,
-				rez    = {
+				rez	= {
 					x: W.scrollLeft(),
 					y: W.scrollTop()
 				};
@@ -719,7 +719,7 @@
 						}
 
 						canScroll = isScrollable( parent[0] );
-						parent    = $(parent).parent();
+						parent	= $(parent).parent();
 					}
 
 					if (delta !== 0 && !canScroll) {
@@ -807,9 +807,9 @@
 					closeBtn   : false,
 					closeClick : false,
 					nextClick  : false,
-					arrows     : false,
+					arrows	 : false,
 					mouseWheel : false,
-					keys       : null,
+					keys	   : null,
 					helpers: {
 						overlay : {
 							closeClick : false
@@ -834,7 +834,7 @@
 			/*
 			 * Add reference to the group, so it`s possible to access from callbacks, example:
 			 * afterLoad : function() {
-			 *     this.title = 'Image ' + (this.index + 1) + ' of ' + this.group.length + (this.title ? ' - ' + this.title : '');
+			 *	 this.title = 'Image ' + (this.index + 1) + ' of ' + this.group.length + (this.title ? ' - ' + this.title : '');
 			 * }
 			 */
 
@@ -922,14 +922,14 @@
 
 		_error: function ( type ) {
 			$.extend(F.coming, {
-				type       : 'html',
+				type	   : 'html',
 				autoWidth  : true,
 				autoHeight : true,
 				minWidth   : 0,
 				minHeight  : 0,
 				scrolling  : 'no',
 				hasError   : type,
-				content    : F.coming.tpl.error
+				content	: F.coming.tpl.error
 			});
 
 			F._afterLoad();
@@ -1029,8 +1029,8 @@
 		_preloadImages: function() {
 			var group   = F.group,
 				current = F.current,
-				len     = group.length,
-				cnt     = current.preload ? Math.min(current.preload, len - 1) : 0,
+				len	 = group.length,
+				cnt	 = current.preload ? Math.min(current.preload, len - 1) : 0,
 				item,
 				i;
 
@@ -1080,7 +1080,7 @@
 
 			current   = coming;
 			content   = coming.content;
-			type      = coming.type;
+			type	  = coming.type;
 			scrolling = coming.scrolling;
 
 			$.extend(F, {
@@ -1167,24 +1167,24 @@
 
 		_setDimension: function () {
 			var viewport   = F.getViewport(),
-				steps      = 0,
+				steps	  = 0,
 				canShrink  = false,
 				canExpand  = false,
-				wrap       = F.wrap,
-				skin       = F.skin,
-				inner      = F.inner,
-				current    = F.current,
-				width      = current.width,
-				height     = current.height,
+				wrap	   = F.wrap,
+				skin	   = F.skin,
+				inner	  = F.inner,
+				current	= F.current,
+				width	  = current.width,
+				height	 = current.height,
 				minWidth   = current.minWidth,
 				minHeight  = current.minHeight,
 				maxWidth   = current.maxWidth,
 				maxHeight  = current.maxHeight,
 				scrolling  = current.scrolling,
 				scrollOut  = current.scrollOutside ? current.scrollbarWidth : 0,
-				margin     = current.margin,
-				wMargin    = getScalar(margin[1] + margin[3]),
-				hMargin    = getScalar(margin[0] + margin[2]),
+				margin	 = current.margin,
+				wMargin	= getScalar(margin[1] + margin[3]),
+				hMargin	= getScalar(margin[0] + margin[2]),
 				wPadding,
 				hPadding,
 				wSpace,
@@ -1395,9 +1395,9 @@
 			var current  = F.current,
 				viewport = F.getViewport(),
 				margin   = current.margin,
-				width    = F.wrap.width()  + margin[1] + margin[3],
+				width	= F.wrap.width()  + margin[1] + margin[3],
 				height   = F.wrap.height() + margin[0] + margin[2],
-				rez      = {
+				rez	  = {
 					position: 'absolute',
 					top  : margin[0],
 					left : margin[3]
@@ -1486,7 +1486,7 @@
 				current   : null,
 				isActive  : false,
 				isOpened  : false,
-				isOpen    : false,
+				isOpen	: false,
 				isClosing : false,
 				wrap   : null,
 				skin   : null,
@@ -1506,9 +1506,9 @@
 		getOrigPosition: function () {
 			var current  = F.current,
 				element  = current.element,
-				orig     = current.orig,
-				pos      = {},
-				width    = 50,
+				orig	 = current.orig,
+				pos	  = {},
+				width	= 50,
 				height   = 50,
 				hPadding = current.hPadding,
 				wPadding = current.wPadding,
@@ -1541,8 +1541,8 @@
 			}
 
 			pos = {
-				top     : getValue(pos.top  - hPadding * current.topRatio),
-				left    : getValue(pos.left - wPadding * current.leftRatio),
+				top	 : getValue(pos.top  - hPadding * current.topRatio),
+				left	: getValue(pos.left - wPadding * current.leftRatio),
 				width   : getValue(width  + wPadding),
 				height  : getValue(height + hPadding)
 			};
@@ -1554,8 +1554,8 @@
 			var ratio,
 				padding,
 				value,
-				prop       = fx.prop,
-				current    = F.current,
+				prop	   = fx.prop,
+				current	= F.current,
 				wrapSpace  = current.wrapSpace,
 				skinSpace  = current.skinSpace;
 
@@ -1598,7 +1598,7 @@
 			F.wrap.css(startPos).animate(endPos, {
 				duration : effect === 'none' ? 0 : current.openSpeed,
 				easing   : current.openEasing,
-				step     : elastic ? this.step : null,
+				step	 : elastic ? this.step : null,
 				complete : F._afterZoomIn
 			});
 		},
@@ -1620,16 +1620,16 @@
 			F.wrap.animate(endPos, {
 				duration : effect === 'none' ? 0 : current.closeSpeed,
 				easing   : current.closeEasing,
-				step     : elastic ? this.step : null,
+				step	 : elastic ? this.step : null,
 				complete : F._afterZoomOut
 			});
 		},
 
 		changeIn: function () {
 			var current   = F.current,
-				effect    = current.nextEffect,
+				effect	= current.nextEffect,
 				startPos  = current.pos,
-				endPos    = { opacity : 1 },
+				endPos	= { opacity : 1 },
 				direction = F.direction,
 				distance  = 200,
 				field;
@@ -1664,8 +1664,8 @@
 
 		changeOut: function () {
 			var previous  = F.previous,
-				effect    = previous.prevEffect,
-				endPos    = { opacity : 0.1 },
+				effect	= previous.prevEffect,
+				endPos	= { opacity : 0.1 },
 				direction = F.direction,
 				distance  = 200;
 
@@ -1689,17 +1689,17 @@
 
 	F.helpers.overlay = {
 		defaults : {
-			closeClick : true,      // if true, fancyBox will be closed when user clicks on the overlay
-			speedOut   : 200,       // duration of fadeOut animation
-			showEarly  : true,      // indicates if should be opened immediately or wait until the content is ready
-			css        : {},        // custom CSS properties
-			locked     : !isTouch,  // if true, the content will be locked into overlay
-			fixed      : true       // if false, the overlay CSS position property will not be set to "fixed"
+			closeClick : true,	  // if true, fancyBox will be closed when user clicks on the overlay
+			speedOut   : 200,	   // duration of fadeOut animation
+			showEarly  : true,	  // indicates if should be opened immediately or wait until the content is ready
+			css		: {},		// custom CSS properties
+			locked	 : !isTouch,  // if true, the content will be locked into overlay
+			fixed	  : true	   // if false, the overlay CSS position property will not be set to "fixed"
 		},
 
-		overlay : null,      // current handle
-		fixed   : false,     // indicates if the overlay has position "fixed"
-		el      : $('html'), // element that contains "the lock"
+		overlay : null,	  // current handle
+		fixed   : false,	 // indicates if the overlay has position "fixed"
+		el	  : $('html'), // element that contains "the lock"
 
 		// Public methods
 		create : function(opts) {
@@ -1870,14 +1870,14 @@
 
 	F.helpers.title = {
 		defaults : {
-			type     : 'float', // 'float', 'inside', 'outside' or 'over',
+			type	 : 'float', // 'float', 'inside', 'outside' or 'over',
 			position : 'bottom' // 'top' or 'bottom'
 		},
 
 		beforeShow: function (opts) {
 			var current = F.current,
-				text    = current.title,
-				type    = opts.type,
+				text	= current.title,
+				type	= opts.type,
 				title,
 				target;
 
@@ -1927,9 +1927,9 @@
 	// jQuery plugin initialization
 	$.fn.fancybox = function (options) {
 		var index,
-			that     = $(this),
+			that	 = $(this),
 			selector = this.selector || '',
-			run      = function(e) {
+			run	  = function(e) {
 				var what = $(this).blur(), idx = index, relType, relVal;
 
 				if (!(e.ctrlKey || e.altKey || e.shiftKey || e.metaKey) && !what.is('.fancybox-wrap')) {

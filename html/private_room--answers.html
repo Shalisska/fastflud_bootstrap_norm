@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <title>fastflud</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../css/bootstrap.css" rel="stylesheet">
+    <link href="../css/style.css" rel="stylesheet">
+    <script src="../js/jquery-1.11.2.min.js"></script>
+    <script src="../js/auto-height.js"></script>
+    <script src="../libs/mustache-v.2-0-0.min.js"></script>
+    <script src="../js/auto-width.js"></script>
+  </head>
+  <body>
+    <header class="header private">
+      <div class="head">
+        <div class="container">
+          <div class="row">
+            <!--хлебные крошки-->
+            <nav class="col-md-8">
+              <ul class="head__breadcrumb">
+                <li><a href="#">Главная</a></li>
+                <li><a href="#">Логотипы</a></li>
+                <li><a href="#">Новость</a></li>
+              </ul>
+            </nav>
+            <!--регистрация-->
+            <div class="col-md-4">
+              <div class="head__registration hide"><a href="#registration" class="registration">Регистрация / Вход</a></div>
+              <div class="head__registration head__registration--known"><a href="#" class="user">Anonym Anonym</a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="main-wrapper container">
+      <main class="private">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="avatar-l avatar--header-l">
+              <div class="avatar"><img src="../img/content/avatar.jpg" alt="foto"></div>
+            </div>
+            <div class="info-l">
+              <div class="info clearfix">
+                <div class="info__part">
+                  <p class="title">Anonym Anonym</p>
+                  <p class="rang rang--header">Профи</p>
+                  <p class="subtext">На сайте <span class="subtext--timer">2 месяца 4 дня</span></p>
+                </div>
+                <div class="info__part info__part--options">
+                  <div class="info__part--options-item"><a href="#" class="add-form">Добавить пост +</a></div>
+                  <div class="info__part--options-item"><a href="#">Мои посты <span class="posts-counter">4</span></a></div>
+                </div>
+              </div>
+              <p class="info__text">
+                Ножницы режут бумагу, бумага заворачивает камень, камень давит ящерицу, ящерица травит Спока, Спок ломает ножницы, ножницы отрезают голову ящерице, ящерица ест бумагу, бумага подставляет Спока, Спок испаряет камень, и, как обычно, камень разбивает ножницы. &#169;
+                
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <nav class="col-md-12">
+            <ul class="private__menu">
+              <li><a href="private_room.html">Редактировать профиль</a></li>
+              <li><a href="private_room--comments.html">Мои комментарии</a></li>
+              <li class="active"><a href="private_room--answers.html">Ответы ( <span class="private__menu-answers">5</span>)</a></li>
+              <li><a href="private_room--posts.html">10 последних просмотренных постов</a></li>
+              <li class="additional-buttons"><a href="private_room.html" class="private__menu-home"></a><a href="#" class="private__menu-search"></a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <!--блок с комментами-->
+                        <div class="comments comments__private comments__private--answer">
+                          <div class="comments__header content__item">
+                            <div class="img-box">
+                              <div class="img-box__part"><img src="../img/content/site1.jpg" alt="site1"></div>
+                              <div class="img-box__part"><img src="../img/content/site2.jpg" alt="site2"></div>
+                            </div>
+                            <p class="img-box__title"><span class="img-box__number">#208</span><br>Металлоперерабатывающий завод vs завод железобетонных блоков</p>
+                          </div>
+                          <!--поле с комментом-->
+                          <div class="comments-item">
+                            <div class="comments-item__head">
+                              <p class="comments-item__author">Я,</p>
+                              <p class="comments-item__rang">Профи</p>
+                            </div>
+                            <p class="comments-item__text">Купи себе лесизаблудись в нем Купи себе лес и заблудись в немм Купи себе лес и заблудись в нем Купи себе лес и заблудись в нем</p>
+                            <!--действия на коммент-->
+                            <div class="comments-item__more">
+                              <div class="comments-item__date"><span class="comments__time">20:38:59</span><span class="comments__date">12.12.2014</span></div>
+                              <!--оценить-->
+                              <div class="comments-item__counter-l">
+                                <button disabled class="comments-item__counter comments-item__counter--plus">+1</button>
+                                <button disabled class="comments-item__counter comments-item__counter--minus">-10</button>
+                              </div>
+                            </div>
+                            <!--поле с комментом answer-->
+                            <div class="comments-item comments-item--answer">
+                              <div class="comments-item__img"><img src="../img/content/site1.jpg" alt=""></div>
+                              <div class="comments-item__head">
+                                <p class="comments-item__author">Anonym</p>
+                                <p class="comments-item__rang">Эксперт</p>
+                              </div>
+                              <p class="comments-item__text">Купи себе лесизаблудись в нем Купи себе лес и заблудись в немм Купи себе лес и заблудись в нем Купи себе лес и заблудись в нем</p>
+                              <!--действия на коммент-->
+                              <div class="row">
+                                <div class="comments-item__more">
+                                  <!--ответить-->
+                                  <div class="col-md-10"><a href="#" class="comments-item__answer">Ответить</a></div>
+                                  <!--оценить-->
+                                  <div class="col-md-2 comments-item__counter-l">
+                                    <button disabled class="comments-item__counter comments-item__counter--plus">+1</button>
+                                    <button disabled class="comments-item__counter comments-item__counter--minus">-10</button>
+                                  </div>
+                                </div>
+                              </div>
+                              <!--скрытое поле для ответа на коммент-->
+                              <div class="row">
+                                <div class="col-md-12">
+                                  <form action="#" method="get" name="comments__answer" class="comments__form comments__form--answer">
+                                    <textarea name="comment" placeholder="Anonym, я говорю.../" rows="5"></textarea>
+                                    <input type="submit">
+                                    <!--доп. кнопки-->
+                                    <div class="comments__more"><a class="smile"></a><a class="file"></a></div>
+                                  </form>
+                                </div>
+                              </div>
+                            </div>
+                          </div><a href="#" class="comments__all">Все комментарии</a>
+                        </div>
+                        <div class="comments comments__private comments__private--answer">
+                          <div class="comments__header content__item">
+                            <div class="img-box">
+                              <div class="img-box__part"><img src="../img/content/site1.jpg" alt="site1"></div>
+                              <div class="img-box__part"><img src="../img/content/site2.jpg" alt="site2"></div>
+                            </div>
+                            <p class="img-box__title"><span class="img-box__number">#208</span><br>Металлоперерабатывающий завод vs завод железобетонных блоков</p>
+                          </div>
+                          <!--поле с комментом-->
+                          <div class="comments-item">
+                            <div class="comments-item__head">
+                              <p class="comments-item__author">Я,</p>
+                              <p class="comments-item__rang">Профи</p>
+                            </div>
+                            <p class="comments-item__text">Купи себе лесизаблудись в нем Купи себе лес и заблудись в немм Купи себе лес и заблудись в нем Купи себе лес и заблудись в нем</p>
+                            <!--действия на коммент-->
+                            <div class="comments-item__more">
+                              <div class="comments-item__date"><span class="comments__time">20:38:59</span><span class="comments__date">12.12.2014</span></div>
+                              <!--оценить-->
+                              <div class="comments-item__counter-l">
+                                <button disabled class="comments-item__counter comments-item__counter--plus">+1</button>
+                                <button disabled class="comments-item__counter comments-item__counter--minus">-10</button>
+                              </div>
+                            </div>
+                            <!--поле с комментом answer-->
+                            <div class="comments-item comments-item--answer">
+                              <div class="comments-item__img"><img src="../img/content/site1.jpg" alt=""></div>
+                              <div class="comments-item__head">
+                                <p class="comments-item__author">Anonym</p>
+                                <p class="comments-item__rang">Эксперт</p>
+                              </div>
+                              <p class="comments-item__text">Купи себе лесизаблудись в нем Купи себе лес и заблудись в немм Купи себе лес и заблудись в нем Купи себе лес и заблудись в нем</p>
+                              <!--действия на коммент-->
+                              <div class="row">
+                                <div class="comments-item__more">
+                                  <!--ответить-->
+                                  <div class="col-md-10"><a href="#" class="comments-item__answer">Ответить</a></div>
+                                  <!--оценить-->
+                                  <div class="col-md-2 comments-item__counter-l">
+                                    <button disabled class="comments-item__counter comments-item__counter--plus">+1</button>
+                                    <button disabled class="comments-item__counter comments-item__counter--minus">-10</button>
+                                  </div>
+                                </div>
+                              </div>
+                              <!--скрытое поле для ответа на коммент-->
+                              <div class="row">
+                                <div class="col-md-12">
+                                  <form action="#" method="get" name="comments__answer" class="comments__form comments__form--answer">
+                                    <textarea name="comment" placeholder="Anonym, я говорю.../" rows="5"></textarea>
+                                    <input type="submit">
+                                    <!--доп. кнопки-->
+                                    <div class="comments__more"><a class="smile"></a><a class="file"></a></div>
+                                  </form>
+                                </div>
+                              </div>
+                            </div>
+                          </div><a href="#" class="comments__all">Все комментарии</a>
+                        </div>
+                        <div class="comments comments__private comments__private--answer">
+                          <div class="comments__header content__item">
+                            <div class="img-box">
+                              <div class="img-box__part"><img src="../img/content/site1.jpg" alt="site1"></div>
+                              <div class="img-box__part"><img src="../img/content/site2.jpg" alt="site2"></div>
+                            </div>
+                            <p class="img-box__title"><span class="img-box__number">#208</span><br>Металлоперерабатывающий завод vs завод железобетонных блоков</p>
+                          </div>
+                          <!--поле с комментом-->
+                          <div class="comments-item">
+                            <div class="comments-item__head">
+                              <p class="comments-item__author">Я,</p>
+                              <p class="comments-item__rang">Профи</p>
+                            </div>
+                            <p class="comments-item__text">Купи себе лесизаблудись в нем Купи себе лес и заблудись в немм Купи себе лес и заблудись в нем Купи себе лес и заблудись в нем</p>
+                            <!--действия на коммент-->
+                            <div class="comments-item__more">
+                              <div class="comments-item__date"><span class="comments__time">20:38:59</span><span class="comments__date">12.12.2014</span></div>
+                              <!--оценить-->
+                              <div class="comments-item__counter-l">
+                                <button disabled class="comments-item__counter comments-item__counter--plus">+1</button>
+                                <button disabled class="comments-item__counter comments-item__counter--minus">-10</button>
+                              </div>
+                            </div>
+                            <!--поле с комментом answer-->
+                            <div class="comments-item comments-item--answer">
+                              <div class="comments-item__img"><img src="../img/content/site1.jpg" alt=""></div>
+                              <div class="comments-item__head">
+                                <p class="comments-item__author">Anonym</p>
+                                <p class="comments-item__rang">Эксперт</p>
+                              </div>
+                              <p class="comments-item__text">Купи себе лесизаблудись в нем Купи себе лес и заблудись в немм Купи себе лес и заблудись в нем Купи себе лес и заблудись в нем</p>
+                              <!--действия на коммент-->
+                              <div class="row">
+                                <div class="comments-item__more">
+                                  <!--ответить-->
+                                  <div class="col-md-10"><a href="#" class="comments-item__answer">Ответить</a></div>
+                                  <!--оценить-->
+                                  <div class="col-md-2 comments-item__counter-l">
+                                    <button disabled class="comments-item__counter comments-item__counter--plus">+1</button>
+                                    <button disabled class="comments-item__counter comments-item__counter--minus">-10</button>
+                                  </div>
+                                </div>
+                              </div>
+                              <!--скрытое поле для ответа на коммент-->
+                              <div class="row">
+                                <div class="col-md-12">
+                                  <form action="#" method="get" name="comments__answer" class="comments__form comments__form--answer">
+                                    <textarea name="comment" placeholder="Anonym, я говорю.../" rows="5"></textarea>
+                                    <input type="submit">
+                                    <!--доп. кнопки-->
+                                    <div class="comments__more"><a class="smile"></a><a class="file"></a></div>
+                                  </form>
+                                </div>
+                              </div>
+                            </div>
+                          </div><a href="#" class="comments__all">Все комментарии</a>
+                        </div>
+                        <div class="comments comments__private comments__private--answer">
+                          <div class="comments__header content__item">
+                            <div class="img-box">
+                              <div class="img-box__part"><img src="../img/content/site1.jpg" alt="site1"></div>
+                              <div class="img-box__part"><img src="../img/content/site2.jpg" alt="site2"></div>
+                            </div>
+                            <p class="img-box__title"><span class="img-box__number">#208</span><br>Металлоперерабатывающий завод vs завод железобетонных блоков</p>
+                          </div>
+                          <!--поле с комментом-->
+                          <div class="comments-item">
+                            <div class="comments-item__head">
+                              <p class="comments-item__author">Я,</p>
+                              <p class="comments-item__rang">Профи</p>
+                            </div>
+                            <p class="comments-item__text">Купи себе лесизаблудись в нем Купи себе лес и заблудись в немм Купи себе лес и заблудись в нем Купи себе лес и заблудись в нем</p>
+                            <!--действия на коммент-->
+                            <div class="comments-item__more">
+                              <div class="comments-item__date"><span class="comments__time">20:38:59</span><span class="comments__date">12.12.2014</span></div>
+                              <!--оценить-->
+                              <div class="comments-item__counter-l">
+                                <button disabled class="comments-item__counter comments-item__counter--plus">+1</button>
+                                <button disabled class="comments-item__counter comments-item__counter--minus">-10</button>
+                              </div>
+                            </div>
+                            <!--поле с комментом answer-->
+                            <div class="comments-item comments-item--answer">
+                              <div class="comments-item__img"><img src="../img/content/site1.jpg" alt=""></div>
+                              <div class="comments-item__head">
+                                <p class="comments-item__author">Anonym</p>
+                                <p class="comments-item__rang">Эксперт</p>
+                              </div>
+                              <p class="comments-item__text">Купи себе лесизаблудись в нем Купи себе лес и заблудись в немм Купи себе лес и заблудись в нем Купи себе лес и заблудись в нем</p>
+                              <!--действия на коммент-->
+                              <div class="row">
+                                <div class="comments-item__more">
+                                  <!--ответить-->
+                                  <div class="col-md-10"><a href="#" class="comments-item__answer">Ответить</a></div>
+                                  <!--оценить-->
+                                  <div class="col-md-2 comments-item__counter-l">
+                                    <button disabled class="comments-item__counter comments-item__counter--plus">+1</button>
+                                    <button disabled class="comments-item__counter comments-item__counter--minus">-10</button>
+                                  </div>
+                                </div>
+                              </div>
+                              <!--скрытое поле для ответа на коммент-->
+                              <div class="row">
+                                <div class="col-md-12">
+                                  <form action="#" method="get" name="comments__answer" class="comments__form comments__form--answer">
+                                    <textarea name="comment" placeholder="Anonym, я говорю.../" rows="5"></textarea>
+                                    <input type="submit">
+                                    <!--доп. кнопки-->
+                                    <div class="comments__more"><a class="smile"></a><a class="file"></a></div>
+                                  </form>
+                                </div>
+                              </div>
+                            </div>
+                          </div><a href="#" class="comments__all">Все комментарии</a>
+                        </div>
+            <script type="text/html" id="answer_field">
+              <div class="col-md-12">
+                <form action="#" method="get" name="comments__answer" class="comments__form comments__form--answer1">
+                  <textarea name="comment" placeholder="{{name}}, я говорю.../" rows="5"></textarea>
+                  <input type="submit">
+                  <!--доп. кнопки-->
+                  <div class="comments__more"><a class="smile"></a><a class="file"></a></div>
+                </form>
+              </div>
+            </script>
+          </div>
+        </div>
+      </main>
+      <footer class="footer">
+        <div class="col-md-5">
+          <!--нижнее меню-->
+          <nav class="footer__menu">
+            <ul>
+              <li><a href="#" class="footer__menu--vk"></a></li>
+              <li><a href="#" class="footer__menu--fb"></a></li>
+              <li><a href="#" class="footer__menu--twitter"></a></li>
+              <li><a href="#" class="footer__menu--odnoklassniki"></a></li>
+              <li><a href="#" class="footer__menu--google"></a></li>
+            </ul>
+          </nav>
+          <!--подменю-->
+          <div class="footer__submenu"><a href="#">О проекте</a><a href="#">Размещение рекламы</a></div>
+        </div>
+        <!--копирайт-->
+        <div class="col-md-2 col-md-offset-5 footer__copyright">
+          <p class="footer__copyright-text">Создание сайта:</p><a href="#" class="footer__copyright-logo"><img src="../img/logo-artbrother.png" alt=""></a>
+        </div>
+      </footer>
+    </div><a id="toTop" href="/" class="scroll_top"></a>
+    <!--.shiminclude form-add
+    -->
+    <!--.shiminclude form-reg
+    -->
+    <!--script(src="../libs/fancybox/jquery.fancybox.pack.js")-->
+    <script src="../js/common.js"></script>
+    <script src="../js/script.js"></script>
+    <!--script(src="../js/chat.js")-->
+  </body>
+</html>

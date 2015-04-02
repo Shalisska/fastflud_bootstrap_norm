@@ -83,42 +83,42 @@ module.exports = function (grunt) {
 					dest: 'build'
 				}]
 			},
-            build_html: {
-                files: [{
+			build_html: {
+				files: [{
 					expand: true,
 					cwd: 'html/',
-                    src:['*.html'],
+					src:['*.html'],
 					dest: 'build'
 				}]
-            }
+			}
 		},
-        jade: {
+		jade: {
 			 temp: {
-                  options: {
-                      pretty: true
-            },
-                    files: [{
-                      expand: true,
-                      cwd: 'jade/',
-                      src: ['*.jade'],
-                      dest: 'html/',
-                      ext: '.html',
-                      extDot: 'last'
-                    }]
-                },
-            parts: {
-                  options: {
-                      pretty: true
-                    },
-                    files: [{
-                      expand: true,
-                      cwd: 'jade/parts/',
-                      src: ['*.jade'],
-                      dest: 'html/parts',
-                      ext: '.html',
-                      extDot: 'last'
-                    }]
-                }
+				  options: {
+					  pretty: true
+			},
+					files: [{
+						expand: true,
+						cwd: 'jade/',
+						src: ['*.jade'],
+						dest: 'html/',
+						ext: '.html',
+						extDot: 'last'
+					}]
+				},
+			parts: {
+					options: {
+						pretty: true
+					},
+					files: [{
+						expand: true,
+						cwd: 'jade/parts/',
+						src: ['*.jade'],
+						dest: 'html/parts',
+						ext: '.html',
+						extDot: 'last'
+					}]
+				}
 		},
 		watch: {
 			styles: {
@@ -128,7 +128,7 @@ module.exports = function (grunt) {
 					spawn: false
 				}
 			},
-            jades: {
+			jades: {
 				files: ['jade/**/*.jade'],
 				tasks: ['jade'],
 				options: {
@@ -142,25 +142,25 @@ module.exports = function (grunt) {
 				dest: 'build/js/js.min.js'
 			}
 		},
-        
-        replace: {
-            build: {
-                options: {
-                    patterns: [{
-                        match: /src="..\//g,
-                        replacement: 'src="'
-                    }, {
-                        match: /href="..\//g,
-                        replacement: 'href="'
-                    }]
-                },
-                files: [{
-                    expand: true,
-                    flattern: true,
-                    src: ['build/*.html']
-                }]
-            }
-        }
+		
+		replace: {
+			build: {
+				options: {
+					patterns: [{
+						match: /src="..\//g,
+						replacement: 'src="'
+					}, {
+						match: /href="..\//g,
+						replacement: 'href="'
+					}]
+				},
+				files: [{
+					expand: true,
+					flattern: true,
+					src: ['build/*.html']
+				}]
+			}
+		}
 	});
 	
 	grunt.registerTask('default', [
@@ -170,7 +170,7 @@ module.exports = function (grunt) {
 //		'cssmin',
 //		'htmlmin',
 //		'uglify',
-        'replace'
+		'replace'
 	]);
 	
 	grunt.registerTask('debug', [

@@ -11,14 +11,14 @@ $(document).ready(function() {
 	//<a class="fancybox"><img src="image.jpg" /></a>
 	//<a class="fancybox" data-fancybox-group="group"><img src="image.jpg" /></a>
 //	$(".fancybox.registration").fancybox({
-//        'padding' : 0,
-//        'margin' : 0
-//    });
-//    
-//    $(".fancybox.add-form").fancybox({
-//        'padding' : 0,
-//        'margin' : 0
-//    });
+//		'padding' : 0,
+//		'margin' : 0
+//	});
+//	
+//	$(".fancybox.add-form").fancybox({
+//		'padding' : 0,
+//		'margin' : 0
+//	});
 
 //	//Навигация по Landing Page
 //	//$(".top_mnu") - это верхняя панель со ссылками.
@@ -90,25 +90,25 @@ $(document).ready(function() {
 //		});
 //		return false;
 //	});
-    
-    //кнопка Наверх
-    $(function(){
+	
+	//кнопка Наверх
+	$(function(){
   $.fn.scrollToTop=function(){
-    $(this).hide().removeAttr("href");
-    if($(window).scrollTop()!="0"){
-        $(this).fadeIn("slow")
+	$(this).hide().removeAttr("href");
+	if($(window).scrollTop()!="0"){
+		$(this).fadeIn("slow")
   }
   var scrollDiv=$(this);
   $(window).scroll(function(){
-    if($(window).scrollTop()=="0"){
-    $(scrollDiv).fadeOut("slow")
-    }else{
-    $(scrollDiv).fadeIn("slow")
+	if($(window).scrollTop()=="0"){
+	$(scrollDiv).fadeOut("slow")
+	}else{
+	$(scrollDiv).fadeIn("slow")
   }
   });
-    $(this).click(function(){
-      $("html, body").animate({scrollTop:0},"slow")
-    })
+	$(this).click(function(){
+	  $("html, body").animate({scrollTop:0},"slow")
+	})
   }
 });
 $(function() {$("#toTop").scrollToTop();});

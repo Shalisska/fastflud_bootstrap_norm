@@ -1,85 +1,85 @@
 //правая колонка с комментами
 .comments
-    //основной заголовок
-    .row.comments__head
-        .col-md-8
-            p.comments__head-title Комментарии:
-        .col-md-4
-            p.comments__head-count 236
-    //поле для комментария
-    .row.comments-item.comments-item--main
-        .col-md-12
-            p.comments__write Оставить комментарий
-            a.comments__reg.fancybox.registration(href="#registration") Регистрация/Вход
-        //форма коммента
-        .col-md-12
-            form.comments__form(action="#" method="get" name="comments")
-                textarea(name="comment" placeholder="Я говорю.../" rows="5")
-                input(type="submit" value="Отправить")
-                //доп. кнопки
-                .comments__more
-                    a.smile
-                    a.file
-    
-    //поле с комментом
-    .comments-item
-        .comments-item__img
-            img(src="../img/content/site1.jpg", alt="")
-        .comments-item__head
-            p.comments-item__author Anonym
-            p.comments-item__rang Эксперт
-        p.comments-item__text Купи себе лесизаблудись в нем Купи себе лес и заблудись в немм Купи себе лес и заблудись в нем Купи себе лес и заблудись в нем
-        //действия на коммент
-        .row
-            .comments-item__more
-                //ответить
-                .col-md-7
-                    a.comments-item__answer(href="#") Ответить
-                //оценить
-                .col-md-5.comments-item__counter-l
-                    button.comments-item__counter.comments-item__counter--plus +1
-                    button.comments-item__counter.comments-item__counter--minus -10
-        //скрытое поле для ответа на коммент
-        .row
-            .col-md-12
-                form.comments__form.comments__form--answer(action="#" method="get" name="comments__answer")
-                    textarea(name="comment" placeholder="Anonym, я говорю.../"  rows="5")
-                    input(type="submit")
-                    //доп. кнопки
-                    .comments__more
-                        a.smile
-                        a.file
-                        
-        
-                
-    //поле с комментом
-    .comments-item
-        .comments-item__img
-            img(src="../img/content/site1.jpg", alt="")
-        .comments-item__head
-            p.comments-item__author Anonym
-            p.comments-item__rang Эксперт
-        p.comments-item__text Купи себе лесизаблудись в нем Купи себе лес и заблудись в немм Купи себе лес и заблудись в нем Купи себе лес и заблудись в нем
-        //действия на коммент
-        .row
-            .comments-item__more
-                //ответить
-                .col-md-7
-                    a.comments-item__answer(href="#") Ответить
-                //оценить
-                .col-md-5.comments-item__counter-l
-                    button.comments-item__counter.comments-item__counter--plus +1
-                    button.comments-item__counter.comments-item__counter--minus -10
-        //скрытое поле для ответа на коммент
-        .row
-            .col-md-12
-                form.comments__form.comments__form--answer(action="#" method="get" name="comments__answer")
-                    textarea(name="comment" placeholder="Anonym, я говорю.../"  rows="5")
-                    input(type="submit")
-                    //доп. кнопки
-                    .comments__more
-                        a.smile
-                        a.file
-    
-    //все комментарии (внизу сайдбара)
-    a.comments__all(href="#") Все комментарии
+	//основной заголовок
+	.row.comments__head
+		.col-md-8
+			p.comments__head-title Комментарии:
+		.col-md-4
+			p.comments__head-count 236
+	//поле для комментария
+	.row.comments-item.comments-item--main
+		.col-md-12
+			p.comments__write Оставить комментарий
+			a.comments__reg.fancybox.registration(href="#registration") Регистрация/Вход
+		//форма коммента
+		.col-md-12
+			form.comments__form(action="#" method="get" name="comments")
+				textarea(name="comment" placeholder="Я говорю.../" rows="5")
+				input(type="submit" value="Отправить")
+				//доп. кнопки
+				.comments__more
+					a.smile
+					a.file
+	
+	//поле с комментом
+	.comments-item
+		.comments-item__img
+			img(src="../img/content/site1.jpg", alt="")
+		.comments-item__head
+			p.comments-item__author Anonym
+			p.comments-item__rang Эксперт
+		p.comments-item__text Купи себе лесизаблудись в нем Купи себе лес и заблудись в немм Купи себе лес и заблудись в нем Купи себе лес и заблудись в нем
+		//действия на коммент
+		.row
+			.comments-item__more
+				//ответить
+				.col-md-7
+					a.comments-item__answer(href="#") Ответить
+				//оценить
+				.col-md-5.comments-item__counter-l
+					button.comments-item__counter.comments-item__counter--plus +1
+					button.comments-item__counter.comments-item__counter--minus -10
+		//скрытое поле для ответа на коммент
+		.row
+			.col-md-12
+				form.comments__form.comments__form--answer(action="#" method="get" name="comments__answer")
+					textarea(name="comment" placeholder="Anonym, я говорю.../"  rows="5")
+					input(type="submit")
+					//доп. кнопки
+					.comments__more
+						a.smile
+						a.file
+						
+		
+				
+	//поле с комментом
+	.comments-item
+		.comments-item__img
+			img(src="../img/content/site1.jpg", alt="")
+		.comments-item__head
+			p.comments-item__author Anonym
+			p.comments-item__rang Эксперт
+		p.comments-item__text Купи себе лесизаблудись в нем Купи себе лес и заблудись в немм Купи себе лес и заблудись в нем Купи себе лес и заблудись в нем
+		//действия на коммент
+		.row
+			.comments-item__more
+				//ответить
+				.col-md-7
+					a.comments-item__answer(href="#") Ответить
+				//оценить
+				.col-md-5.comments-item__counter-l
+					button.comments-item__counter.comments-item__counter--plus +1
+					button.comments-item__counter.comments-item__counter--minus -10
+		//скрытое поле для ответа на коммент
+		.row
+			.col-md-12
+				form.comments__form.comments__form--answer(action="#" method="get" name="comments__answer")
+					textarea(name="comment" placeholder="Anonym, я говорю.../"  rows="5")
+					input(type="submit")
+					//доп. кнопки
+					.comments__more
+						a.smile
+						a.file
+	
+	//все комментарии (внизу сайдбара)
+	a.comments__all(href="#") Все комментарии
